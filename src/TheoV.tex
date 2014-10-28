@@ -14,7 +14,8 @@
 
 \usepackage[automark,headsepline]{scrlayer-scrpage} %headings
 \pagestyle{scrheadings}
-\ihead{\exptitleshort}
+\ihead{\headmark}
+\chead{}
 \ohead{\pagemark}
 \cfoot{}
 
@@ -80,9 +81,10 @@ Fehler und Verbesserungsvorschläge bitte an \emph{benjamin [at] dierottlers [do
 \hypersetup{pageanchor=true} %start page numbering again
 \setcounter{page}{1} %set to page 1
 
-\input{chapter00}
+\setcounter{section}{-1}  % set number of first section to 0 
+
+\input{chapter00.tex}
 
 \newpage
-\input{chapter01}
-
+\input{chapter01.tex}
 \end{document}
