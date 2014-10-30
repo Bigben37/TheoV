@@ -1,7 +1,218 @@
 \section{Thermodynamik}
 \subsection{Die Zustandsgrößen}
+Thermodynamische Systeme (viele Freiheitsgrade)
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\textwidth]{../img/exampleSystems.pdf}
+        \caption{Beispiele komplizierter thermodynamischer Systeme (Gasgefäß, Kolben Feder)}
+        \label{img:exampleSystems}
+    \end{center}
+\end{figure}
+Es gibt zwei Arten von thermodynamischen Systemen:
+\begin{enumerate}
+    \item abgeschlossene Systeme
+    \item offense Systeme
+\end{enumerate}
+Thermodynamische (Zustands-)größen:
+Apparativ messbare Eigenschaften des Systems (relevante Größen)
+\begin{equation}
+    p, V, E, T, S, N, \mu, \vec{M}, \vec{H}, c_p, \ldots
+\end{equation}
+\begin{itemize}
+    \item extensive Variable (proportional zu Menge des Systems)
+    \begin{equation}
+        V, E, S, \vec{M}, N
+    \end{equation}
+    \item intensive Variable (unabhängig von der Menge des Systems)
+    \begin{equation}
+        p, T, \rho=\frac{N}{V}, \vec{H}
+    \end{equation}
+\end{itemize}
+Thermodynamisches Gleichgewicht: Keine zeitliche Änderung der thermodynamischen Größen
 \subsection{0. Hauptsatz der Thermodynamik}
+$A$ im Gleichgewicht mit $B$ und $B$ im Gleichgewicht mit $C \Rightarrow A$ im Gleichgewicht mit $C$ \\
+Beziehungen zwischen den Zustandsgrößen: \\
+Beispiel: Ideales Gas (einatomig)
+\begin{equation}
+    \begin{split}
+        p V &= N k T \\
+        E &= \frac{3}{2} N k T
+    \end{split}
+\end{equation}
+mit $k=k_\text{Boltzmann} \approx 1.38\cdot 10^{-23}\,\frac{\text{J}}{\text{K}}$ \\
+Zustandsgrößen mit \emph{mechanischer} Signifikanz:
+\begin{equation}
+    $E, V, N, M$ \qquad \text{(sind auch für ein Teilchen definiert)}
+\end{equation}
+Ideales Gas:
+\begin{equation}
+    \begin{split}
+        p &= \frac{2}{3} \frac{E}{V} \\
+        k T &= \frac{2}{3} \frac{E}{N}
+    \end{split}
+\end{equation}
 \subsection{1. Hauptsatz der Thermodynamik}
+Innere Energie $E$:
+\begin{equation}
+    \begin{split}
+        E&=\const \quad \text{(abgeschlossenes System)} \\
+        \difd E &= \delta A + \delta Q \quad \text{(offenes System)}
+    \end{split}
+\end{equation}
+Die innere Energie ist eie Zustandsgröße.
+\begin{description}
+    \item[$\delta A$] kontrollierte Energiezufuhr durch adiabatische (sehr langsame) Änderung von mechanischen Parametern.
+    \item[$\delta Q$] unkontrollierte Energiezufuhr
+\end{description}
+\subsubsection{Beispiele für $\delta Q$}
+\begin{enumerate}[a)]
+    \item $\delta Q = m g \Delta h$
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/exampleDQpot.pdf}
+            \caption{caption}  % TODO label
+            \label{img:exampleDQpot}
+        \end{center}
+    \end{figure}
+    
+    \item  $\delta Q = I^2 R \delta t$
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/exampleDQinductor.pdf}
+            \caption{caption}  % TODO label
+            \label{img:exampleDQcoil}
+        \end{center}
+    \end{figure}
+\end{enumerate}
+\subsubsection{Beispiele für $\delta A$}
+\begin{enumerate}[a)]
+    \item
+    \begin{equation}
+        \delta A = k \difd x = p F \difd x = - p \difd V
+    \end{equation}
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/exampleDApiston.pdf}
+            \caption{Kolben.}  % TODO label
+            \label{img:exampleDApiston}
+        \end{center}
+    \end{figure}
+    \item Magnetsierung, Magnetfeld
+    \begin{equation}
+        k = M \frac{\difd H'}{\difd x}
+    \end{equation}
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/exampleDAmagnetism.pdf}
+            \caption{Magnetisierung.}  % TODO label
+            \label{img:exampleDAmagnetism}
+        \end{center}
+    \end{figure}
+    \begin{enumerate}[i)]
+        \item Magnetsierung der Probe
+        \begin{equation}
+            -A_1 = \int K \difd x \int M \frac{\difd H'}{\difd x} \difd x = \int_{0}^{H} M \difd H'
+        \end{equation}
+        \item Magnetisierung des Feldes bei fester Magnetisierung
+        \begin{equation}
+            - A_2 = M(H) \int_{H}^{0} \difd H' = - M(H) \cdot H^0
+        \end{equation}
+    \end{enumerate}
+    Gesamtheit der Magnetsierung $A = A_1 + A_2$
+    \begin{equation}
+        \begin{split}
+            \delta A &= \delta A_1 + \delta A_2 = - M \difd H + \difd(M \cdot H) \\
+            &= - M \difd H + H \difd M + M \difd H \\
+            &= H \difd M
+        \end{split}
+    \end{equation}
+    Nicht-inifitesimale Arbeit:
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.49\textwidth]{../img/notInfWork_p-V.pdf}
+            \includegraphics[width=0.49\textwidth]{../img/notInfWork_H-M.pdf}
+            \caption{Nicht-inifitesimale Arbeit.}  % TODO label
+            \label{img:label}
+        \end{center}
+    \end{figure}
+    \begin{equation}
+        A_{pV} = - \oint p \difd V \text{  (Fläche)} \qquad \qquad \qquad A_{HM} = - \oint H \difd M \text{  (Fläche)}
+    \end{equation}
+    Nun beachte: Die Arbeit ist \emph{keine} Zustandsgröße, da Wegabhängigkeit.
+    \begin{equation}
+        - \int_\mathcal{W} p \difd V \neq - \int_\mathcal{V} p \difd V
+    \end{equation}
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/pathsWV_in_p-V.pdf}
+            \caption{Zwei Wege $\mathcal{W}$ und $\mathcal{V}$ im $p$-$V$-Diagram.}
+            \label{img:pathsVW_in_p-V}
+        \end{center}
+    \end{figure}
+    
+    \paragraph{Exkurs über vollständige (totale) Differentiale}
+    \begin{equation}
+        \begin{split}
+            F(x, y) \Rightarrow \difd F &= \underbrace{\pd{F}{x}}_{A(x, y)} \difd x + \underbrace{\pd{F}{y}}_{B(x, y)} \difd y \\
+            &= A(x, y) \difd x + B(x, y) \difd y
+        \end{split}
+    \end{equation}
+    Man beachte: $A$ und $B$ sind nicht unabhängig! \\
+    z.B. gilt
+    \begin{equation}
+        \pd{A}{y} = \frac{\partial^2 F}{\partial y \partial x} = \frac{\partial^2 F}{\partial x \partial y} = \pd{B}{x}
+    \end{equation}
+    Für eine beliebige Form $\delta \Phi = C(x, y) \difd x + D(x, y) \difd y$ gilt:
+    \begin{equation}
+        \delta \Phi \text{ totales Differential } \Leftrightarrow \pd{C}{y} = \pd{D}{x}
+    \end{equation}
+    Weiterhin gilt:
+    \begin{equation}
+        \int \delta \Phi \text{ wegunabhängig} \Leftrightarrow \delta \Phi \text{ totales Differential}
+    \end{equation}
+    Beispiel:
+    \begin{equation}
+        \begin{split}
+            & \delta A = - p \difd V = - p \difd V + 0 \difd p \\
+            & \Rightarrow
+            \begin{cases}
+                C = - p \\
+                D = 0
+            \end{cases}
+            \Rightarrow \pd{C}{p} = -1 \neq 0 = \pd{D}{V}
+        \end{split}
+    \end{equation}
+    d.h. $\delta A$ ist \emph{kein} totales Differential. \\[\baselineskip]
+    Verallgemeinerung zu mehreren Dimensionen und Beispiele : Übungsgruppen \\
+    Insbesondere für $\delta \Phi = \sum_i a_i (x_1, \ldots, x_\nu) \difd x_i$ gilt:
+    \begin{equation}
+        \int \delta \Phi \text{ wegunabhängig} \Leftrightarrow \pd{a_i}{x_j} = \pd{a_j}{x_i} \quad \forall i, j
+    \end{equation}
+    \item Allgemeine, kontrollierbare Arbeitsänderung
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/controlledDeltaWork.pdf}
+            \caption{caption}  % TODO caption
+            \label{img:controlledDeltaWork}
+        \end{center}
+    \end{figure}
+    Äusere Parameter $E(x_1, \ldots, x_n)$ \\
+    Verallgemeinerte Kraft:
+    \begin{equation}
+        K_i = - \pd{E}{x_i}
+    \end{equation}
+\end{enumerate}
+\subsubsection{Adiabatensatz}
+(z.B. Landau-Lifschitz §11) \\
+Eine sehr langsame (quasistatische) Änderung von $x$ produziert keine Wärme ($\delta Q = 0$). Damit ist 
+\begin{equation}
+    \difd E = - \sum_i K_k \difd x_i
+\end{equation}
+Allgemein:
+\begin{equation}
+    \difd E = \delta Q - \sum_i K_i \difd x_i \qquad \text{(1. Hauptsatz)}
+\end{equation}
+
 \subsection{2. Hauptsatz der Thermodynamik}
 \subsubsection{Äquivalente Formulierung des 2. Hauptsatzes}
 \paragraph{Folgerungen}
@@ -13,253 +224,253 @@
 \subsubsection{Fundamentale Gleichung}
 \subsubsection{Anwendungsbeispiele}
 \begin{enumerate}
-  \item Entropie des idealen Gases (einatomig)
-  \item Gleichheit der absoluten Temperatur $T$ und der Temperatur des idealen Gases $T_G$
-  \item \emph{Wirkungsgrad} einer Wärmekraftmaschine
-  \begin{figure}[H]
-\begin{center}
-  \includegraphics[width=0.3\textwidth]{../img/waermekraftmaschine.pdf}
-  \caption{Wärmekraftmaschine}
-  \label{img:waermekraftmaschine}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-  \includegraphics[width=0.3\textwidth]{../img/carnotprocess.pdf}
-  \caption{Carnot-Prozess}
-  \label{img:carnot}
-\end{center}
-\end{figure}
-
-Reversibel:
-\begin{equation}
-\begin{split}
-  & \Delta S = 0 \Rightarrow - \frac{Q_2}{T_2} + \frac{Q_1}{T_1} + 0  \\
-  & \Rightarrow \frac{Q_2}{T_2} = \frac{Q_1}{T_1} = \gamma
-\end{split}
-\end{equation}
-Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustan sein $\Rightarrow A = Q_2 - Q_1$) \
-Wirkungsgrad $\eta$
-\begin{equation}
-  \eta := \frac{A}{Q_2} \Rightarrow \eta_{\text{reversibel}} = \frac{Q_2 - Q_1}{q_2} = \frac{T_2 - T_1}{T_2}
-\end{equation}
-Wärmepumpe:
-\begin{equation}
-\bar{\eta} = \frac{Q_1}{A} (\text{für } T_1 > T_2) \Rightarrow \bar{\eta}_{\text{reversibel}} = \frac{T_1}{T_1 - T_2}
-\end{equation}
-Kühlmaschine
-\begin{equation}
-\bar{\bar{\eta}} = \frac{Q_2}{-A} (\text{für } T_1 > T_2) \Rightarrow \bar{\bar{\eta}}_{\text{reversibel}} = \frac{T_2}{T_1-T_2}
-\end{equation}
-irreversibel:
-\begin{equation}
-  \Delta S > 0 \Rightarrow \frac{Q_1'}{T_1} > \frac{Q_2'}{T_2}
-\end{equation}
-Wirkungsgrad der Wärmekraftmaschine $\eta_{\text{irrev.}} = \frac{A'}{Q_2'}$ \\
-Sei z.B. $Q_2' = Q_2 \Rightarrow Q_1' > Q_1$
-\begin{equation}
-\begin{split}
-  \Rightarrow & A' = Q_2' - Q_1' = Q_2 - Q_1' < A \\
-  \Rightarrow & \eta_\text{irrev.} < \eta_\text{reversibel}
-\end{split}
-\end{equation}
-Wirkungsgrad der idealen \emph{Carnot-Maschine} ist maximal.
+    \item Entropie des idealen Gases (einatomig)
+    \item Gleichheit der absoluten Temperatur $T$ und der Temperatur des idealen Gases $T_G$
+    \item \emph{Wirkungsgrad} einer Wärmekraftmaschine
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/waermekraftmaschine.pdf}
+            \caption{Wärmekraftmaschine.}
+            \label{img:waermekraftmaschine}
+        \end{center}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/carnotprocess.pdf}
+            \caption{Carnot-Prozess.}
+            \label{img:carnot}
+        \end{center}
+    \end{figure}
+    
+    Reversibel:
+    \begin{equation}
+        \begin{split}
+            & \Delta S = 0 \Rightarrow - \frac{Q_2}{T_2} + \frac{Q_1}{T_1} + 0  \\
+            & \Rightarrow \frac{Q_2}{T_2} = \frac{Q_1}{T_1} = \gamma
+        \end{split}
+    \end{equation}
+    Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustan sein $\Rightarrow A = Q_2 - Q_1$) \
+    Wirkungsgrad $\eta$
+    \begin{equation}
+        \eta := \frac{A}{Q_2} \Rightarrow \eta_{\text{reversibel}} = \frac{Q_2 - Q_1}{q_2} = \frac{T_2 - T_1}{T_2}
+    \end{equation}
+    Wärmepumpe:
+    \begin{equation}
+        \bar{\eta} = \frac{Q_1}{A} (\text{für } T_1 > T_2) \Rightarrow \bar{\eta}_{\text{reversibel}} = \frac{T_1}{T_1 - T_2}
+    \end{equation}
+    Kühlmaschine
+    \begin{equation}
+        \bar{\bar{\eta}} = \frac{Q_2}{-A} (\text{für } T_1 > T_2) \Rightarrow \bar{\bar{\eta}}_{\text{reversibel}} = \frac{T_2}{T_1-T_2}
+    \end{equation}
+    irreversibel:
+    \begin{equation}
+        \Delta S > 0 \Rightarrow \frac{Q_1'}{T_1} > \frac{Q_2'}{T_2}
+    \end{equation}
+    Wirkungsgrad der Wärmekraftmaschine $\eta_{\text{irrev.}} = \frac{A'}{Q_2'}$ \\
+    Sei z.B. $Q_2' = Q_2 \Rightarrow Q_1' > Q_1$
+    \begin{equation}
+        \begin{split}
+            \Rightarrow & A' = Q_2' - Q_1' = Q_2 - Q_1' < A \\
+            \Rightarrow & \eta_\text{irrev.} < \eta_\text{reversibel}
+        \end{split}
+    \end{equation}
+    Wirkungsgrad der idealen \emph{Carnot-Maschine} ist maximal.
 \end{enumerate}
 
 \subsection{Einige Folgerungen aus den Hauptsätzen}
 \subsubsection{Wichtige abgeleitete Größen}
 \begin{itemize}
-  \item Spezifische Wärme
+    \item Spezifische Wärme
     \begin{equation}
-  	\begin{split}
-  	  c_p &= \left( \frac{\Delta Q}{\Delta T} \right)_p = T \left( \frac{\partial S}{\partial T} \right)_p \\
-  	  c_V &= \left( \frac{\Delta Q}{\Delta T} \right)_p = T \left( \frac{\partial S}{\partial T} \right)_V
-  	\end{split}
+        \begin{split}
+            c_p &= \left( \frac{\Delta Q}{\Delta T} \right)_p = T \left( \frac{\partial S}{\partial T} \right)_p \\
+            c_V &= \left( \frac{\Delta Q}{\Delta T} \right)_p = T \left( \frac{\partial S}{\partial T} \right)_V
+        \end{split}
     \end{equation}
     Technische Definition bezogen auf 1 Mol, $N=N_A$ (Avogadro) \\
     Korrekterweise: $s = \frac{S N_A}{N}, \quad v = \frac{V N_A}{N}$, siehe Adam + Hittmair \\
     hier sehen wir davon ab
-  \item Kompressibilität
+    \item Kompressibilität
     \begin{equation}
-   	\begin{split}
-  	  \kappa_s &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_S \text{ (adiabatisch)} \\
-  	  \kappa_T &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_T \text{ (isoterm)}
-    \end{split}
-	\end{equation}
-  \item Ausdehungskoeffizient
-  \begin{equation}
-  	\alpha = \frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_p
-  \end{equation}
-  \item Magnetische Suszeptibilität
-  \begin{equation}
-  	\chi = \left( \frac{\partial M}{\partial H} \right)_T
-  \end{equation}
+        \begin{split}
+            \kappa_s &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_S \text{ (adiabatisch)} \\
+            \kappa_T &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_T \text{ (isoterm)}
+        \end{split}
+    \end{equation}
+    \item Ausdehungskoeffizient
+    \begin{equation}
+        \alpha = \frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_p
+    \end{equation}
+    \item Magnetische Suszeptibilität
+    \begin{equation}
+        \chi = \left( \frac{\partial M}{\partial H} \right)_T
+    \end{equation}
 \end{itemize}
-Diese Größen sind der Messung direkt zugänglich. Man beachte: die verschiedenen Größen sind nicht unabhängig, z.B. gilt 
+Diese Größen sind der Messung direkt zugänglich. Man beachte: die verschiedenen Größen sind nicht unabhängig, z.B. gilt
 $c_p - c_v = V T \alpha^2 / \kappa_T$ (Beweis später).
 Woher kommen diese Abhängigkeiten? \emph{Integrabilitätsbeziehungen}!
 \subsubsection{Maxwell-Beziehungen}
 Fundamentale Gleichung \eqref{eq:fundamentalEQ}:
 \begin{equation}
-  \difd E = T \difd S - p \difd V + \mu \difd N, \quad E=E(S, V, N)
+    \difd E = T \difd S - p \difd V + \mu \difd N, \quad E=E(S, V, N)
 \end{equation}
 \paragraph{Freie Energie} $F:=E - TS$ (\textsc{Legendre}-Transformation)
 \begin{equation}
-\begin{split}
-  \Rightarrow & \difd F = \difd E - T \difd S - S \difd T \\
-  \Rightarrow & \difd F = -S\difd T - p \difd V + \mu \difd N \\
-  \Rightarrow & F=F(T, V, N)
-\end{split}
+    \begin{split}
+        \Rightarrow & \difd F = \difd E - T \difd S - S \difd T \\
+        \Rightarrow & \difd F = -S\difd T - p \difd V + \mu \difd N \\
+        \Rightarrow & F=F(T, V, N)
+    \end{split}
 \end{equation}
 \paragraph{Enthalpie} $H:=E+pV$
 \begin{equation}
-\begin{split}
-  \Rightarrow & \difd H = \difd E + p \difd V + V \difd p \\
-  \Rightarrow & \difd H = T \difd S + V \difd p + \mu \difd N \\
-  \Rightarrow & H=H(S, p, N)
-\end{split}
+    \begin{split}
+        \Rightarrow & \difd H = \difd E + p \difd V + V \difd p \\
+        \Rightarrow & \difd H = T \difd S + V \difd p + \mu \difd N \\
+        \Rightarrow & H=H(S, p, N)
+    \end{split}
 \end{equation}
 \paragraph{Freie Enthalpie} $G:=E-T+pV$
 \begin{equation}
-\begin{split}
-  \Rightarrow & \difd G = - S \difd T + V \difd p + \mu \difd N \\
-  \Rightarrow & G=G(T, p, N)
-\end{split}
+    \begin{split}
+        \Rightarrow & \difd G = - S \difd T + V \difd p + \mu \difd N \\
+        \Rightarrow & G=G(T, p, N)
+    \end{split}
 \end{equation}
 $E, F, H, G$ heißen \emph{Thermodynamische Potentiale}. \\
 \paragraph{Integrabilitätsbeziehungen} \mbox{}\\
 aus $E$:
 \begin{equation}
-  \left( \frac{\partial T}{\partial V} \right)_{S, N} = \left( \frac{\partial p}{\partial S} \right)_{V, N}, \quad
-  \left( \frac{\partial T}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial S} \right)_{V, N}, \quad
-  - \left( \frac{\partial p}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial V} \right)_{S, N}
+    \left( \frac{\partial T}{\partial V} \right)_{S, N} = \left( \frac{\partial p}{\partial S} \right)_{V, N}, \quad
+    \left( \frac{\partial T}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial S} \right)_{V, N}, \quad
+    - \left( \frac{\partial p}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial V} \right)_{S, N}
 \end{equation}
 aus $F$:
 \begin{equation}
-  \left( \frac{\partial S}{\partial V} \right)_{T, N} = \left( \frac{\partial p}{\partial T} \right)_{V, N}, \quad \text{usw.}
+    \left( \frac{\partial S}{\partial V} \right)_{T, N} = \left( \frac{\partial p}{\partial T} \right)_{V, N}, \quad \text{usw.}
 \end{equation}
 aus $H$:
 \begin{equation}
-  \left( \frac{\partial T}{\partial p} \right)_{S, N} = \left( \frac{\partial V}{\partial S} \right)_{p, N}, \quad \text{usw.}
+    \left( \frac{\partial T}{\partial p} \right)_{S, N} = \left( \frac{\partial V}{\partial S} \right)_{p, N}, \quad \text{usw.}
 \end{equation}
 aus $G$:
 \begin{equation}
-  - \left( \frac{\partial S}{\partial p} \right)_{T, N} = \left( \frac{\partial V}{\partial T} \right)_{p, N}, \quad \text{usw.}
+    - \left( \frac{\partial S}{\partial p} \right)_{T, N} = \left( \frac{\partial V}{\partial T} \right)_{p, N}, \quad \text{usw.}
 \end{equation}
 \textsc{Maxwell}-Beziehungen (insgesamt 12 Beziehungen) \\
 \subsubsection{Exkurs: Variablentransformation}
 Erwünscht:
 \begin{equation}
-  \left( \frac{\partial E}{\partial V} \right)_T \overset{?}{\rightarrow} \left( \frac{\partial E}{\partial V} \right)_p
-  \text{ oder }
-  \left( \frac{\partial E}{\partial V} \right)_T \overset{?}{\rightarrow} \left( \frac{\partial E}{\partial p} \right)_T
+    \left( \frac{\partial E}{\partial V} \right)_T \overset{?}{\rightarrow} \left( \frac{\partial E}{\partial V} \right)_p
+    \text{ oder }
+    \left( \frac{\partial E}{\partial V} \right)_T \overset{?}{\rightarrow} \left( \frac{\partial E}{\partial p} \right)_T
 \end{equation}
 Wichtig: Jacobi'sche Determinanten $f=f(x, y)$; $g=g(x, y)$ \\
 Definition:
 \begin{equation}
-  \frac{\partial (f, g)}{\partial(x, y)} = \det 
-  \begin{pmatrix}
-  \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
-  \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y} 
-  \end{pmatrix}
-  = \left( \frac{\partial f}{\partial x} \right) \left( \frac{\partial g}{\partial
-  y} \right) - \left( \frac{\partial f}{\partial y} \right) \left( \frac{\partial g}{\partial x} \right)
+    \frac{\partial (f, g)}{\partial(x, y)} = \det
+    \begin{pmatrix}
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
+\frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
+\end{pmatrix}
+= \left( \frac{\partial f}{\partial x} \right) \left( \frac{\partial g}{\partial
+y} \right) - \left( \frac{\partial f}{\partial y} \right) \left( \frac{\partial g}{\partial x} \right)
 \end{equation}
 Rechenregeln
 \begin{equation}
-  \frac{\partial(f, g)}{\partial(x, y)} = -\frac{\partial(f, g)}{\partial(y, x)}; \qquad
-  \frac{\partial(f, y)}{\partial(x, y)} = \frac{\partial f}{\partial x}
+    \frac{\partial(f, g)}{\partial(x, y)} = -\frac{\partial(f, g)}{\partial(y, x)}; \qquad
+    \frac{\partial(f, y)}{\partial(x, y)} = \frac{\partial f}{\partial x}
 \end{equation}
 und für $x=(u, v), y=(u, v)$
 \begin{equation}
-  \Rightarrow \frac{\partial(f, g)}{\partial(u, v)} = \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(u, v)}
+    \Rightarrow \frac{\partial(f, g)}{\partial(u, v)} = \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(u, v)}
 \end{equation}
 Beweis:
 \begin{equation}
-\begin{split}
-   \det
-  \begin{pmatrix}
-    \frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \\
-    \frac{\partial g}{\partial u} & \frac{\partial g}{\partial v}
-  \end{pmatrix}
-  &= \det \left[
-  \begin{pmatrix}
-    \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
-    \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
-  \end{pmatrix}
-  \cdot
-  \begin{pmatrix}
-    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
-    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
-  \end{pmatrix}
-  \right] \\
-  &= \det 
-    \begin{pmatrix}
-    \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
-    \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
-  \end{pmatrix}
-  \cdot \det
-  \begin{pmatrix}
-    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
-    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
-  \end{pmatrix} \qquad \square
-\end{split}
+    \begin{split}
+        \det
+        \begin{pmatrix}
+\frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \\
+\frac{\partial g}{\partial u} & \frac{\partial g}{\partial v}
+\end{pmatrix}
+&= \det \left[
+\begin{pmatrix}
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
+\frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+\end{pmatrix}
+\right] \\
+&= \det
+\begin{pmatrix}
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
+\frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
+\end{pmatrix}
+\cdot \det
+\begin{pmatrix}
+\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+\end{pmatrix} \qquad \square
+    \end{split}
 \end{equation}
-Spezialfall der Kettenregel 
+Spezialfall der Kettenregel
 \begin{equation}
-  \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(f, g)} = 1
+    \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(f, g)} = 1
 \end{equation}
 \subsubsection{Anwendungsbeispiele} $N$ = konstant
 \begin{enumerate}  % a), b)
-  \item
-  \begin{equation}
-  \begin{split}
-    c_p &=  T \left( \frac{\partial S}{\partial T} \right)_p = T \frac{\partial(S, p)}{\partial(T, p)} \overset{\text{$V$ abh.}}{=}
-    T \frac{\partial(S, p)}{\partial(T, V)} / \underbrace{\frac{\partial(T, p)}{\partial(T, V)}}_{ \left( \frac{\partial p}{\partial V} \right)_T} \\ 
-    &= \frac{T}{ \left( \frac{\partial p}{\partial V} \right)_T} \left[ \left( \frac{\partial S}{\partial T} \right)_V 
-    \left( \frac{\partial p}{\partial V} \right) - \left( \frac{\partial S}{\partial V} \right)_T \left( \frac{\partial p}{\partial T} \right)_V \right] \\
-    &= c_V - T \left( \frac{\partial S}{\partial V} \right)_T \left( \frac{\partial p}{\partial T} \right)_V / \left( \frac{\partial p}{\partial V} \right)_T \\
-    &\overset{\text{Maxwell-Bez.}}{=} c_V - T \left( \frac{\partial p}{\partial T} \right)_V^2 / \left( \frac{\partial p}{\partial V} \right)_T
-  \end{split}
-  \end{equation}
-  Nun ist
-  \begin{equation}
-  \begin{split}
-    \left( \frac{\partial p}{\partial T} \right)_V &= \frac{\partial(p, V)}{\partial (T, V)} \\
-     &= \frac{\partial (p, V)}{\partial (p, T)} \cdot \frac{\partial(p, T)}{\partial(T, V)} \\
-     &= \left( \frac{\partial V}{\partial T} \right)_p \cdot \left[ - \left( \frac{\partial p}{\partial V} \right)_T \right]
-  \end{split}
-  \end{equation}
-  \begin{equation}
-    \Rightarrow c_p = c_V - T \left( \frac{\partial V}{\partial T} \right)_p^2 \left( \frac{\partial p}{\partial V} \right)_T = c_V + T V \alpha^2 / \kappa_T^2
-  \end{equation}
-  \item 
-  \begin{equation}
-    \frac{c_p}{c_v} = \frac{\kappa_T}{\kappa_S} \quad \text{(Übungsaufgabe)}
-  \end{equation}
+    \item
+    \begin{equation}
+        \begin{split}
+            c_p &=  T \left( \frac{\partial S}{\partial T} \right)_p = T \frac{\partial(S, p)}{\partial(T, p)} \overset{\text{$V$ abh.}}{=}
+            T \frac{\partial(S, p)}{\partial(T, V)} / \underbrace{\frac{\partial(T, p)}{\partial(T, V)}}_{ \left( \frac{\partial p}{\partial V} \right)_T} \\
+            &= \frac{T}{ \left( \frac{\partial p}{\partial V} \right)_T} \left[ \left( \frac{\partial S}{\partial T} \right)_V
+            \left( \frac{\partial p}{\partial V} \right) - \left( \frac{\partial S}{\partial V} \right)_T \left( \frac{\partial p}{\partial T} \right)_V \right] \\
+            &= c_V - T \left( \frac{\partial S}{\partial V} \right)_T \left( \frac{\partial p}{\partial T} \right)_V / \left( \frac{\partial p}{\partial V} \right)_T \\
+            &\overset{\text{Maxwell-Bez.}}{=} c_V - T \left( \frac{\partial p}{\partial T} \right)_V^2 / \left( \frac{\partial p}{\partial V} \right)_T
+        \end{split}
+    \end{equation}
+    Nun ist
+    \begin{equation}
+        \begin{split}
+            \left( \frac{\partial p}{\partial T} \right)_V &= \frac{\partial(p, V)}{\partial (T, V)} \\
+            &= \frac{\partial (p, V)}{\partial (p, T)} \cdot \frac{\partial(p, T)}{\partial(T, V)} \\
+            &= \left( \frac{\partial V}{\partial T} \right)_p \cdot \left[ - \left( \frac{\partial p}{\partial V} \right)_T \right]
+        \end{split}
+    \end{equation}
+    \begin{equation}
+        \Rightarrow c_p = c_V - T \left( \frac{\partial V}{\partial T} \right)_p^2 \left( \frac{\partial p}{\partial V} \right)_T = c_V + T V \alpha^2 / \kappa_T^2
+    \end{equation}
+    \item
+    \begin{equation}
+        \frac{c_p}{c_v} = \frac{\kappa_T}{\kappa_S} \quad \text{(Übungsaufgabe)}
+    \end{equation}
 \end{enumerate}
 \subsubsection{Die Gibbs-Duhem-Beziehung}
 Fundamentalgleichung \eqref{eq:fundamentalEQ}, $E, S, V, N$ sind extensive Variablen
 \begin{equation}
-  \difd E = T \difd S - p \difd V + \mu \difd N
+    \difd E = T \difd S - p \difd V + \mu \difd N
 \end{equation}
 Somit gilt für $E=E(S, V, N)$ dass $E(\alpha S, \alpha V, \alpha N) = \alpha E(S, V, N)$ (homogene Funktion nach \textsc{Euler})
 \paragraph{Eulerscher Satz über homogene Funktion} $f(x_1, \ldots, x_n)$: \\
 Falls $f(\alpha x_1, \ldots, \alpha x_n) = \alpha^r f(x_1, \ldots, x_n)$ so ist
 \begin{equation}
-  \sum_{i=1}^{n} x_i \frac{\partial f}{\partial x_i} = r f
+    \sum_{i=1}^{n} x_i \frac{\partial f}{\partial x_i} = r f
 \end{equation}
-Beweis: Differentiation nach $\alpha$ und dann $\alpha = 1$ setzten. 
+Beweis: Differentiation nach $\alpha$ und dann $\alpha = 1$ setzten.
 \paragraph{}\mbox{}\\
-Damit folgt 
+Damit folgt
 \begin{equation}
-\begin{split}
-  E &= \left( \frac{\partial E}{\partial S} \right)_{V, N} S + \left( \frac{\partial E}{\partial V} \right)_{S, N} V + \left( \frac{\partial E}{\partial N} \right)_{V, S} N \\ 
-  &= T S - p V + \mu N
-\end{split}
+    \begin{split}
+        E &= \left( \frac{\partial E}{\partial S} \right)_{V, N} S + \left( \frac{\partial E}{\partial V} \right)_{S, N} V + \left( \frac{\partial E}{\partial N} \right)_{V, S} N \\
+        &= T S - p V + \mu N
+    \end{split}
 \end{equation}
 Damit, im Gleichgewicht
 \begin{equation}
-  E = T S - p V + \mu N \qquad \text{Fundamentalrelation}
+    E = T S - p V + \mu N \qquad \text{Fundamentalrelation}
 \end{equation}
