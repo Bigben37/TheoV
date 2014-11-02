@@ -11,7 +11,7 @@ Thermodynamische Systeme (viele Freiheitsgrade)
 Es gibt zwei Arten von thermodynamischen Systemen:
 \begin{enumerate}
     \item abgeschlossene Systeme
-    \item offense Systeme
+    \item offene Systeme
 \end{enumerate}
 Thermodynamische (Zustands-)größen:
 Apparativ messbare Eigenschaften des Systems (relevante Größen)
@@ -59,7 +59,7 @@ Innere Energie $E$:
         \difd E &= \delta A + \delta Q \quad \text{(offenes System)}
     \end{split}
 \end{equation}
-Die innere Energie ist eie Zustandsgröße.
+Die innere Energie ist eine Zustandsgröße.
 \begin{description}
     \item[$\delta A$] kontrollierte Energiezufuhr durch adiabatische (sehr langsame) Änderung von mechanischen Parametern.
     \item[$\delta Q$] unkontrollierte Energiezufuhr
@@ -97,7 +97,7 @@ Die innere Energie ist eie Zustandsgröße.
             \label{img:exampleDApiston}
         \end{center}
     \end{figure}
-    \item Magnetsierung, Magnetfeld
+    \item Magnetisierung, Magnetfeld
     \begin{equation}
         k = M \frac{\difd H'}{\difd x}
     \end{equation}
@@ -109,7 +109,7 @@ Die innere Energie ist eie Zustandsgröße.
         \end{center}
     \end{figure}
     \begin{enumerate}[i)]
-        \item Magnetsierung der Probe
+        \item Magnetisierung der Probe
         \begin{equation}
             -A_1 = \int K \difd x \int M \frac{\difd H'}{\difd x} \difd x = \int_{0}^{H} M \difd H'
         \end{equation}
@@ -118,7 +118,7 @@ Die innere Energie ist eie Zustandsgröße.
             - A_2 = M(H) \int_{H}^{0} \difd H' = - M(H) \cdot H^0
         \end{equation}
     \end{enumerate}
-    Gesamtheit der Magnetsierung $A = A_1 + A_2$
+    Gesamtheit der Magnetisierung $A = A_1 + A_2$
     \begin{equation}
         \begin{split}
             \delta A &= \delta A_1 + \delta A_2 = - M \difd H + \difd(M \cdot H) \\
@@ -196,7 +196,7 @@ Die innere Energie ist eie Zustandsgröße.
             \label{img:controlledDeltaWork}
         \end{center}
     \end{figure}
-    Äusere Parameter $E(x_1, \ldots, x_n)$ \\
+    Äußere Parameter $E(x_1, \ldots, x_n)$ \\
     Verallgemeinerte Kraft:
     \begin{equation}
         K_i = - \pd{E}{x_i}
@@ -224,15 +224,15 @@ Allgemein:
 Irreversible Prozesse, Ablauf?
 \begin{enumerate}[a)]
     \item Es gibt eine extensive Zustandsgröße $S(E, V, N, \ldots)$, die \emph{Entropie}, die den Ablauf von Prozessen regelt.
-    \item In einem abgeschlossenen System kann die Entropie nicht abnehmen. $S$ ist ein Maß für die Unordung
-    (Unschärfe der Kentnis pber den mikroskopischen Zustand)
+    \item In einem abgeschlossenen System kann die Entropie nicht abnehmen. $S$ ist ein Maß für die Unordnung
+    (Unschärfe der Kenntnis über den mikroskopischen Zustand)
 \end{enumerate}
 
 \subsubsection{Äquivalente Formulierung des 2. Hauptsatzes}
 (Es gibt kein \emph{perpetuum mobile} 2. Art) \\
 Es gibt keine periodisch arbeitende Maschine, die \emph{ausschließlich}
 \begin{enumerate}[I.]
-    \item Wärme aus einem kalten in ein wärmeres Resorvoir überführt (\textsc{Clausius})
+    \item Wärme aus einem kalten in ein wärmeres Reservoir überführt (\textsc{Clausius})
     \item Wärme in Arbeit umwandelt (\textsc{Thomson}, \textsc{Lord Kelvin})
 \end{enumerate}
 \paragraph{Folgerungen}
@@ -329,7 +329,7 @@ $(*)$: Energietransfer ohne Arbeitsleistung
         & \difd E_1 = - \difd E_2 \\
         & \difd V_1 = - \difd V_2 \\
         & \difd S_1 = \pdi{S_1}{E_1}{V_1, N_1} \difd E_1 + \pdi{S_1}{V_1}{E_1, N_1} \difd V_1 \\
-        & \Rightarrow \difd E_1 = \underbrace{T_1 \difd S_1}_{\delta Q_1} - \underbrace{T_1 \pdi{S_1}{V_1}{E_1, N_1}}_{p_1 \text{ (Äquivalenzbet; 1. HS.)}} \difd V_1
+        & \Rightarrow \difd E_1 = \underbrace{T_1 \difd S_1}_{\delta Q_1} - \underbrace{T_1 \pdi{S_1}{V_1}{E_1, N_1}}_{p_1 \text{ (Äquivalenzbet.; 1. HS.)}} \difd V_1
     \end{split}
 \end{equation}
 \begin{equation}
@@ -445,8 +445,8 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
             & \Rightarrow \frac{Q_2}{T_2} = \frac{Q_1}{T_1} = \gamma
         \end{split}
     \end{equation}
-    Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustan sein $\Rightarrow A = Q_2 - Q_1$) \
-    Wirkungsgrad $\eta$
+    Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustan sein $\Rightarrow A = Q_2 - Q_1$) \\
+    Wirkungsgrad $\eta$:
     \begin{equation}
         \eta := \frac{A}{Q_2} \Rightarrow \eta_{\text{reversibel}} = \frac{Q_2 - Q_1}{q_2} = \frac{T_2 - T_1}{T_2}
     \end{equation}
@@ -454,7 +454,7 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
     \begin{equation}
         \bar{\eta} = \frac{Q_1}{A} (\text{für } T_1 > T_2) \Rightarrow \bar{\eta}_{\text{reversibel}} = \frac{T_1}{T_1 - T_2}
     \end{equation}
-    Kühlmaschine
+    Kühlmaschine:
     \begin{equation}
         \bar{\bar{\eta}} = \frac{Q_2}{-A} (\text{für } T_1 > T_2) \Rightarrow \bar{\bar{\eta}}_{\text{reversibel}} = \frac{T_2}{T_1-T_2}
     \end{equation}
@@ -462,7 +462,7 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
     \begin{equation}
         \Delta S > 0 \Rightarrow \frac{Q_1'}{T_1} > \frac{Q_2'}{T_2}
     \end{equation}
-    Wirkungsgrad der Wärmekraftmaschine $\eta_{\text{irrev.}} = \frac{A'}{Q_2'}$ \\
+    Wirkungsgrad der Wärmekraftmaschine: $\eta_{\text{irrev.}} = \frac{A'}{Q_2'}$ \\
     Sei z.B. $Q_2' = Q_2 \Rightarrow Q_1' > Q_1$
     \begin{equation}
         \begin{split}
@@ -490,10 +490,10 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
     \begin{equation}
         \begin{split}
             \kappa_s &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_S \text{ (adiabatisch)} \\
-            \kappa_T &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_T \text{ (isoterm)}
+            \kappa_T &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_T \text{ (isotherm)}
         \end{split}
     \end{equation}
-    \item Ausdehungskoeffizient
+    \item Ausdehnungskoeffizient
     \begin{equation}
         \alpha = \frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_p
     \end{equation}
@@ -612,7 +612,7 @@ Beweis:
 \end{pmatrix} \qquad \square
     \end{split}
 \end{equation}
-Spezialfall der Kettenregel
+Spezialfall der Kettenregel:
 \begin{equation}
     \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(f, g)} = 1
 \end{equation}
@@ -646,7 +646,7 @@ Spezialfall der Kettenregel
     \end{equation}
 \end{enumerate}
 \subsubsection{Die Gibbs-Duhem-Beziehung}
-Fundamentalgleichung \eqref{eq:fundamentalEQ}, $E, S, V, N$ sind extensive Variablen
+Fundamentalgleichung (\autoref{eq:fundamentalEQ}), $E, S, V, N$ sind extensive Variablen
 \begin{equation}
     \difd E = T \difd S - p \difd V + \mu \difd N
 \end{equation}
