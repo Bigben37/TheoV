@@ -214,18 +214,213 @@ Allgemein:
 \end{equation}
 
 \subsection{2. Hauptsatz der Thermodynamik}
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{../img/irrevProcess.pdf}
+  \caption{caption}  % TODO caption
+  \label{img:irrevProcess}
+\end{center}
+\end{figure}
+Irreversible Prozesse, Ablauf?
+\begin{enumerate}[a)]
+    \item Es gibt eine extensive Zustandsgröße $S(E, V, N, \ldots)$, die \emph{Entropie}, die den Ablauf von Prozessen regelt.
+    \item In einem abgeschlossenen System kann die Entropie nicht abnehmen. $S$ ist ein Maß für die Unordung
+    (Unschärfe der Kentnis pber den mikroskopischen Zustand)
+\end{enumerate}
+
 \subsubsection{Äquivalente Formulierung des 2. Hauptsatzes}
+(Es gibt kein \emph{perpetuum mobile} 2. Art) \\
+Es gibt keine periodisch arbeitende Maschine, die \emph{ausschließlich}
+\begin{enumerate}[I.]
+    \item Wärme aus einem kalten in ein wärmeres Resorvoir überführt (\textsc{Clausius})
+    \item Wärme in Arbeit umwandelt (\textsc{Thomson}, \textsc{Lord Kelvin})
+\end{enumerate}
 \paragraph{Folgerungen}
+\begin{itemize}
+    \item aus b): für ein abgeschlossenes System gilt
+    \begin{equation}
+        \difd S = 0 \qquad
+        \begin{cases}
+            \text{i) } & \difd S > 0 \Leftrightarrow \text{Prozess irreversibel} \\
+            \text{ii)} & \difd S = 0 \Leftrightarrow \text{Prozess reversibel}
+        \end{cases}
+    \end{equation}
+    \item Thermodynamisches Gleichgewicht: $S$ maximal unter Berücksichtigung der gegebenen Randbedingungen
+\end{itemize}
+Die Entropie ist die zentrale statistische Größe der Thermodynamik und der statistischen Physik. Sie ist eine \emph{nicht-mechanische} Größe.
+Alle anderen nicht-mechanischen Größen ($\delta Q, T, \ldots$) können aus $S$ hergeleitet werden.
 \subsubsection{Die Temperatur}
-\paragraph{Eichung}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{../img/derivationT.pdf}
+        \caption{caption}  % TODO caption
+        \label{img:derivationT}
+    \end{center}
+\end{figure}
+\begin{equation}
+    \label{eq:derivationT:constTotEnergy}
+	\difd E_1 = - \difd E_2 \qquad \text{(konstante Gesamtenergie)}
+\end{equation}
+\begin{equation}
+    S = S_1(E_1, V_1, N_1) + S_2 (E_2, V_2, N_2)
+\end{equation}
+Im Gleichgewicht:
+\begin{equation}
+    \label{eq:derivationT:equilibrium}
+    0 = \difd S = \pd{S_1(E_1, V_1, N_1)}{E_1} \difd E_1 + \pd{S_2 (E_2, V_2, N_2)}{E_2} \difd E_2
+\end{equation}
+Mit \autoref{eq:derivationT:constTotEnergy} und \autoref{eq:derivationT:equilibrium} folgt:
+\begin{equation}
+    \pd{S_1}{E_1} = \pd{S_2}{E_2} =: \frac{1}{T} \qquad T:\text{absolute Temperatur}
+\end{equation}
+
+\paragraph{Eichung} Tripelpunkt des Wassers
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=0.3\textwidth]{../img/tripelpoint.pdf}
+  \caption{Tripelpunkt des Wassers.}
+  \label{img:tripelpoint}
+\end{center}
+\end{figure}
+\begin{equation}
+    \begin{split}
+        T_t &= 273.16 \, \text{K} \qquad P_t = 611.7 \, \text{Pa} \\
+        T_t &= 647.36 \, \text{K} \qquad P_t = 22.06 \, \text{MPa}
+    \end{split}
+\end{equation}
+
+\paragraph{Richtung des Energieflusses} \mbox{}\\ 
+Im Gleichgewicht: $T_1 = T_2$ \\
+Richtung des Energieflusses bei $T_1 \neq T_2$ ?
+\begin{equation}
+    \begin{split}
+        & \pd{S_1}{E_1} = \frac{1}{T_1}, \qquad \pd{S_2}{E_2} = \frac{1}{T_2} \\
+        & 0 < \difd S = \frac{1}{T_1} \difd E_1 + \frac{1}{T_2} \difd E_2 = \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \difd E_1
+    \end{split}
+\end{equation}
+$\Rightarrow$ für $T_2 > T_1$ ist $\difd E_1 > 0$. \\
+Es ist:
+\begin{equation}
+    \frac{\difd E}{\difd t} \propto (T_2 - T_1) \qquad \text{(empirisch)}
+\end{equation}
+\begin{equation}
+    \Rightarrow \frac{\difd S}{\difd t} \propto \frac{(T_2 - T_1)^2}{T_1 T_2}
+\end{equation}
+d.h. \emph{Entropieproduktion} ist proportional zu $(T_2 - T_1)^2$. Wichtig bei Fluktuationen, bei irreversibler Thermodynamik.
+
 \subsubsection{Die Wärme(menge)}
+\begin{equation}
+    \difd S_1 = \frac{1}{T_1} \difd E_1 \overset{(*)}{=} \frac{1}{T_1} \delta Q
+\end{equation}
+$(*)$: Energietransfer ohne Arbeitsleistung
+\begin{equation}
+    \Rightarrow \delta Q = T \difd S \qquad \text{2. Hauptsatz}
+\end{equation}
 \subsubsection{Der Druck}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{../img/derivationP.pdf}
+        \caption{caption}  % TODO caption
+        \label{img:derivatoinP}
+    \end{center}
+\end{figure}
+\begin{equation}
+    \begin{split}
+        & \difd E_1 = - \difd E_2 \\
+        & \difd V_1 = - \difd V_2 \\
+        & \difd S_1 = \pdi{S_1}{E_1}{V_1, N_1} \difd E_1 + \pdi{S_1}{V_1}{E_1, N_1} \difd V_1 \\
+        & \Rightarrow \difd E_1 = \underbrace{T_1 \difd S_1}_{\delta Q_1} - \underbrace{T_1 \pdi{S_1}{V_1}{E_1, N_1}}_{p_1 \text{ (Äquivalenzbet; 1. HS.)}} \difd V_1
+    \end{split}
+\end{equation}
+\begin{equation}
+    \Rightarrow p = T \pdi{S}{V}{E, N}
+\end{equation}
+Gleichgewicht: Volumenaustausch und Wärmeaustausch
+\begin{equation}
+    \begin{split}
+        & \difd V_1 = - \difd V2, \qquad \difd E_1 = - \difd E_2 \\
+        & \Rightarrow \difd S = \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \difd E_1 + \left( \frac{p_1}{T_1} - \frac{p_2}{T_2} \right) \difd V_1
+    \end{split}
+\end{equation}
+Im Gleichgewicht: $\difd S = 0$
+\begin{equation}
+    \Rightarrow T_1 = T_1 , \qquad p_1 = p_2
+\end{equation}
 \subsubsection{Das chemische Potential}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{../img/derivationMu.pdf}
+        \caption{caption}  % TODO caption
+        \label{img:derivationMu}
+    \end{center}
+\end{figure}
+Energie-, Volumen- und Teilchenaustausch.
+\begin{equation}
+    \begin{split}
+        \difd S_1 &= \pdi{S_1}{E_1}{V_1, N_1} \difd E_1 + \pdi{S_1}{V_1}{E_1, N_1} \difd V_1 + \pdi{S_1}{N_1}{E_1, V_1} \difd N_1 \\
+        & \Rightarrow \difd E_1 = \underbrace{T_1 \difd S_1}_{\delta Q} - \underbrace{p_1 \difd V_1}{\text{mech. Arbeit}}
+        \underbrace{- T_1 \pdi{S_1}{N_1}{E_1, V_1}}_{\mu_1} \difd N1
+    \end{split}
+\end{equation}
+$\mu$: Chemisches Potential
+\begin{equation}
+    \Rightarrow E_1 = \delta Q_1 - p_1 \difd V_1 + \mu_1 \difd N_1
+\end{equation}
+\begin{equation}
+    \mu = - T_1 \pdi{S_1}{N_1}{E_1, V_1}
+\end{equation}
+Im Gleichgewicht, wie oben, folgt $\mu_1 = \mu_2$.
+
 \subsubsection{Fundamentale Gleichung}
+\begin{equation}
+    \label{eq:fundamentalEQ}
+    \difd E = T \difd S - p \difd V + \mu \difd N
+\end{equation}
+$E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
+
 \subsubsection{Anwendungsbeispiele}
 \begin{enumerate}
-    \item Entropie des idealen Gases (einatomig)
+    \item Entropie des idealen Gases (einatomig) \\
+    Konstante Teilchenzahl $N$
+    \begin{equation}
+        \begin{split}
+            & T \difd S = \difd E + p \difd V, \qquad p V = N k T, \qquad E = \frac{3}{2} N k T \\
+            & \Rightarrow \difd S = \frac{\difd E}{T} + \frac{p}{T} \difd V = \frac{3}{2} N k \frac{\difd E}{E} + N k \frac{\difd V}{V}
+        \end{split}
+    \end{equation}
+    $\difd S$ totales Differential:
+    \begin{equation}
+        \Rightarrow S - S_0 = \frac{3}{2} N k \ln (\frac{E}{E_0}) + N k \ln (\frac{V}{V_0})
+    \end{equation}
+    Bemerkung: $S$ extensiv (korrekt!), da Ausdruck proportional zu $N$.
+    \paragraph{Adiabate} Linien konstanter Entropie \\
+    Hier: $\ln(E^{3/2} V) = \const \Leftrightarrow E^{3/2} V = \const$ \\
+    Äquivalente Schreibweise: $T^{3/2} V = \const \Leftrightarrow p^{3/2} V^{3/2} V = \const$ \\
+    $\Leftrightarrow p^{3/2} V^{5/2} = \const \Leftrightarrow p V^{5/3} = \const$
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=\textwidth]{../img/adiabate_pV_ST.pdf}
+            \caption{caption}  % TODO caption
+            \label{img:adiabate_pV_ST}
+        \end{center}
+    \end{figure}
     \item Gleichheit der absoluten Temperatur $T$ und der Temperatur des idealen Gases $T_G$
+    Denkbar ist $T_G = f(T)$
+    \begin{equation}
+        \begin{split}
+            & \difd S = \frac{1}{T} \difd E + \frac{p}{T}\difd V \qquad \text{Integrabilitätsbedingung} \\
+            & \frac{\partial}{\partial E} \left( \frac{p}{T} \right)_V = \frac{\partial}{\partial V} \left( \frac{1}{T} \right)_E = 0 \quad \text{da } E = \frac{3}{2} N k T_G
+        \end{split}
+    \end{equation}
+    Ideales Gas: $p V = N k T_G$
+    \begin{equation}
+        \begin{split}
+            \Rightarrow & \frac{\partial}{\partial E} \left( \frac{p}{T} \right)_V = \frac{N k }{V} \frac{\partial}{\partial E} \left( \frac{T_G}{T} \right)_V = 0 \\
+            \Rightarrow & \frac{\partial}{\partial T_G} \left( \frac{T_G}{T} \right) = 0 \\
+            \Rightarrow & T_G = T \cdot \const
+        \end{split}
+    \end{equation}
+    Die Konstante wird durch den Tripelpunkt des Wassers fixiert.
     \item \emph{Wirkungsgrad} einer Wärmekraftmaschine
     \begin{figure}[H]
         \begin{center}
@@ -338,7 +533,7 @@ Fundamentale Gleichung \eqref{eq:fundamentalEQ}:
         \Rightarrow & G=G(T, p, N)
     \end{split}
 \end{equation}
-$E, F, H, G$ heißen \emph{Thermodynamische Potentiale}. \\
+$E, F, H, G$ heißen \emph{Thermodynamische Potentiale}.
 \paragraph{Integrabilitätsbeziehungen} \mbox{}\\
 aus $E$:
 \begin{equation}
@@ -358,7 +553,7 @@ aus $G$:
 \begin{equation}
     - \left( \frac{\partial S}{\partial p} \right)_{T, N} = \left( \frac{\partial V}{\partial T} \right)_{p, N}, \quad \text{usw.}
 \end{equation}
-\textsc{Maxwell}-Beziehungen (insgesamt 12 Beziehungen) \\
+\textsc{Maxwell}-Beziehungen (insgesamt 12 Beziehungen)
 \subsubsection{Exkurs: Variablentransformation}
 Erwünscht:
 \begin{equation}
