@@ -657,7 +657,7 @@ Falls $f(\alpha x_1, \ldots, \alpha x_n) = \alpha^r f(x_1, \ldots, x_n)$ so ist
     \sum_{i=1}^{n} x_i \frac{\partial f}{\partial x_i} = r f
 \end{equation}
 Beweis: Differentiation nach $\alpha$ und dann $\alpha = 1$ setzten.
-\paragraph{}\mbox{}\\
+\paragraph{Fundamentalrelation}\mbox{}\\
 Damit folgt
 \begin{equation}
     \begin{split}
@@ -669,3 +669,160 @@ Damit, im Gleichgewicht
 \begin{equation}
     E = T S - p V + \mu N \qquad \text{Fundamentalrelation}
 \end{equation}
+Differentiation ergibt:
+\begin{equation}
+    \difd E = T \difd S + S \difd T - p \difd V - V \difd P + \mu \difd N + N \difd \mu
+\end{equation}
+\begin{equation}
+    \Rightarrow S \difd T - V \difd p + N \difd \mu = 0 \qquad \text{\textsc{Gibbs-Duhem} Beziehung}
+\end{equation}
+D.h. $T$, $p$ und $\mu$ nicht unabhängig voneinander. \\
+Folgerung: Die Zustandsgleichung muss zur eindeutigen Charakterisierung des Systems zumindest \emph{eine} extensive Größe enthalten. \\
+Folgerungen für die thermodynamischen Potentiale:
+\begin{equation}
+    \begin{split}
+        & E(S, V, N) = T S - p V + \mu N \\
+        & F(T, V, N) = E - TS = - pV + \mu N \\
+        & H(S, p, N) = E + p V = T S + \mu N \\
+        & G(T, p, N) = E + p V - T S = \mu N
+    \end{split}
+\end{equation}
+Man beachte: obwohl $G=\mu N$ recht einfach erscheint, ist zur Kennzeichnung des Systems die Kenntnis von $\mu$ als Funktion der \emph{natürlichen}
+Variablen $T, p, N$, d.h. die Funktionalität $\mu(T, p, N)$ notwendig.
+
+\subsubsection{Der Joule-Thomson-Prozess (gedrosselte Entspannung)}
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=0.3\textwidth]{../img/joule-thomson-process.pdf}
+  \caption{Joule-Thomson-Prozess.}
+  \label{img:joule-thomson-process}
+\end{center}
+\end{figure}
+Gasströmung bei konstant gehaltenen Druckwerten $p_1, p_2$. Irreversibler Prozess, keine Strömungsenergie wegen Drossel.
+\begin{equation}
+    \begin{split}
+        \difd E &= \difd E_1 + \difd E_2 = - p_1 \difd V_1 - p \difd V_2 \\
+        & \overset{p_1, p_2 = \const}{=} - \difd (p_1 V_1) - \difd (p_2, V_2) \\
+        & \Rightarrow \difd (E_1 + p_1 V_1) + \difd (E_2 p_2 V_2) = 0
+    \end{split}
+\end{equation}
+$\Rightarrow$ Die Gesamtenthalpie $H = E + p V$ bleibt erhalten.\\
+Von Interesse: Temperaturänderung bei Druckänderung. Infinitesimal verrücken.
+\begin{equation}
+    \frac{\Delta T}{\Delta p} \to \pdi{T}{p}{N, H} \equiv \kappa_\text{JT}
+\end{equation}
+Berechnung ($N$ konstant)
+\begin{equation}
+    \begin{split}
+     \pdi{T}{p}{H} &= \pd{(T, H)}{(p, H)} = \pd{(T, H)}{(T, p)} \cdot \pd{(T, p)}{(p, H)} \\ 
+    &= - \pdi{H}{p}{T} / \pdi{H}{T}{p} \\
+    \difd H &= T \difd S + V \difd p = T \pdi{S}{T}{p} \difd T + \left[ T \pdi{S}{p}{T} + V \right] \difd p \\
+    & \Rightarrow \pdi{H}{T}{p} = T \pdi{S}{T}{p} = c_p \\
+    \pdi{H}{p}{T} &= V + T \pdi{S}{p}{T} = V - T \pdi{V}{T}{p} \text{ (mit Maxwellbeziehung zu $G$)} \\
+    &= V \left[ 1 - T \alpha \right]
+    \end{split}
+\end{equation}
+Damit
+\begin{equation}
+    \kappa_\text{JT} = \frac{V \left( T \alpha - 1 \right) }{c_p}
+\end{equation}
+Im Versuch ist $\delta p$ negativ (Druckverminderung)
+\begin{equation}
+    \Rightarrow
+    \begin{cases}
+        \kappa_\text{JT} > 0 & \text{Temperaturabnahme} \\
+        \kappa_\text{JT} < 0 & \text{Temperaturzunahme} \\
+    \end{cases}
+\end{equation}
+\begin{enumerate}[a)]  % TODO alpha
+    \item Ideales Gas
+    \begin{equation}
+        \begin{split}
+            \alpha &= \frac{1}{V} \pdi{V}{T}{p} = \frac{1}{V} \frac{N k}{p} = \frac{N k}{N k T} = \frac{1}{T} \\
+            & \Rightarrow T \alpha - 1 = 0 \Rightarrow \kappa_\text{JT} = 0
+        \end{split}
+    \end{equation}
+    \item van-der Waals Gas: Hier, i.A. ist $\kappa_\text{JT} \neq 0$ (hängt von $p, T$ ab) \\
+    Die Kurve, für die $\kappa_\text{JT} = 0 $ gilt, heißt \emph{Inversionskurve}. Kühleffekte nur innerhalb 
+    $\kappa_\text{JT} > 0$
+\end{enumerate}
+
+\subsection{Thermodynamische Potentiale}
+Bereits kennengelernt $E(S, V, n), F(T, V, N), H(S, p, N), G(T, p, N)$ und Varianten, z.B. $S(E, V, N)$. Die obigen Potentiale
+sind durch sogenannte \emph{Legendre-Transformationen} miteinander verknüpft. \\
+Allgemeines Schema: Sei $P(x_1, \ldots, x_n)$ ein thermodynamisches Potential mit
+\begin{equation}
+    \difd P = K_1 \difd x_1 + K_2 \difd x_2 + \ldots + K_n \difd x_n
+\end{equation}
+Dann ist $Q_i := P - K_i x_i$ neues thermodynamisches Potential mit
+\begin{equation}
+    \begin{split}
+        \difd Q_i &= K_1 \difd x_1 + \ldots + K_i \difd x_i + \ldots + K_n \difd x_n - K_i \difd x_i - x_i \difd K_i \\
+        & = K_1 \difd x_1 + \ldots - x_i \difd K_i + \ldots + K_n \difd x_n
+    \end{split}
+\end{equation}
+d.h. $Q_i = Q(x_1, \ldots, x_{i-1}, K_i, x_{i+1}, \ldots, x_n)$ und
+\begin{equation}
+    \pdi{Q_1}{x_1}{x_2, \ldots, K_i, \ldots, x_n} = K_1, \ldots, \pdi{Q}{K_i}{x_1, \ldots, x_i, \ldots x_n} % TODO letztes x_i durchgestrichen
+\end{equation}
+Die beiden Potentiale $P$ und $Q$ enthalten die gleichen Information. Es ist eine Frage der Zweckmäßigkeit, welches thermodynamisches Potential
+im Spezialfall benutzt wird. \\
+$x_1, \ldots, x_i, \ldots, x_n \to $ natürliche Variable von $P$; \\
+$x_1, \ldots, k_i, \ldots, x_n \to$ natürliche Variable von $Q_i$ \\
+Zum Informationsverlust bei beliebigen Transformationen und zur heuristischen Begründung der Legendre-Transformation siehe z.B. A. u. H. §3.23. \\[\baselineskip]
+Damit enthalten $E, F, G$ und $H$ als Funktion ihrer natürlichen Variablen die gleiche INformation
+\begin{equation}
+    \begin{split}
+        & F(T, V, N) = E - ST \\
+        & G(T, p, N) = F + p V = E - ST + pV \\
+        & H(S, p, N) = E + pV
+    \end{split}
+\end{equation}
+Bedeutung:
+\begin{description}
+    \item[$F$] \emph{isotherme Prozesse}: Freie Energie; Anteil der Gesamtenergie, der zur Arbeitsleistung verwendet werden kann
+    \item[$G$] \emph{isotherm-isobare Prozesse}: Freie Enthalpie (Gibbssches Potential); Wichtig für chemische Prozesse.
+    \item[$H$] \emph{adiabatisch-isobare Prozesse}
+\end{description}
+Es gibt weitere thermodynamische Potentiale, z.B. das \emph{großkanonische} Potential $\Omega = \Omega(T, V, \mu)$. 
+\begin{equation}
+    \begin{split}
+        \Omega(T, V, \mu) &= F - \mu N \\
+        \Rightarrow \difd \Omega &= - S \difd T - p \difd V - N \difd \mu
+    \end{split}
+\end{equation}
+Fundamentalbeziehung $F=-pV + \mu N$
+\begin{equation}
+    \Rightarrow \Omega = - p V
+\end{equation}
+Vorsicht: $p$ ist \emph{keine} natürliche Variable von $\Omega$; für die Kenntnis des Systems brauchen wir $p(T, V, \mu)$.\\[\baselineskip]
+Ein Beispiel zum Zurückrechnen: $\Omega$ ist bekannt; wie sieht $E$ aus? \\
+$\Omega(T, V, \mu)$ bekannt:
+\begin{equation}
+    \begin{split}
+        S &= \pdi{\Omega}{T}{V, \mu} \\
+        N &= \pdi{\Omega}{\mu}{T, V} \\
+        \Rightarrow &
+        \begin{cases}
+            S(T, V, \mu) \\
+            N(T, V, \mu)
+        \end{cases} \\
+        \Rightarrow &
+        \begin{cases}
+            T = T(S, V, N) \\
+            \mu = \mu(S, V, N)
+        \end{cases} \\
+        \Rightarrow & E(S, V, N) = \Omega + TS + \mu N \\
+        &= \Omega(T(S, V, N), V, \mu(S, V, N)) + T(S, V, N) S + \mu (S, V, N) N
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{array}{lll}
+        E & \difd E = T \difd S - p \difd V + \mu \difd N & E(S, V, N) \\
+        F = E - TS & \difd F = - S \difd T - p \difd V + \mu \difd N & F(T, V, N) \\
+        H = E + pV & \difd H = T \difd S + V \difd p + \mu \difd N & H(S, p, N) \\
+        G = E - TS + pV & \difd G = - S \difd T + V \difd p + \mu \difd N & G(T, p, N) \\
+        \Omega = E - TS - \mu N & \difd \Omega = - S \difd T - p \difd V - N \difd \mu & \Omega(T, V, \mu)
+    \end{array}
+\end{equation}
+Es gibt noch weitere zwei thermodynamische Potentiale, welche allerdings ungebräuchlich sind.
