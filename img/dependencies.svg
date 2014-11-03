@@ -127,7 +127,7 @@
      inkscape:cx="643.01785"
      inkscape:cy="261.66291"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4002"
      showgrid="false"
      inkscape:snap-global="true"
      inkscape:snap-bbox="true"
@@ -153,7 +153,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -188,7 +188,7 @@
        id="g4558">
       <path
          transform="matrix(1.1454545,0,0,1.1562811,3.465348,361.03493)"
-         d="m 258.59905,152.1451 a 111.11678,32.324883 0 1 1 -222.233564,0 111.11678,32.324883 0 1 1 222.233564,0 z"
+         d="m 258.59905,152.1451 c 0,17.85254 -49.74868,32.32488 -111.11678,32.32488 -61.368105,0 -111.116784,-14.47234 -111.116784,-32.32488 0,-17.85254 49.748679,-32.32489 111.116784,-32.32489 61.3681,0 111.11678,14.47235 111.11678,32.32489 z"
          sodipodi:ry="32.324883"
          sodipodi:rx="111.11678"
          sodipodi:cy="152.1451"
@@ -237,7 +237,7 @@
        id="g4563">
       <path
          transform="matrix(1.8181818,0,0,1.3750311,617.80857,305.41016)"
-         d="m 258.59905,152.1451 a 111.11678,32.324883 0 1 1 -222.233564,0 111.11678,32.324883 0 1 1 222.233564,0 z"
+         d="m 258.59905,152.1451 c 0,17.85254 -49.74868,32.32488 -111.11678,32.32488 -61.368105,0 -111.116784,-14.47234 -111.116784,-32.32488 0,-17.85254 49.748679,-32.32489 111.116784,-32.32489 61.3681,0 111.11678,14.47235 111.11678,32.32489 z"
          sodipodi:ry="32.324883"
          sodipodi:rx="111.11678"
          sodipodi:cy="152.1451"
@@ -349,7 +349,7 @@
            y="778.78815"
            x="977.68115"
            id="tspan3830"
-           sodipodi:role="line">Berechnung und Deutung</tspan><tspan
+           sodipodi:role="line">Berechnung und Deutung \\</tspan><tspan
            id="tspan3832"
            y="828.78815"
            x="977.68115"
