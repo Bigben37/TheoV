@@ -826,3 +826,131 @@ $\Omega(T, V, \mu)$ bekannt:
     \end{array}
 \end{equation}
 Es gibt noch weitere zwei thermodynamische Potentiale, welche allerdings ungebräuchlich sind.
+
+\subsection{3. Hauptsatz der Thermodynamik}
+Auch bekannt als \textsc{Nerst}'sches Theorem (1906) \\
+Die Entropie eines homogenen, realen Stoffes ist bei $T=0$ Null. \\
+Mathematisch formuliert: 
+\begin{equation}
+    \lim_{T \to 0} S(T, V) = 0, \qquad \lim_{T \to 0} S(T, P) = 0
+\end{equation}
+Erfahrungssatz der Thermodynamik. Beweis: Quantenstatistik. \\[\baselineskip]
+Bemerkung: Der 3. Hauptsatz gilt nicht für das ideale Gas.
+\subsubsection{Folgerungen aus dem 3. Hauptsatz}
+\begin{enumerate}[i)]
+    \item Der Satz gilt für alle $V$ und $p$, somit
+    \begin{equation}
+        \lim_{T \to 0} \pdi{S}{V}{T} = 0, \qquad \lim_{T \to 0} \pdi{S}{p}{T} = 0
+    \end{equation}
+    \item Sei $C_\xi$ die spezifische Wärme ($\xi = p$ oder $V$), $c_\xi = T \pdi{S}{T}{\xi}$. Entlang eines reversiblen Weges ist
+    \begin{equation}
+        S(T, \xi) = \int_{0}^{T} c_\xi(T') \frac{\difd T'}{T'} + \underbrace{S(T=0, \xi)}_{=0, \text{ mit 3. HS}}
+    \end{equation}
+    Damit $\lim_{T \to 0} S(T, \xi) = 0$ ist, muss gelten:
+    \begin{equation}
+        \begin{split}
+            & \lim_{T \to 0} c_\xi(T) = 0 \\
+            \Rightarrow & c_V (T=0) = 0 = c_p(T=0)
+        \end{split}
+    \end{equation}
+    \item Ausdehnungskoeffizient $\alpha$
+    \begin{equation}
+        \lim_{T \to 0} \alpha = \lim_{T \to 0} \frac{1}{V} \pdi{V}{T}{p} = - \lim_{T \to 0} \frac{1}{V} \pdi{S}{p}{T} = 0
+    \end{equation}
+    Weiterhin ist mit $\pdi{p}{V}{T} \pdi{T}{p}{V} \pdi{V}{T}{p} = -1 \, (*)$:
+    \begin{equation}
+        \begin{split}
+            & \lim_{T \to 0} \frac{c_p - c_V}{T} = \lim_{T \to 0} \left[ \pdi{S}{V}{T} \pdi{p}{T}{V} \pdi{p}{V}{T} \right] \\
+            &\overset{(*)}{=} \lim_{T \to 0} \left\{ \pdi{S}{V}{T} \left[- \pdi{V}{T}{p} \right] \right\} \\
+            &= \lim_{T \to 0} \left\{ \pdi{S}{V}{T} \pdi{S}{p}{T} \right\} = 0
+        \end{split}
+    \end{equation}
+    \item Der absolute Nullpunkt ist unerreichbar, nur \emph{asymptotische} Annäherungen möglich. In Frage kommen nur adiabatische Prozesse,
+    z.B. adiabatische Expansion
+    \begin{equation}
+        \begin{split}
+            0 &= T \difd S = T \pdi{S}{T}{p} \difd T + T \pdi{S}{p}{T} \difd p \\
+            &= c_p \difd T - T \pdi{V}{T}{p} \difd p \\
+            &= c_p \difd T - \alpha V T \difd p \\
+            \Rightarrow & \Delta T = \frac{\alpha V T}{c_p} \Delta p
+        \end{split}
+    \end{equation}
+    Führt eine Druckänderung $\Delta p$ zu einer Temperaturänderung $\Delta T$ in der Nähe von $T=0$ ?
+    Gesucht: Wert von $\lim_{T \to 0} \frac{\alpha V T}{c_p}$.\\
+    Nun ist $c_p \propto T^x \ (x > 0)$ für kleine $T$, dann auch $S \propto T^x$ (da $c_p = T \pdi{S}{T}{p}$) und
+    $V \alpha \propto T^x$ (siehe iii)). Somit:
+    \begin{equation}
+        \lim_{T \to 0} \frac{\alpha V}{c_p} = \const \Rightarrow \lim_{T \to 0}  \frac{\alpha V T}{c_p} = 0
+    \end{equation}
+    Hinweis: Experimentell verwendet man die adiabatische Entmagnetisierung einer paramagnetischen Substanz
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.3\textwidth]{../img/paramag_Tto0.pdf}
+            \caption{caption}  % TODO caption
+            \label{img:paramag_Tto0}
+        \end{center}
+    \end{figure}
+    \item Weitere Folgerungen
+    \begin{itemize}
+        \item Da $F = E - TS$, hat man $F = E$ im Grenzfall $T \to 0$
+        \begin{equation}
+            \begin{split}
+                \difd F &= - S \difd T - p \difd V \Rightarrow \lim_{T \to 0} \pdi{F}{T}{V} = \lim_{T \to 0} (-S) = 0 \\
+                \difd E &= \difd F + T \difd S + S \difd T \\
+                \Rightarrow & \lim_{T \to 0} \pdi{E}{T}{V} = \lim_{T \to 0} \pdi{E}{T}{V} 
+                + \lim_{T \to 0} \underbrace{\left[ T \pdi{S}{T}{V} \right]}_{c_V} + \lim_{T \to 0} S = 0
+            \end{split}
+        \end{equation}
+        \begin{equation}
+            \begin{split}
+            	& E(T, V) = \int_{0}^{T} c_V \difd T' + E(0, V) \text{ mit } c_V > 0 \\
+            	&\Rightarrow E(T, V) > E(0, V) \text{ für } T > 0, T \text{ klein} \\
+            	& F(T, V) = E(T, V) - T \int_{0}^{T} \frac{c_V}{T'} \difd T' \\
+            	& = \underbrace{E(0, V)}_{=F(0, V)} - T \int_{0}^{T} \underbrace{\left( \frac{c_V}{T'} - \frac{c_V}{T} \right)}_{>0} \difd T'
+            \end{split}
+        \end{equation}
+        \begin{figure}[H]
+            \begin{center}
+                \includegraphics[width=0.3\textwidth]{../img/FandEoverT.pdf}
+                \caption{caption}  % TODO caption
+                \label{img:FandEoverT}
+            \end{center}
+        \end{figure}
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Stabilität des Gleichgewichtzustandes}
+Im Gleichgewicht ist die Entropie maximal. Von Interesse: Rolle der Fluktuation.
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=0.3\textwidth]{../img/asdf.pdf}
+  \caption{caption}
+  \label{img:label}
+\end{center}
+\end{figure}
+\begin{equation}
+    \begin{split}
+        & \Delta S \simeq \sum_{\alpha = 1, 2} \left[ \pdi{S_\alpha}{E_\alpha}{V_\alpha, N_\alpha} \Delta E_\alpha
+        + \pdi{S_\alpha}{V_\alpha}{E_\alpha, V_\alpha} \Delta V_\alpha + \pdi{S_\alpha}{N_\alpha}{E_\alpha, V_\alpha} \Delta N_\alpha \right] \\
+        & \Delta E_1 = - \Delta E_2, \quad \Delta V_1 = - \Delta V_2, \quad \Delta N_1 = - \Delta N_2 \\
+        & \Delta S \simeq = \left( \frac{1}{T_1} - \frac{1}{T_2} \right) \Delta E_1 + \left( \frac{p_1}{T_1}
+        - \frac{p_2}{T_2} \right) \Delta V_1 + \left( \frac{\mu_1}{T_1} - \frac{\mu_2}{T_2} \right) \Delta N_1
+    \end{split}
+\end{equation}
+Gleichgewicht: $S$ maximal $\Rightarrow \Delta S = 0; \Delta E_1, \Delta V_1, \Delta N_1$ sind beliebig
+$\Rightarrow T_1 = T_2 \Rightarrow p_1 = p_2$ und $\mu_1 = \mu_2$. \\
+Das gleiche Ergebnis folgt, wenn man Önderungen der Energie betrachtet:
+\begin{equation}
+    \Delta E \simeq \underbrace{\left( T_1 - T_2 \right)  \Delta S_1 - \left( p_1 - p_2 \right) \Delta V_1 + \left( \mu_1 - \mu_2 \right) \Delta N_1}_{\Delta E^{(1)}; \text{linearisierter Ausdruck}} \quad \text{($E$ minimal)}
+\end{equation}
+Betrachten wir Fluktuationen aus dem Gleichgewicht. Im Gleichgewicht $\Delta E^{(1)} = 0$. \\
+Fundamental ist die Rolle der höheren Ableitungen: $\Delta E = \Delta E^{(1)} + \Delta E^{(2)} + \ldots$
+\begin{equation}
+    \text{so ergibt} \quad
+    \begin{cases}
+        \Delta E^{(2)} > 0 & \text{stabiler Zustand} \\
+        \Delta E^{(2)} < 0 & \text{instabiler Zustand} \\
+        \Delta E^{(2)} = 0 & \text{Zustand ist indeterminiert,} \\
+        & \text{hängt von den weiteren Ableitungen ab.}
+    \end{cases}
+\end{equation}
