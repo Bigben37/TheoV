@@ -15,7 +15,7 @@
    id="svg2"
    height="744.09003"
    width="1052.3622"
-   sodipodi:docname="exampleDApiston.svg">
+   sodipodi:docname="exampleDApiston.pdf">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.53026592"
-     inkscape:cx="744.84423"
-     inkscape:cy="309.36817"
+     inkscape:zoom="0.74990926"
+     inkscape:cx="544.93281"
+     inkscape:cy="425.64653"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -44,6 +44,32 @@
      inkscape:snap-global="false" />
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="StopM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="StopM"
+       style="overflow:visible">
+      <path
+         id="path5145"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="StopL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="StopL"
+       style="overflow:visible">
+      <path
+         id="path5142"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8)" />
+    </marker>
     <pattern
        patternUnits="userSpaceOnUse"
        width="256"
@@ -722,30 +748,66 @@
        xml:space="preserve"
        id="flowRoot4909"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(424.31541,653.38204)"><flowRegion
+       transform="translate(417.71495,670.35466)"><flowRegion
          id="flowRegion4911"><rect
            id="rect4913"
            width="226.30154"
            height="132.00923"
            x="384.71265"
            y="55.756145" /></flowRegion><flowPara
-         id="flowPara4915">$\vec{K}$</flowPara></flowRoot>    <flowRoot
+         id="flowPara4915"
+         style="font-size:20px">$\vec{K}$</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4909-4"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(378.68958,797.06383)"><flowRegion
+       transform="translate(377.74666,813.09352)"><flowRegion
          id="flowRegion4911-3"><rect
            id="rect4913-9"
            width="226.30154"
            height="132.00923"
            x="384.71265"
            y="55.756145" /></flowRegion><flowPara
-         id="flowPara4915-8">$F$</flowPara></flowRoot>    <path
+         id="flowPara4915-8"
+         style="font-size:20px">$F$</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 710.96404,475.8284 49.97492,95.70669"
        id="path4944"
        inkscape:connector-curvature="0"
        transform="translate(0,308.27218)"
        sodipodi:nodetypes="cc" />
-  </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       d="m 688.56219,673.30711 0,135.30947"
+       id="path4965"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#StopL);marker-end:url(#StopL)"
+       d="m 688.75,655.64803 5.66735,0"
+       id="path4967"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5723"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(38.530848,344.46057)"><flowRegion
+         id="flowRegion5725"><rect
+           id="rect5727"
+           width="223.47278"
+           height="77.319695"
+           x="638.35895"
+           y="277.81454" /></flowRegion><flowPara
+         id="flowPara5729"
+         style="font-size:16px">$\difd x$</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6725"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(22.143847,327.6021)"><flowRegion
+         id="flowRegion6727"><rect
+           id="rect6729"
+           width="79.205544"
+           height="54.218079"
+           x="584.61237"
+           y="399.45163" /></flowRegion><flowPara
+         id="flowPara6731"
+         style="font-size:20px">$p$</flowPara></flowRoot>  </g>
 </svg>
