@@ -48,7 +48,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.87710168)%
+  \begin{picture}(1,0.90415731)%
     \put(0,0){\includegraphics[width=\unitlength]{exampleDQcoil.pdf}}%
+    \put(0.47227676,0.16724183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28098947\unitlength}\raggedright $R$\end{minipage}}}%
+    \put(0.29961246,0.92151394){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19225595\unitlength}\raggedright $I$\end{minipage}}}%
   \end{picture}%
 \endgroup%

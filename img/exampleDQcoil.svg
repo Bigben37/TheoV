@@ -38,9 +38,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="609.21661"
-     inkscape:cy="461.58264"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="352.18082"
+     inkscape:cy="386.2185"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -63,7 +63,8 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
-     inkscape:snap-page="false" />
+     inkscape:snap-page="false"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -136,6 +137,33 @@
        style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 389.07774,548.89829 183.66742,0"
        id="path3820-9"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2994"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,308.2677)"><flowRegion
+         id="flowRegion2996"><rect
+           id="rect2998"
+           width="153.54318"
+           height="81.822357"
+           x="370.72598"
+           y="582.47009" /></flowRegion><flowPara
+         id="flowPara3000">$R$</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3002"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-159,310.2677)"><flowRegion
+         id="flowRegion3004"><rect
+           id="rect3006"
+           width="105.05586"
+           height="67.680222"
+           x="435.37573"
+           y="168.30753" /></flowRegion><flowPara
+         id="flowPara3008">$I$</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Mend)"
+       d="m 314.27933,534.34429 -53.67117,0"
+       id="path3010"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
