@@ -1,0 +1,62 @@
+\section{Anwendungen der Thermodynamik}
+\subsection{Die Misch(ungs)entropie}
+Beispiel: Mischung zweier idealer Gase \\
+TODO: Bild: 2 Kasten mit Loch \\ %TODO Bild
+\begin{equation}
+    p = \frac{N_1 k T}{V_1} = \frac{N_2 k T}{V_2} \Rightarrow \frac{N_1}{V_1} = \frac{N_2}{V_2}
+\end{equation}
+Partialdrucke
+\begin{equation}
+    p_1 = \frac{N_1 k T}{V}; \quad p_2 = \frac{N_2 k T}{V}
+\end{equation}
+\textsc{Dalton}sches Gesetz: Der Gesamtdruck $p_G$ it die Summe der Partialdrücke, $p_G = p_1 + p_2$ \\
+Hier:
+\begin{equation}
+    p_G = \frac{N_1 k T}{V} + \frac{N_2 k T}{V} = \frac{p V_1 + p V_2}{V} = p
+\end{equation}
+Außerdem ändert sich $E_1$ und $E_2$ nicht. \\
+Was passiert mit der Entropie? Anfangswerte:
+\begin{equation}
+    \begin{split}
+        & S_1 = S_{10} + \frac{3}{2} N_1 k \ln(E_1) + N_1 k \ln(V_1) \\
+        & S_2 = S_{20} + \frac{3}{2} N_2 k \ln(E_2) + N_2 k \ln(V_2) \\
+        & S_A = S_1 + S_2 \quad \text{A=Anfang}
+    \end{split}
+\end{equation}
+Was ändert sich nach der Öffnung? $V_1 \to V, V_2 \to V$. Damit ist für $S_E$ ($E=$ Ende):
+\begin{equation}
+    \begin{split}
+        S_E - S_A &= N_1 k \left[ \ln(V) - \ln(V_1) \right] + N_2 k \left[ \ln(V) - \ln(V_2) \right] \\
+        &= k N_1 \ln \left( \frac{V}{V_1} \right)  + k N_2 \ln \left( \frac{V}{V_2} \right) \\
+        &= k \left[ N_1 \ln \left( \frac{N_G}{N_1} \right) + N_2 \ln \left( \frac{N_G}{N_2} \right)  \right] \quad \text{mit } N_G = N_1 + N_2
+    \end{split}
+\end{equation}
+$\Rightarrow$ Zunahme der Entropie. \\[\baselineskip]
+Allgemein: für $m$ ideale Gase
+\begin{equation}
+    S_E - S_A = k \sum_{i=1}^{m} N_i \ln \left( \frac{N_G}{N_i} \right) \quad \text{mit } N_G = N_1 + \ldots + N_m
+\end{equation}
+oder mit $n_i$ Molzahl, $N_i = N_A n_i$, $R = k N_A$ (Gaskonstante)
+\begin{equation}
+    S_E - S_A = R \sum_{i=1}^{m} n_i \ln \left( \frac{n_G}{n_i} \right) \quad n_G = n_1 + \ldots + n_m
+\end{equation}
+Man beachte: $S_E - S_A > 0$ für $i > 0$; der Prozess ist irreversibel. \\
+Was passiert, wenn die zwei Gase identisch sind? Dann findet, entgegen der abgeleiteten Gleichung, \emph{keine} Vermehrung der Entropie statt 
+(\textsc{Gibbs}sches Paradoxon). Wichtig hier : die \emph{Ununterscheidbarkeit} der Teilchen.
+
+\subsection{Heterogene Systeme}
+Bestehen aus mehreren \emph{Phasen} (getrennte homogene Gebiete mit verschiedenen Eigenschaften). Phasenübergänge: sichtbar im ($p$, $T$) oder 
+($p$, $V$) Diagramm. \\
+TODO: Bild (p, T) + (p, V) Diagramm, Phasen\\  % TODO Bild
+Folgt: Koexistenz zwischen Gas-Flüssig, Flüssig-Fest, Gas-Fest Gemischen.\\
+Bei der Phasenumwandlung sind $T$, $p$ und $N$ konstant. \\
+$\Rightarrow$ Thermodynamisches Potential $G$. Im Gleichgewicht ist $G$ minimal. \\[\baselineskip]
+Beispiel: Zwei getrennte Phasen (1 und 2), daher keine Mischentropie.
+\begin{equation}
+    G(T, p, n_1, n_2) = n_1 g_1(T, p) + n_2 g_2(T, p) \qquad \text{($g_i$: freie Enthalpie pro Mol)}
+\end{equation}
+Im Gleichgewicht: $\Delta G = 0$; $T, p$ sind konstant und $\Delta n_1 = - \Delta n_2$
+\begin{equation}
+    \Rightarrow g_1(T, p) = g_2(T, p) \quad \text{entlang der $T$, $p$ Umwandlungskurve}
+\end{equation}
+Bei bekannten $g_1$ und $g_2$ folgt $T = T(p)$, d.h. die Temperatur der Phasenumwandlung bei gegebenem Druck.

@@ -952,7 +952,7 @@ Im Gleichgewicht ist die Entropie maximal. Von Interesse: Rolle der Fluktuation.
 \end{equation}
 Gleichgewicht: $S$ maximal $\Rightarrow \Delta S = 0; \Delta E_1, \Delta V_1, \Delta N_1$ sind beliebig
 $\Rightarrow T_1 = T_2 \Rightarrow p_1 = p_2$ und $\mu_1 = \mu_2$. \\
-Das gleiche Ergebnis folgt, wenn man Önderungen der Energie betrachtet:
+Das gleiche Ergebnis folgt, wenn man Änderungen der Energie betrachtet:
 \begin{equation}
     \Delta E \simeq \underbrace{\left( T_1 - T_2 \right)  \Delta S_1 - \left( p_1 - p_2 \right) \Delta V_1 + \left( \mu_1 - \mu_2 \right) \Delta N_1}_{\Delta E^{(1)}; \text{linearisierter Ausdruck}} \quad \text{($E$ minimal)}
 \end{equation}
@@ -966,4 +966,67 @@ Fundamental ist die Rolle der höheren Ableitungen: $\Delta E = \Delta E^{(1)} +
         \Delta E^{(2)} = 0 & \text{Zustand ist indeterminiert,} \\
         & \text{hängt von den weiteren Ableitungen ab.}
     \end{cases}
+\end{equation}
+Folgerungen: \\
+TODO: Graphik Fluktuation von Wärmeenergie.\\  % TODO Bild
+\begin{equation}
+    \begin{split}
+        & \Delta S_1 = - \Delta S_2 \qquad \text{Fluktuation} \\
+        & \Delta V_1 = \Delta V_2 = \Delta N_1 = \Delta N_2 = 0 \\
+        & \Rightarrow \Delta E^{(2)} \simeq = \frac{1}{2} \left( \frac{\partial^2 E_1}{\partial S_1^2} \right)_{V_1, N_1} (\Delta S_1)^2 +  
+        \left( \frac{\partial^2 E_2}{\partial S_2^2} \right)_{V_2, N_2} (\Delta S_2)^2 
+    \end{split}
+\end{equation}
+Nun ist
+\begin{equation}
+    \left( \frac{\partial^2 E}{\partial S^2} \right)_{V, N} = \pdi{T}{S}{V, N} = \frac{T}{c_V}  \quad \text{und} \quad
+    (\Delta S_1)^2 = (\Delta S_2)^2
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Delta E^{(2)} = \frac{1}{2} (\Delta S_1)^2 \left( \frac{T_1}{C_{V1}} + \frac{T_2}{C_{V2}} \right) = (\Delta S_1)^2 \frac{T_1}{c_{V1}}
+    \end{split}
+\end{equation}
+Aus $\Delta E^{(2)} > 0$ folgt:
+\begin{equation}
+    c_V > 0
+\end{equation} 
+Betrachten wir die Fluktuation um $V$ bei konstant gehaltenen $S$ und $N$. \\
+Hier ist
+\begin{equation}
+    \left( \frac{\partial^2 E}{\partial V^2} \right)_{S, N} = - \pdi{p}{V}{S, N} = - \frac{1}{\pdi{V}{p}{S, N}} = \frac{1}{V \kappa_S}
+\end{equation}
+Wie oben:
+\begin{equation}
+    \Rightarrow \kappa_S > 0
+\end{equation}
+$F = E - TS$. Im thermodynamischen Gleichgewicht. $0 \leq \Delta F = \Delta F^{(2)}$ ($F$ minimal im Gleichgewicht, $\Delta F^{(1)} = 0$). \\
+Hier ist
+\begin{equation}
+    \left( \frac{\partial^2 F}{\partial V^2} \right)_{T, N} = - \pdi{p}{V}{T, N} = \frac{1}{V \kappa_T} \Rightarrow \kappa_T > 0
+\end{equation}
+$H = E + pV$. Hier:
+\begin{equation}
+    \left( \frac{\partial^2 H}{\partial S^2} \right)_{p, N} = \pdi{T}{S}{p, N} = \frac{T}{c_p} \Rightarrow c_p > 0
+\end{equation}
+Diese Beispiele sind \emph{Spezialfälle} eines allgemeinen Satzes: \\[\baselineskip]
+Sei $\Phi$ entweder die Energie des Systems oder eine Legendre-Transformierte davon. $\Phi$ sei eine Funktion der natürlichen Variablen 
+$X_1, \ldots, X_r$ und $I_{r+1}, \ldots, I_n$ ($X_i$ extensiv, $I_j$ intensiv). Damit ist
+\begin{equation}
+    \difd \Phi = \sum_{i=1}^{r}  I_i \difd X_i - \sum_{j=r+1}^{n} X_j \difd I_j
+\end{equation}
+und es gelten die \emph{Stabilitätsbedingungen}
+\begin{equation}
+    0 \leq \pdi{Itext_k}{X_k}{X_i (i \neq k), I_j} \qquad \forall k \qquad \text{(\textsc{Chandler}, Kap. 2)}
+\end{equation}\\
+Physikalische Deutung: Prinzip von \textsc{Le Chatelier}: Jede spontane Änderung des Systems aus dem Gleichgewicht führt zu Prozessen, die zur 
+Wiederherstellung des Gleichgewichts streben. Z.B. Zufuhr von Wärme bei $c_V > 0 \Rightarrow$ lokale Erhöhung von $T \Rightarrow $ 
+Ausgleich der Temperatur (Wärmeabfuhr). \\[\baselineskip]
+Es gilt:
+\begin{equation}
+    c_p > c_V > 0
+\end{equation}
+und
+\begin{equation}
+    \kappa_T > \kappa_S > 0
 \end{equation}
