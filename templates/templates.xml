@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="net.sourceforge.texlipse.templates.math" deleted="false" description="Big braces" enabled="true" name="br">\left( ${formula} \right) ${cursor}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="math equation" enabled="true" name="eq">\begin{equation}
+    ${cursor}
+\end{equation}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="equation with split" enabled="true" name="eqs">\begin{equation}
+    \begin{split}
+        ${cursor}
+    \end{split}
+\end{equation}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.math" deleted="false" description="integral with borders" enabled="true" name="integral">\int_{${lower}}^{${upper}} ${cursor}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.math" deleted="false" description="matrix" enabled="true" name="matrix">\begin{pmatrix}
+  ${cursor}
+\end{pmatrix}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.math" deleted="false" description="sum with borders" enabled="true" name="sum">\sum_{${lower}}^{${upper}} ${cursor}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.math" deleted="false" description="text in math mode" enabled="true" name="text">\text{${text}}${cursor}</template></templates>
