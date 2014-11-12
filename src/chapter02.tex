@@ -41,11 +41,11 @@ oder mit $n_i$ Molzahl, $N_i = N_A n_i$, $R = k N_A$ (Gaskonstante)
     S_E - S_A = R \sum_{i=1}^{m} n_i \ln \left( \frac{n_G}{n_i} \right) \quad n_G = n_1 + \ldots + n_m
 \end{equation}
 Man beachte: $S_E - S_A > 0$ für $i > 0$; der Prozess ist irreversibel. \\
-Was passiert, wenn die zwei Gase identisch sind? Dann findet, entgegen der abgeleiteten Gleichung, \emph{keine} Vermehrung der Entropie statt 
+Was passiert, wenn die zwei Gase identisch sind? Dann findet, entgegen der abgeleiteten Gleichung, \emph{keine} Vermehrung der Entropie statt
 (\textsc{Gibbs}sches Paradoxon). Wichtig hier : die \emph{Ununterscheidbarkeit} der Teilchen.
 
 \subsection{Heterogene Systeme}
-Bestehen aus mehreren \emph{Phasen} (getrennte homogene Gebiete mit verschiedenen Eigenschaften). Phasenübergänge: sichtbar im ($p$, $T$) oder 
+Bestehen aus mehreren \emph{Phasen} (getrennte homogene Gebiete mit verschiedenen Eigenschaften). Phasenübergänge: sichtbar im ($p$, $T$) oder
 ($p$, $V$) Diagramm. \\
 TODO: Bild (p, T) + (p, V) Diagramm, Phasen\\  % TODO Bild
 Folgt: Koexistenz zwischen Gas-Flüssig, Flüssig-Fest, Gas-Fest Gemischen.\\
@@ -60,3 +60,126 @@ Im Gleichgewicht: $\Delta G = 0$; $T, p$ sind konstant und $\Delta n_1 = - \Delt
     \Rightarrow g_1(T, p) = g_2(T, p) \quad \text{entlang der $T$, $p$ Umwandlungskurve}
 \end{equation}
 Bei bekannten $g_1$ und $g_2$ folgt $T = T(p)$, d.h. die Temperatur der Phasenumwandlung bei gegebenem Druck.
+Weiterhin ist $\Delta g_1 = \Delta g_2$, d.h.
+\begin{equation}
+    \pdi{g_1}{T}{p} \Delta T + \pdi{g_1}{p}{T} \Delta p = \pdi{g_2}{T}{p} \Delta T + \pdi{g_2}{p}{T} \Delta p
+\end{equation}
+Nun ist
+\begin{equation}
+    \pdi{G}{T}{p} = - S; \qquad \pdi{G}{p}{T} = V
+\end{equation}
+und daher
+\begin{equation}
+    (S_2 - S_1) \Delta T = (V_2 - V_1) \Delta p
+\end{equation}
+entlang der Übergangskurve.
+
+\begin{enumerate}[a)]
+    \item Phasenübergang erster Ordnung $g_1 = g_2$ aber $\pdi{g_1}{T}{p} \neq \pdi{g_2}{T}{p}$ und $\pdi{g_1}{p}{T} \neq \pdi{g_2}{p}{T}$. \\
+    Dann folgt
+    \begin{equation}
+        \frac{\Delta p}{\Delta T} = \frac{S_2 - S_1}{V_2 - V_1} = \frac{\delta Q}{T (V_2 - V_1)} \qquad \text{\textsc{Clausius}-\textsc{Clapeyron}}
+    \end{equation}
+    $\delta Q$: Umwandlungswärme, latente Wärme
+    \item Phasenübergang zweiter Ordnung, partielle Ableitungen stetig. $\delta Q = 0$
+\end{enumerate}
+\subsubsection{Beispiele zu Clausius-Clapeyron}
+\begin{enumerate}[a)]
+    \item Schmelzen: 1: fest, 2: flüssig. In der Regel $V_1 < V_2 \Rightarrow \frac{\difd T}{\difd p} > 0$. Schmelztemperatur nimmt mit dem Druck
+    zu. \\
+    Ausnahme: Wasser $V_1 > V_2$; Schmelzen unter Druck.
+    \item Dampfdruckkurve: 1: flüssig, 2: Gas. $V_2 - V_1 \simeq V_2 \approx \frac{R T}{p}$
+    \begin{equation}
+        \Rightarrow \frac{\difd p}{\difd T} \simeq \frac{\delta Q \cdot p}{R T^2} \Rightarrow p = p_0 e^{- \frac{\delta Q}{R T}}
+    \end{equation}
+    Mit Separation der Variablen, Integration, Auflösen nach $p$.
+    \begin{equation}
+        \text{bzw.} \ln p = \ln p_0 - \frac{\delta Q}{R T}
+    \end{equation}
+    \item ${}^3\text{He}$ (Minimum wegen Spineffekten), Pomeranchuk-Effekt \\
+    TODO: Helium-p-T-Diagramm \\ % TODO Bild
+    $\frac{\difd p}{\difd T} < 0$ bei sehr tiefen Temperaturen. $V_\text{Fest} < V_\text{Flüssig}$
+    \begin{equation}
+        \frac{S_\text{Fest} - S_\text{Flüssig}}{V_\text{Fest} - V_\text{Flüssig}} = \frac{1}{T} \frac{\delta Q}{V_\text{Fest} - V_\text{Flüssig}} =
+        \frac{\difd p}{\difd T} < 0 \Rightarrow \delta Q > 0
+    \end{equation}
+    \begin{enumerate}[1.]
+        \item Flüssiges ${}^3\text{He}$ wird durch Erwärmen (im Tieftemperaturbereich) fest!
+        \item Festes ${}^3\text{He}$ hat die höhere Entropie.
+        \item Durch adiabatische Kompression entsteht ein Kühleffekt (Pomeranchuk-Kühlung)
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Das van der Waals Gas}
+ideales Gas: keine Wechselwirkung der Moleküle.\\
+reales Gas: kurzreichweitig abstoßende und langreichweitig anziehende intermolekulare Wechselwirkungen. \\
+TODO: Bild Potential zweier Moleküle \\%TODO Bild
+\begin{equation}
+    v := \frac{V}{N} \qquad \text{Volumen pro Teilchen}
+\end{equation}
+Modell: van der Waals: Zustandsgleichung
+\begin{equation}
+    (v-b) \left( p+\frac{a}{v^2} \right) = k T \qquad \text{Gleichung 3. Grades in }v
+\end{equation}
+Mit $b$: Eigenvolumen des Moleküls und $a$: Stärke der Dipol-Dipol-Wechselwirkung.\\
+TODO Bild: p-v-Diagramm für van der Waals Gas \\%TODO Bild
+$T_c$: kritische Temperatur \\
+Bestimmung von $p_c, v_c$ und $T_c$ aus der Relation
+\begin{equation}
+    p_c = \frac{k T_c}{v_c - b} - \frac{a}{v_c^2}
+\end{equation}
+und (Sattelpunkt)
+\begin{equation}
+    \pdi{p}{v}{T} = 0 \quad \text{und} \quad \left( \frac{\partial^2 p}{\partial v^2} \right)_T = 0
+\end{equation}
+\begin{equation}
+    \Rightarrow
+    \begin{cases}
+        v_c = 3 b \\
+        T_c = \frac{8 a}{27 k b} \\
+        p_c = \frac{a}{27 b^2}
+    \end{cases}
+\end{equation}
+Theoretisch: $\frac{k T_c}{p_c v_c} = \frac{8}{3} = 2.666\ldots$, experimentell: $\frac{k T_c}{p_c v_c} = 3.2 \ldots 4.3$ \\
+Bestimmung des Umwandlungsdrucks $p(T)$ \\
+TODO Bild: Skizze p-v-Diagramm mit Weg \\ % TODO Bild
+Vorschrift: reversibler Kreisprozess entlang des gezeichneten Weges in Abbildung ??.  % TODO autoref auf graphik
+\begin{equation}
+    \begin{split}
+        \Rightarrow  0 &= \oint \frac{\delta Q}{T} = \frac{1}{T} \oint \delta Q = \frac{1}{T} \oint (\difd E + p \difd V) \\
+        &= \frac{1}{T} \oint p \difd V \quad \text{(da $E$ Zustandsgröße)} \\
+        \Rightarrow & \oint p \difd V \overset{!}{=} 0
+    \end{split}
+\end{equation}
+$\Rightarrow$ Gleichheit der schraffierten Fläche! $\Rightarrow$ Festlegung von $p$, d.h. im Allgemeinem von $p(T)$
+
+\subsection{Gibbssche Phasenregel}
+Heterogenes System; $\kappa$ Bestandteile (Stoffe); $\varphi$ Phasen.\\
+Gleichgewicht des Systems: $\Delta G = 0$. Nebenbedingungen: $\Delta T = 0$, $\Delta p = 0$, $\Delta N = 0$. Keine chemische Reaktionen.
+$\Rightarrow\Delta n_k = 0, \quad k = 1, \ldots, \kappa$ ($n_k$: Molzahlen).
+\begin{equation}
+    G = \sum_{i=1}^{\varphi} G^{(i)} \left( T, p, n_1^{(i)}, n_2^{(i)}, \ldots, n_\kappa^{(i)} \right)
+\end{equation}
+mit $G^{(i)}$: freie Enthalpie der $i$-ten Phase, $n_k = \sum_{i=1}^{\varphi} n_k^{(i)}$: Molzahl des $k$-ten Stoffes,
+$n^{(i)} = \sum_{k=1}^{\kappa} n_k^{(i)}$ . \\
+$G^{(i)}$ extensiv
+\begin{equation}
+    \Rightarrow G^{(i)} \left( T, p, \alpha n_1^{(i)}, \alpha, n_2^{(i)}, \ldots, \alpha n_\kappa^{(i)} \right) = \alpha G^{(i)} \left( T, p, n_1^{(i)}, n_2^{(i)}, \ldots, n_\kappa^{(i)} \right)
+\end{equation}
+$\Rightarrow$ \textsc{Euler}scher Satz
+\begin{equation}
+    G^{(i)} = \sum_{k=1}^{\kappa} n_k^{(i)} \underbrace{\frac{\partial G^{(i)}}{\partial n_k^{(i)}}}_{\mu_k^{(i)}} =
+    \sum_{k=1}^{\kappa}  n_k^{(i)} \mu_k^{(i)}
+\end{equation}
+$G^{(i)}$ homogene Funktion ersten Grades in $n_k^{(i)} \Rightarrow \mu_k^{(i)}$ homogene Funktion nullten Grades in $n_k^{(i)}$
+\begin{equation}
+    \Rightarrow \mu_k^{(i)} = \mu_k^{(i)} \left( T, p, c_1^{(i)}, \ldots, c_{\kappa-1}^{(i)}, c_k^{(i)} \right)
+\end{equation}
+mit
+\begin{equation}
+    c_k^{(i)} := \frac{n_k^{(i)}}{n^{(i)}} \quad \text{mit} \quad \sum_{k=1}^{\kappa} c_k^{(i)} = 1
+\end{equation}
+Redundanz, da Variablen nicht unabhängig $\Rightarrow T, p, c_j^{(i)}$ innere Variable (intensiv). Anzahl $\varphi (\kappa - 1) + 2$ 
+\begin{equation}
+    \mu_k^{(i)} = \mu_k^{(i)} \left( T, p, c_1^{(i)}, \ldots, c_{\kappa-1}^{(i)} \right)
+\end{equation}
