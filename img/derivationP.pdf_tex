@@ -1,0 +1,60 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'derivationP.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{645.8606795bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.25384344)%
+    \put(0,0){\includegraphics[width=\unitlength]{derivationP.pdf}}%
+    \put(0.48284957,0.10687771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20703272\unitlength}\raggedright $\Rightarrow$\end{minipage}}}%
+    \put(0.01397736,0.13586919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18049006\unitlength}\centering $E_1$\\ $V_1 \ \ N_1$\end{minipage}}}%
+    \put(0.80761939,0.25971336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28836285\unitlength}\raggedright verschiebbar\end{minipage}}}%
+    \put(0.21216252,0.13586919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18049006\unitlength}\centering $E_2$\\ $V_2 \ \ N_2$\end{minipage}}}%
+    \put(0.62587403,0.13586919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18049006\unitlength}\centering $E_1'$\\ $V_1' \ \ N_1$\end{minipage}}}%
+    \put(0.8265365,0.13586919){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18049006\unitlength}\centering $E_2'$\\ $V_2' \ \ N_2$\end{minipage}}}%
+  \end{picture}%
+\endgroup%
