@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="adiabate_pV.pdf">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3786"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="728.24588"
+     inkscape:cy="302.24334"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 333.08482,940.14903 467.70201,0"
+       id="path2985"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4212"
+       d="m 358.08948,967.11638 0,-429.02951"
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4252"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-73.182746,335.2677)"><flowRegion
+         id="flowRegion4254"><rect
+           id="rect4256"
+           width="94.954338"
+           height="68.690376"
+           x="838.42664"
+           y="616.81525"
+           style="font-size:20px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4258">$V$</flowPara></flowRoot>    <flowRoot
+       transform="translate(-560.95224,-90.68893)"
+       xml:space="preserve"
+       id="flowRoot4252-2"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion4254-5"><rect
+           id="rect4256-4"
+           width="94.954338"
+           height="68.690376"
+           x="838.42664"
+           y="616.81525"
+           style="font-size:20px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4258-9">$p$</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 401.63665,562.17732 0,296.4376"
+       id="path3052"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 586.88411,754.93874 -154.57841,0"
+       id="path3052-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 809.04065,826.8088 C 647.4712,817.08256 560.90175,683.85632 519.3323,554.63008"
+       id="path3052-4-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 731.85418,891.45154 C 652.28473,867.7253 575.71528,666.49906 559.14583,557.27282"
+       id="path3052-4-7-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-17,471.2677)"><flowRegion
+         id="flowRegion3895"><rect
+           id="rect3897"
+           width="120"
+           height="40"
+           x="683"
+           y="267.09448"
+           style="font-size:20px" /></flowRegion><flowPara
+         id="flowPara3899">Isotherme</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893-3"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(65.003908,597.7895)"><flowRegion
+         id="flowRegion3895-6"><rect
+           id="rect3897-4"
+           width="120"
+           height="40"
+           x="683"
+           y="267.09448"
+           style="font-size:20px" /></flowRegion><flowPara
+         id="flowPara3899-5">Adiabate</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893-6"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-309.99609,598.7895)"><flowRegion
+         id="flowRegion3895-1"><rect
+           id="rect3897-2"
+           width="120"
+           height="40"
+           x="683"
+           y="267.09448"
+           style="font-size:20px" /></flowRegion><flowPara
+         id="flowPara3899-1">Isochore</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893-4"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-233.99609,505.7895)"><flowRegion
+         id="flowRegion3895-3"><rect
+           id="rect3897-6"
+           width="120"
+           height="40"
+           x="683"
+           y="267.09448"
+           style="font-size:20px" /></flowRegion><flowPara
+         id="flowPara3899-19">Isobare</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893-7"
+       style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(152.00391,457.7895)"><flowRegion
+         id="flowRegion3895-9"><rect
+           id="rect3897-7"
+           width="116.60661"
+           height="19.292892"
+           x="683"
+           y="267.09448"
+           style="font-size:10px" /></flowRegion><flowPara
+         id="flowPara3899-4">$p \sim \frac{1}{V}$</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3893-7-9"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(213.90137,589.85103)"><flowRegion
+         id="flowRegion3895-9-7"><rect
+           id="rect3897-7-4"
+           width="172"
+           height="26"
+           x="683"
+           y="267.09448"
+           style="font-size:20px" /></flowRegion><flowPara
+         id="flowPara3899-4-7"
+         style="font-size:11px">$p \sim \frac{1}{V^{5/3}}$</flowPara></flowRoot>  </g>
+</svg>
