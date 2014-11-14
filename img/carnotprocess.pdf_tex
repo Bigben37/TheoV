@@ -54,7 +54,7 @@
     \put(-0.05346822,0.79839848){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16890957\unitlength}\centering $p$\end{minipage}}}%
     \put(0.48500434,0.57676268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright isotherm\end{minipage}}}%
     \put(0.37806432,0.20798038){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright isotherm\end{minipage}}}%
-    \put(0.79800319,0.35744719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright adiabatisch\end{minipage}}}%
+    \put(0.79800319,0.35744719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27572183\unitlength}\raggedright adiabatisch\end{minipage}}}%
     \put(0.17479998,0.48323092){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright ad.\end{minipage}}}%
     \put(0.39136156,0.73561825){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright $T_2$\end{minipage}}}%
     \put(0.20396644,0.19403159){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21346206\unitlength}\raggedright $T_1$\end{minipage}}}%

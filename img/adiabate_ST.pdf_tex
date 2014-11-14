@@ -52,7 +52,7 @@
     \put(0,0){\includegraphics[width=\unitlength]{adiabate_ST.pdf}}%
     \put(0.71246925,0.03425473){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14221227\unitlength}\centering $T$\end{minipage}}}%
     \put(-0.04501721,0.67220617){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14221227\unitlength}\centering $S$\end{minipage}}}%
-    \put(0.15646059,0.43671542){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17972293\unitlength}\raggedright Isotherme\end{minipage}}}%
+    \put(0.15646059,0.43671542){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24562134\unitlength}\raggedright Isotherme\end{minipage}}}%
     \put(0.37363165,0.63961991){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17972293\unitlength}\raggedright Adiabate\end{minipage}}}%
     \put(0.75404519,0.37752397){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17972293\unitlength}\raggedright Isochore\end{minipage}}}%
     \put(0.82743205,0.5916938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17972293\unitlength}\raggedright Isobare\end{minipage}}}%

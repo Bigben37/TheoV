@@ -39,8 +39,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="468.41838"
-     inkscape:cy="361.16338"
+     inkscape:cx="605.89601"
+     inkscape:cy="199.60764"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -135,7 +135,7 @@
        sodipodi:cy="538.59448"
        sodipodi:rx="5"
        sodipodi:ry="5"
-       d="m 605.5,538.59448 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       d="m 605.5,538.59448 c 0,2.76143 -2.23858,5 -5,5 -2.76142,0 -5,-2.23857 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
        transform="translate(-82.5,284.7677)" />
     <path
        sodipodi:type="arc"
@@ -145,7 +145,7 @@
        sodipodi:cy="538.59448"
        sodipodi:rx="5"
        sodipodi:ry="5"
-       d="m 605.5,538.59448 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       d="m 605.5,538.59448 c 0,2.76143 -2.23858,5 -5,5 -2.76142,0 -5,-2.23857 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
        transform="translate(188.89133,104.61587)" />
     <flowRoot
        xml:space="preserve"
@@ -154,8 +154,8 @@
        transform="translate(-111.5,308.7677)"><flowRegion
          id="flowRegion3879"><rect
            id="rect3881"
-           width="157"
-           height="35"
+           width="189"
+           height="40"
            x="643"
            y="517.09448"
            style="font-size:20px" /></flowRegion><flowPara
@@ -178,8 +178,8 @@
        transform="translate(-227.3125,219.85103)"><flowRegion
          id="flowRegion3879-6"><rect
            id="rect3881-2"
-           width="33"
-           height="31"
+           width="44"
+           height="39"
            x="643"
            y="517.09448"
            style="font-size:20px" /></flowRegion><flowPara
@@ -190,8 +190,8 @@
        transform="translate(-58.263672,155.79243)"><flowRegion
          id="flowRegion3879-6-2"><rect
            id="rect3881-2-9"
-           width="33"
-           height="31"
+           width="51"
+           height="33"
            x="643"
            y="517.09448"
            style="font-size:20px" /></flowRegion><flowPara
@@ -202,8 +202,8 @@
        transform="translate(3.736328,359.29243)"><flowRegion
          id="flowRegion3879-6-28"><rect
            id="rect3881-2-4"
-           width="33"
-           height="31"
+           width="55"
+           height="32"
            x="643"
            y="517.09448"
            style="font-size:20px" /></flowRegion><flowPara

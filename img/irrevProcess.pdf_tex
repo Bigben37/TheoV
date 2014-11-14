@@ -55,7 +55,7 @@
     \put(0.24352853,0.20812072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07335062\unitlength}\raggedright $0$\end{minipage}}}%
     \put(0.56209038,0.20895229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07335062\unitlength}\raggedright $N/2$\end{minipage}}}%
     \put(0.70499904,0.20895229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07335062\unitlength}\raggedright $N/2$\end{minipage}}}%
-    \put(0.85405546,0.31256051){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20957318\unitlength}\raggedright "Gleichgewicht"\end{minipage}}}%
+    \put(0.85405546,0.31256051){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24044623\unitlength}\raggedright "Gleichgewicht"\end{minipage}}}%
     \put(0.41349763,0.07951703){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20957318\unitlength}\raggedright $\Rightarrow$\end{minipage}}}%
     \put(0.03234442,0.0840592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17659383\unitlength}\raggedright $E_1,N_1,V_1$\end{minipage}}}%
     \put(0.21756028,0.0840592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17659383\unitlength}\raggedright $E_2,N_2,V_2$\end{minipage}}}%

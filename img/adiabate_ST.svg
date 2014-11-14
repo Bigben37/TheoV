@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="adiabate_ST.pdf">
+   sodipodi:docname="adiabate_ST.svg">
   <defs
      id="defs4">
     <marker
@@ -40,7 +40,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1"
      inkscape:cx="593.41511"
-     inkscape:cy="282.73097"
+     inkscape:cy="322.73097"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -129,8 +129,8 @@
        transform="translate(-271,416.2677)"><flowRegion
          id="flowRegion3895"><rect
            id="rect3897"
-           width="120"
-           height="40"
+           width="164"
+           height="41"
            x="683"
            y="267.09448"
            style="font-size:20px" /></flowRegion><flowPara

@@ -52,8 +52,8 @@
     \put(0,0){\includegraphics[width=\unitlength]{adiabate_pV.pdf}}%
     \put(0.61184893,0.03057387){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12693078\unitlength}\centering $V$\end{minipage}}}%
     \put(-0.04017986,0.59997395){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.12693078\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.47918407,0.31626638){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16041072\unitlength}\raggedright Isotherme\end{minipage}}}%
-    \put(0.58880328,0.14713761){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16041072\unitlength}\raggedright Adiabate\end{minipage}}}%
+    \put(0.47918407,0.31626638){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20767219\unitlength}\raggedright Isotherme\end{minipage}}}%
+    \put(0.58880328,0.14713761){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19632943\unitlength}\raggedright Adiabate\end{minipage}}}%
     \put(0.08751979,0.14580085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16041072\unitlength}\raggedright Isochore\end{minipage}}}%
     \put(0.18911324,0.27011916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.16041072\unitlength}\raggedright Isobare\end{minipage}}}%
     \put(0.70510106,0.33428344){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15587459\unitlength}\raggedright $p \sim \frac{1}{V}$\end{minipage}}}%

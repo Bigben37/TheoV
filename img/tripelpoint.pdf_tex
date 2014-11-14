@@ -52,11 +52,11 @@
     \put(0,0){\includegraphics[width=\unitlength]{tripelpoint.pdf}}%
     \put(0.8646999,0.04937368){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $T$\end{minipage}}}%
     \put(-0.04823392,0.78698219){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.36497721,0.26218173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26262115\unitlength}\raggedright Tripelpunkt\end{minipage}}}%
+    \put(0.36497721,0.26218173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31614902\unitlength}\raggedright Tripelpunkt\end{minipage}}}%
     \put(0.73664049,0.65513769){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41149555\unitlength}\raggedright Kritischer Punkt\end{minipage}}}%
-    \put(0.17125229,0.41091675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05520062\unitlength}\raggedright s\end{minipage}}}%
-    \put(0.45402807,0.51807052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05520062\unitlength}\raggedright fl\end{minipage}}}%
-    \put(0.55773833,0.17766668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05520062\unitlength}\raggedright g\end{minipage}}}%
+    \put(0.17125229,0.41091675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07360083\unitlength}\raggedright s\end{minipage}}}%
+    \put(0.45402807,0.51807052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08531005\unitlength}\raggedright fl\end{minipage}}}%
+    \put(0.55773833,0.17766668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09200104\unitlength}\raggedright g\end{minipage}}}%
     \put(0.3156459,0.04123495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_t$\end{minipage}}}%
     \put(-0.00013067,0.29094458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $p_t$\end{minipage}}}%
     \put(0.77267805,0.0450509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_c$\end{minipage}}}%
