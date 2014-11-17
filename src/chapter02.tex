@@ -179,7 +179,120 @@ mit
 \begin{equation}
     c_k^{(i)} := \frac{n_k^{(i)}}{n^{(i)}} \quad \text{mit} \quad \sum_{k=1}^{\kappa} c_k^{(i)} = 1
 \end{equation}
-Redundanz, da Variablen nicht unabhängig $\Rightarrow T, p, c_j^{(i)}$ innere Variable (intensiv). Anzahl $\varphi (\kappa - 1) + 2$ 
+Redundanz, da Variablen nicht unabhängig $\Rightarrow T, p, c_j^{(i)}$ innere Variable (intensiv). Anzahl $\varphi (\kappa - 1) + 2$
 \begin{equation}
     \mu_k^{(i)} = \mu_k^{(i)} \left( T, p, c_1^{(i)}, \ldots, c_{\kappa-1}^{(i)} \right)
 \end{equation}
+$n^{(i)}$: äußere Variablen, extensiv. Anzahl $\varphi$. \\
+Gesamtanzahl der Variablen des Systems $\kappa \varphi + 2$. \\
+Wie üblich führen die Nebenbedingungen $\Delta T = 0, \Delta p = 0, \sum_{i=1}^{\varphi} \Delta n_k^{(i)} = 0 \quad \forall k$ zu
+\begin{equation}
+    \pd{G}{n_k^{(1)}} = \pd{G}{n_k^{(2)}} = \ldots = \pd{G}{n_k^{(\varphi)}}
+\end{equation}
+d.h.
+\begin{equation}
+    \mu_k^{(1)} = \mu_k^{(2)} = \ldots = \mu_k^{(\varphi)} \quad \forall k
+\end{equation}
+somit zur Gleichheit des Wertes des chemischen Potentials einer beliebigen Komponente in allen Phasen im Gleichgewicht. Ableitung der Beziehung(en):
+Vergleich der Variationen in $G$ oder Methode der Lagrange-Multiplikatoren. \\
+Anzahl der Beziehungen: Dies sind $(\varphi - 1)$ Gleichungen pro Komponente, insgesamt also $\kappa (\varphi - 1)$ Gleichungen, die
+$\varphi (\kappa - 1) + 2$ inneren Variablen verbinden. System nicht überbestimmt, falls
+$(\varphi - 1) \kappa \leq \varphi (\kappa - 1) + 2 \Rightarrow \varphi \leq \kappa + 2$ \\
+Umschreibung: Sei $f$ die Anzahl der frei wählbaren inneren Variablen. Dann ist
+\begin{equation}
+    f := \kappa + 2 - \varphi \geq 0 \qquad \text{\textsc{Gibbs}sche Phasenregel}
+\end{equation}
+\subsubsection{Beispiele}
+\begin{enumerate}[a)]
+    \item Einstoffsystem $\kappa = 1$. $\varphi$ maximal 3 ($\kappa = 1, f = 0$) \\
+    TODO: Bild Phasendiagrammm Einstoffsystem  % TODO Bild
+    \begin{itemize}
+        \item flüssig-fest oder Gas-flüssig Übergang $\Rightarrow$ 2 Phasen im Gleichgewicht $\Rightarrow f = 1 + 2 -2 = 1$ (Linie)
+        \item Tripelpunkt: 3 Phasen im Gleichgewicht $\Rightarrow f = 1 + 2 - 3 = 0$ (Punkt): $T_t, p_t$ fest.
+    \end{itemize}
+    \item Mischungen
+    \begin{itemize}
+        \item Wasser + Ethanol (mischbar): 1 Phase, $f = 2 + 2 - 1 = 3$ z.B. $p, T, c_\text{Ethanol}$
+        \item Wasser + Öl (nicht mischbar): 2 Phasen, $f = 2 + 2 - 2 = 2 $ \\
+        TODO: Bild Wasser- + Öl- phase\\  % TODO Bild
+        Variable: $c^{(1)}$: Konzentration von Wasser in der ölreichen Phasen, $c^{(2)}$: Konzentration von Öl in der wasserreichen Phase.
+        Dann setzt deren Wahl die Werte von $p$ und $T$ fest.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Thermodynamik im Magnetfeld; Supraleitung}
+Literatur: \textsc{Reif}, Kap. 11\\
+Wichtig als Teil der Tieftemperaturphysik.
+\begin{equation}
+    \begin{split}
+        & \vec{B} = \vec{H} + 4 \pi \underbrace{\vec{M}_0}_{\text{intensiv}}, \quad \vec{B} = \mu' \vec{H} = (1 + 4 \pi \chi) \vec{H} \\
+        & \mu': \text{magn. Permeabilität} \\
+        & \chi: \text{magn. Suszeptibilität}
+    \end{split}
+\end{equation}
+(homogene Substanz, lineare, skalare Beziehung). \\
+Zur Vereinfachung: eindimensional (siehe ?? (1.1)) $M = V M_0 = V \chi H$ (extensiv)
+\begin{equation}
+    \difd E = T \difd S - p \difd V + H \difd M, \qquad E = E(S, V, M)
+\end{equation}
+Mögliche Legendre Transformation: $E^* = E - M H$
+\begin{equation}
+    \Rightarrow \difd E^* = T \difd S - p \difd V - M \difd H, \quad E^* =  E^*(S, V, H)
+\end{equation}
+\emph{Hinweis}: Hier ist die Bezeichnungsweise nicht mehr standardisiert. Daher: Immer bestimmen, welche natürlichen Variablen gemeint sind! \\
+\subsubsection{Adiabatische Entmagnetisierung}
+TODO Bild S-T-Diagramm adiabatische Entmagnetisierung \\ % TODO Bild
+$S(H_i, T_i) = S(H_f = 0, T = T_f)$, dabei sind $V$ (und $N$) konstant. $T$ und $H$ spezifizieren den Zustand.
+\begin{equation}
+    \begin{split}
+        & \difd S = \pdi{S}{T}{H} \difd T + \pdi{S}{H}{T} \difd H = 0 \quad \text{da adiabatisch}  \\
+        & \Rightarrow \pdi{T}{H}{S} = - \frac{\pdi{S}{H}{T}}{\pdi{S}{T}{H}} = - \frac{T \pdi{S}{H}{T} }{c_H (T, H)}
+    \end{split}
+\end{equation}
+Nun:
+\begin{equation}
+    \difd F^* = - S \difd T - M \difd H \Rightarrow \pdi{S}{H}{T} = \pdi{M}{T}{H}
+\end{equation}
+\begin{equation}
+    \Rightarrow \pdi{T}{H}{S} = - \frac{V T H}{c_H} \pdi{\chi}{T}{H}
+\end{equation}
+Weiterhin ist $c_H$ durch $\chi(T, H)$ eindeutig bestimmt, da
+\begin{equation}
+    \begin{split}
+        \pdi{c_H}{H}{T} &= \pdi{}{H}{T} \left[ T \pdi{S}{T}{H} \right] = T \frac{\partial^2 S}{\partial H \partial T} \\
+        &= T \pdi{}{T}{H} \pdi{S}{H}{T} = T \left( \frac{\partial^2 M}{\partial T^2} \right)_H	= V T H \left( \frac{\partial^2 \chi}{\partial T^2} \right)_H \\
+       \Rightarrow & c_H(T, H) = c_H (T, 0) + V T \int_{0}^{H} \frac{\partial^2  \chi(T, H')}{\partial T^2} H' \difd H'
+    \end{split}
+\end{equation}
+
+\subsubsection{Supraleitung}
+Phänomenologisches zum Phasenübergang
+TODO: Bild Supraleitung 1. Art  % TODO Bild
+\begin{enumerate}[i)]
+    \item Im SL-Zustand ist der elektrische Widerstand Null
+    \item Im Material ist $B = 0$, d.h. $M_\text{SL} = - \frac{V}{4 \pi} H$ (Meissner-Ochsenfeld Effekt)
+    \item Der SL-Zustand wird zerstört durch starke $H$-Felder
+\end{enumerate}
+\begin{equation}
+    \difd F^* = - S \difd T - M \difd H - p \difd V
+\end{equation}
+$V$ ist in ausgezeichneter Näherung konstant $\Rightarrow \difd F^* = - S \difd T - M \difd H$, $F^* = F^*(T, H)$ \\
+Gleichgewichtsbedingung $\Rightarrow F^*$ minimal. Stationaritätsbedingung zwischen 2 koexistierenden Phasen
+\begin{equation}
+    \Rightarrow F_\text{N}^* (T, H) = F_\text{SL}^* (T, H)
+\end{equation}
+Ableitung einer Clausius-Clapeyron-artigen Beziehung:
+\begin{equation}
+    \begin{split}
+        & \pdi{F_\text{N}^*}{T}{H} \difd T + \pdi{F_\text{N}^*}{H}{T} \difd H = \pdi{F_\text{SL}^*}{T}{H} \difd T + \pdi{F_\text{SL}^*}{H}{T} \difd H \\
+        \Rightarrow & \left( S_\text{N} - S_\text{SL} \right) \Delta T = \left( M_\text{SL} - M_\text{N} \right) \Delta H \simeq M_\text{SL} \Delta H = - \frac{V H}{4 \pi} \Delta H \\
+        \Rightarrow & S_\text{N} - S_\text{SL} = - \frac{V H}{4 \pi} \frac{\Delta H}{\Delta T}
+    \end{split}
+\end{equation}
+Folgerungen:
+\begin{enumerate}[i)]
+    \item Da $\frac{\Delta H}{\Delta T} \leq 0$ (siehe Skizze) ist $S_\text{N} - S_\text{SL} > 0$, d.h. der supraleitende Zustand ist geordneter
+    \item Mit der Entropiedifferenz geht einher die latente Wärme $\delta Q = T \left( S_\text{N} - _\text{SL} \right) $
+    \item Für $H = 0$ ist $S_\text{N} - S_\text{SL} = 0 \Rightarrow $ bei $H = 0$ ist $\delta Q = 0$
+    \item Ebenfalls ist $S_\text{N} - S_\text{SL} = 0$ für $T \to 0 $ (3. HS). Daher ist $\frac{\difd H}{\difd T} = 0$ bei $T = 0$ (wie in der Skizze angedeutet) und $\delta Q = 0$ für $T \to 0$
+\end{enumerate}
