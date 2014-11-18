@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="waermekraftmaschine.pdf">
+   sodipodi:docname="waermekraftmaschine.svg">
   <defs
      id="defs4">
     <marker
@@ -67,7 +67,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="426.48302"
+     inkscape:cx="176.48302"
      inkscape:cy="453.4486"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -98,7 +98,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -108,7 +108,7 @@
      id="layer1"
      transform="translate(0,-308.2677)">
     <rect
-       style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="fill:#f81f1f;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3023"
        width="195.9696"
        height="113.56062"
@@ -120,7 +120,7 @@
        height="123.56061"
        width="195.9696"
        id="rect3025"
-       style="fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+       style="fill:#2050f8;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:4.99999952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
        d="m 534.33041,675.60301 104.50419,0"
@@ -223,7 +223,7 @@
        sodipodi:cy="359.22635"
        sodipodi:rx="43.436558"
        sodipodi:ry="43.436558"
-       d="m 226.27417,359.22635 a 43.436558,43.436558 0 1 1 -86.87311,0 43.436558,43.436558 0 1 1 86.87311,0 z"
+       d="m 226.27417,359.22635 c 0,23.98935 -19.44721,43.43656 -43.43655,43.43656 -23.98935,0 -43.43656,-19.44721 -43.43656,-43.43656 0,-23.98935 19.44721,-43.43656 43.43656,-43.43656 23.98934,0 43.43655,19.44721 43.43655,43.43656 z"
        transform="translate(310.11682,316.32862)" />
   </g>
 </svg>
