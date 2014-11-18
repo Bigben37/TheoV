@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="FandEoverT.pdf">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="304.02875"
+     inkscape:cy="207.56798"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-nodes="true" />
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path3786" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-308.2677)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       inkscape:connector-curvature="0"
+       id="path2985"
+       d="m 333.08482,940.14903 454.77621,0"
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+       d="m 358.08948,967.11638 0,-353.80272"
+       id="path4212"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       transform="translate(-109.93506,340.43927)"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4252"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4254"><rect
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="616.81525"
+           x="838.42664"
+           height="68.690376"
+           width="94.954338"
+           id="rect4256" /></flowRegion><flowPara
+         id="flowPara4258">$T$</flowPara></flowRoot>    <flowRoot
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4252-2"
+       xml:space="preserve"
+       transform="translate(-572.95224,-4.68893)"><flowRegion
+         id="flowRegion4254-5"><rect
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="616.81525"
+           x="838.42664"
+           height="68.690376"
+           width="94.954338"
+           id="rect4256-4" /></flowRegion><flowPara
+         id="flowPara4258-9">$F, E$</flowPara></flowRoot>    <flowRoot
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4252-2-9-0"
+       xml:space="preserve"
+       transform="translate(-320.30339,139.43975)"><flowRegion
+         id="flowRegion4254-5-7-9"><rect
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="616.81525"
+           x="838.42664"
+           height="56.690376"
+           width="254.95435"
+           id="rect4256-4-0-0" /></flowRegion><flowPara
+         id="flowPara4258-9-4-8">horizontale Tangente</flowPara></flowRoot>    <flowRoot
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4252-2-9"
+       xml:space="preserve"
+       transform="translate(-298.641,21.639735)"><flowRegion
+         id="flowRegion4254-5-7"><rect
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="616.81525"
+           x="838.42664"
+           height="56.690376"
+           width="254.95435"
+           id="rect4256-4-0" /></flowRegion><flowPara
+         id="flowPara4258-9-4">$E(T)$</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.00000005, 3.00000005;stroke-dashoffset:0"
+       d="m 359.15279,782.61218 288.19446,0"
+       id="path3031"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot4252-2-9-08"
+       xml:space="preserve"
+       transform="translate(-293.32063,262.50356)"><flowRegion
+         id="flowRegion4254-5-7-1"><rect
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="616.81525"
+           x="838.42664"
+           height="56.690376"
+           width="254.95435"
+           id="rect4256-4-0-3" /></flowRegion><flowPara
+         id="flowPara4258-9-4-2">$F(T)$</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 359.5,782.58876 C 480.76882,783.76727 588.48989,709.2351 623.84523,648.18822"
+       id="path3834"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3836"
+       d="m 359.5,782.82434 c 122.32948,-0.11785 249.57568,42.50442 271.43102,107.0513"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+</svg>
