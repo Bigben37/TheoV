@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="waermekraftmaschine.svg">
+   sodipodi:docname="waermekraftmaschine.pdf">
   <defs
      id="defs4">
     <marker
@@ -67,8 +67,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="176.48302"
-     inkscape:cy="453.4486"
+     inkscape:cx="197.34552"
+     inkscape:cy="394.2154"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -98,7 +98,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -108,19 +108,19 @@
      id="layer1"
      transform="translate(0,-308.2677)">
     <rect
+       y="773.04004"
+       x="394.96964"
+       height="113.56062"
+       width="195.9696"
+       id="rect3825"
+       style="fill:#2050f8;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
        style="fill:#f81f1f;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3023"
        width="195.9696"
        height="113.56062"
        x="394.96964"
        y="465.04004" />
-    <rect
-       y="775.35693"
-       x="394.96964"
-       height="123.56061"
-       width="195.9696"
-       id="rect3025"
-       style="fill:#2050f8;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:4.99999952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
        d="m 534.33041,675.60301 104.50419,0"
@@ -207,7 +207,7 @@
        xml:space="preserve"
        id="flowRoot4297-0-3-9"
        style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(411.55385,501.45499)"><flowRegion
+       transform="translate(411.55385,489.45499)"><flowRegion
          id="flowRegion4299-7-6-8"><rect
            id="rect4301-9-5-80"
            width="92.748398"
