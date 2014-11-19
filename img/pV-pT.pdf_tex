@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{945.2733345bp}%
+    \setlength{\unitlength}{945.8514595bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,24 +48,24 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.41021332)%
+  \begin{picture}(1,0.40996258)%
     \put(0,0){\includegraphics[width=\unitlength]{pV-pT.pdf}}%
-    \put(0.43748982,0.01935668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $V$\end{minipage}}}%
-    \put(-0.02440367,0.39254535){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.15094031,0.16223069){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15995373\unitlength}\raggedright TP\end{minipage}}}%
-    \put(0.4063009,0.27478066){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20819375\unitlength}\raggedright KP\end{minipage}}}%
-    \put(0.08664409,0.20227726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03723791\unitlength}\raggedright fest\end{minipage}}}%
-    \put(0.30334232,0.29880688){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07906827\unitlength}\raggedright flüssig\end{minipage}}}%
-    \put(0.24388453,0.08546264){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14349399\unitlength}\raggedright gasförmig\end{minipage}}}%
-    \put(-0.00006611,0.14157805){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09055582\unitlength}\raggedright $p_t$\end{minipage}}}%
-    \put(-0.00140502,0.2549844){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09055582\unitlength}\raggedright $p_c$\end{minipage}}}%
-    \put(0.94527945,0.01935668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T$\end{minipage}}}%
-    \put(0.48338597,0.39254535){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.57336088,0.196915){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03723791\unitlength}\raggedright fest\end{minipage}}}%
-    \put(0.6739291,0.11273765){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23346471\unitlength}\raggedright gasförmig-flüssig\end{minipage}}}%
-    \put(0.87895326,0.06721916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14349399\unitlength}\raggedright gasförmig\end{minipage}}}%
-    \put(0.92943759,0.18821795){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_3$\end{minipage}}}%
-    \put(0.92943759,0.13997793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_2$\end{minipage}}}%
-    \put(0.93451548,0.10274003){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_1$\end{minipage}}}%
+    \put(0.43722241,0.01934485){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $T$\end{minipage}}}%
+    \put(-0.02438875,0.39230542){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $p$\end{minipage}}}%
+    \put(0.17237857,0.11667821){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15985597\unitlength}\raggedright TP\end{minipage}}}%
+    \put(0.40605256,0.2746127){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.2080665\unitlength}\raggedright KP\end{minipage}}}%
+    \put(0.08659113,0.20215362){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05159372\unitlength}\raggedright fest\end{minipage}}}%
+    \put(0.30315691,0.29862425){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07901994\unitlength}\raggedright flüssig\end{minipage}}}%
+    \put(0.24373546,0.0854104){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14340628\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(-0.00006607,0.14149151){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09050047\unitlength}\raggedright $p_t$\end{minipage}}}%
+    \put(-0.00140416,0.25482855){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09050047\unitlength}\raggedright $p_c$\end{minipage}}}%
+    \put(0.94470167,0.01934485){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $V$\end{minipage}}}%
+    \put(0.48309051,0.39230542){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $p$\end{minipage}}}%
+    \put(0.57301043,0.19679464){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05074793\unitlength}\raggedright fest\end{minipage}}}%
+    \put(0.67351718,0.11266874){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23332201\unitlength}\raggedright gasförmig-flüssig\end{minipage}}}%
+    \put(0.87841602,0.06717807){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14340628\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(0.9288695,0.18810291){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $T_3$\end{minipage}}}%
+    \put(0.9288695,0.13989238){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $T_2$\end{minipage}}}%
+    \put(0.93394429,0.10267723){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08031226\unitlength}\centering $T_1$\end{minipage}}}%
   \end{picture}%
 \endgroup%

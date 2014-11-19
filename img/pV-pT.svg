@@ -38,9 +38,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="1188.3137"
-     inkscape:cy="427.58179"
+     inkscape:zoom="0.7071068"
+     inkscape:cx="1018.0022"
+     inkscape:cy="288.32139"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -102,7 +102,7 @@
            x="838.42664"
            y="616.81525"
            style="font-size:20px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara4258">$V$</flowPara></flowRoot>    <flowRoot
+         id="flowPara4258">$T$</flowPara></flowRoot>    <flowRoot
        transform="translate(-553.95224,-104.68893)"
        xml:space="preserve"
        id="flowRoot4252-2"
@@ -129,7 +129,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="M 518,823.36218 C 592.32235,745.6226 661.24891,647.67759 684.10692,538.86282"
+       d="M 518,823.36218 C 520.32235,701.6226 514.24891,646.67759 475.10693,543.86282"
        id="path3045-7-5"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -151,13 +151,13 @@
        sodipodi:cy="538.59448"
        sodipodi:rx="5"
        sodipodi:ry="5"
-       d="m 605.5,538.59448 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       d="m 605.5,538.59448 c 0,2.76143 -2.23858,5 -5,5 -2.76142,0 -5,-2.23857 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z"
        transform="translate(199.89133,151.61587)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3877"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(-151.34062,267.16972)"><flowRegion
+       transform="translate(-125.88478,320.90983)"><flowRegion
          id="flowRegion3879"><rect
            id="rect3881"
            width="189"
@@ -184,7 +184,7 @@
        transform="translate(-227.3125,219.85103)"><flowRegion
          id="flowRegion3879-6"><rect
            id="rect3881-2"
-           width="44"
+           width="61"
            height="39"
            x="643"
            y="517.09448"
@@ -269,7 +269,7 @@
            height="68.690376"
            width="94.954338"
            id="rect3066" /></flowRegion><flowPara
-         id="flowPara3068">$T$</flowPara></flowRoot>    <flowRoot
+         id="flowPara3068">$V$</flowPara></flowRoot>    <flowRoot
        style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="flowRoot3070"
        xml:space="preserve"
@@ -290,8 +290,8 @@
            style="font-size:20px"
            y="517.09448"
            x="643"
-           height="39"
-           width="44"
+           height="37"
+           width="60"
            id="rect3108" /></flowRegion><flowPara
          id="flowPara3110">fest</flowPara></flowRoot>    <flowRoot
        transform="translate(466.61858,325.65029)"
