@@ -16,7 +16,36 @@
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="derivationMu.pdf">
   <defs
-     id="defs4" />
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mstart"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3816"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(0.6,0.6)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3819"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,9 +53,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="491.96292"
-     inkscape:cy="657.17362"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="654.1829"
+     inkscape:cy="336.88441"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -107,7 +136,7 @@
        xml:space="preserve"
        id="flowRoot3799-6"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(94.625079,134.63371)"><flowRegion
+       transform="translate(114.62508,106.63371)"><flowRegion
          id="flowRegion3801-1"><rect
            id="rect3803-5"
            width="232.80278"
@@ -116,7 +145,9 @@
            y="384.09448"
            style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-size:20px;text-align:center;text-anchor:middle"
-         id="flowPara3017">porös</flowPara></flowRoot>    <flowRoot
+         id="flowPara3037">porös und</flowPara><flowPara
+         style="font-size:20px;text-align:center;text-anchor:middle"
+         id="flowPara3060">verschiebbar</flowPara></flowRoot>    <flowRoot
        transform="translate(-59.96126,149.14785)"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="flowRoot3862"
@@ -138,11 +169,11 @@
     <path
        inkscape:connector-curvature="0"
        id="path3067"
-       d="m 754.95866,567.43286 0,158.57143"
+       d="m 774.95866,567.43286 0,158.57143"
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 762.95866,567.43286 0,158.57143"
+       d="m 782.95866,567.43286 0,158.57143"
        id="path3069"
        inkscape:connector-curvature="0" />
     <rect
@@ -150,35 +181,35 @@
        id="rect3058"
        width="20.728436"
        height="11.616755"
-       x="748.62488"
+       x="768.62488"
        y="580.11584" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3058-9"
        width="20.728436"
        height="11.616755"
-       x="748.76544"
+       x="768.76544"
        y="605.62219" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3058-6"
        width="20.728436"
        height="11.616755"
-       x="748.76544"
+       x="768.76544"
        y="634.41156" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3058-95"
        width="20.728436"
        height="11.616755"
-       x="748.26031"
+       x="768.26031"
        y="664.71613" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect3058-0"
        width="20.728436"
        height="11.616755"
-       x="747.25018"
+       x="767.25018"
        y="690.9801" />
     <flowRoot
        transform="translate(258.38138,148.64277)"
@@ -198,7 +229,7 @@
        xml:space="preserve"
        id="flowRoot3882"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       transform="translate(423.45244,149.65293)"><flowRegion
+       transform="translate(437.45244,149.65293)"><flowRegion
          id="flowRegion3884"><rect
            id="rect3886"
            width="145.71429"
@@ -210,9 +241,14 @@
          id="flowPara3890"
          style="font-size:20px;text-align:center;text-anchor:middle">$V_2' \ \ N_2'$</flowPara></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 769.50565,610.53647 43.63306,-67.35063"
+       d="m 789.50565,610.53647 43.63306,-67.35063"
        id="path3860"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow2Mstart);marker-end:url(#Arrow2Mend)"
+       d="m 757.3535,707.90016 43.29701,0"
+       id="path3018"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

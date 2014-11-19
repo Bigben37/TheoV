@@ -51,7 +51,7 @@
   \begin{picture}(1,0.64842943)%
     \put(0,0){\includegraphics[width=\unitlength]{exampleSystems.pdf}}%
     \put(0.06372817,0.4089571){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22860762\unitlength}\centering Gas\end{minipage}}}%
-    \put(0.59254743,0.38160872){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22860762\unitlength}\centering Magnet\end{minipage}}}%
+    \put(0.59254743,0.41213562){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22860762\unitlength}\centering Magnet\end{minipage}}}%
     \put(0.05428504,0.04748333){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22860762\unitlength}\centering Kristall\end{minipage}}}%
     \put(0.43129503,0.08512473){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.58922758\unitlength}\centering Kolben mit Feder\end{minipage}}}%
   \end{picture}%

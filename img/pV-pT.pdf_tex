@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'tripelpoint.pdf' (pdf, eps, ps)
+%% Accompanies image file 'pV-pT.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -49,14 +49,14 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.77905852)%
-    \put(0,0){\includegraphics[width=\unitlength]{tripelpoint.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength]{pV-pT.pdf}}%
     \put(0.8646999,0.04937368){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $T$\end{minipage}}}%
     \put(-0.04823392,0.78698219){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.37166819,0.26552722){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31614902\unitlength}\raggedright Tripelpunkt\end{minipage}}}%
-    \put(0.73664049,0.63841023){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41149555\unitlength}\raggedright Kritischer Punkt\end{minipage}}}%
-    \put(0.17125229,0.41091675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07360083\unitlength}\raggedright fest\end{minipage}}}%
-    \put(0.45402807,0.51807052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15627866\unitlength}\raggedright flüssig\end{minipage}}}%
-    \put(0.48203848,0.18003231){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28361628\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(0.36497721,0.26218173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31614902\unitlength}\raggedright Tripelpunkt\end{minipage}}}%
+    \put(0.73664049,0.65513769){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41149555\unitlength}\raggedright Kritischer Punkt\end{minipage}}}%
+    \put(0.17125229,0.41091675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07360083\unitlength}\raggedright s\end{minipage}}}%
+    \put(0.45402807,0.51807052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08531005\unitlength}\raggedright fl\end{minipage}}}%
+    \put(0.55773833,0.17766668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09200104\unitlength}\raggedright g\end{minipage}}}%
     \put(0.3156459,0.04123495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_t$\end{minipage}}}%
     \put(-0.00013067,0.29094458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $p_t$\end{minipage}}}%
     \put(0.77267805,0.0450509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_c$\end{minipage}}}%

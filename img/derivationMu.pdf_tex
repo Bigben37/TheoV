@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{645.575bp}%
+    \setlength{\unitlength}{649.1947645bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.25244169)%
+  \begin{picture}(1,0.28558655)%
     \put(0,0){\includegraphics[width=\unitlength]{derivationMu.pdf}}%
-    \put(0.48306324,0.106925){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20712434\unitlength}\raggedright $\Rightarrow$\end{minipage}}}%
-    \put(0.01398355,0.13592932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18056993\unitlength}\centering $E_1$\\ $V_1 \ \ N_1$\end{minipage}}}%
-    \put(0.72247339,0.25836262){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28849045\unitlength}\centering porös\end{minipage}}}%
-    \put(0.2122564,0.13592932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18056993\unitlength}\centering $E_2$\\ $V_2 \ \ N_2$\end{minipage}}}%
-    \put(0.60674831,0.13655522){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18056993\unitlength}\centering $E_1'$\\ $V_1' \ \ N_1'$\end{minipage}}}%
-    \put(0.81130525,0.13530342){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18056993\unitlength}\centering $E_2'$\\ $V_2' \ \ N_2'$\end{minipage}}}%
+    \put(0.48036978,0.10632882){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20596946\unitlength}\raggedright $\Rightarrow$\end{minipage}}}%
+    \put(0.01390558,0.13517141){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17956312\unitlength}\centering $E_1$\\ $V_1 \ \ N_1$\end{minipage}}}%
+    \put(0.74309095,0.29142633){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28688189\unitlength}\centering porös und\\ verschiebbar\end{minipage}}}%
+    \put(0.21107291,0.13517141){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17956312\unitlength}\centering $E_2$\\ $V_2 \ \ N_2$\end{minipage}}}%
+    \put(0.60336522,0.13579381){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17956312\unitlength}\centering $E_1'$\\ $V_1' \ \ N_1'$\end{minipage}}}%
+    \put(0.82403374,0.134549){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17956312\unitlength}\centering $E_2'$\\ $V_2' \ \ N_2'$\end{minipage}}}%
   \end{picture}%
 \endgroup%
