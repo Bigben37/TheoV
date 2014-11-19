@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{478.255472bp}%
+    \setlength{\unitlength}{945.2733345bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,18 +48,24 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.77905852)%
+  \begin{picture}(1,0.41021332)%
     \put(0,0){\includegraphics[width=\unitlength]{pV-pT.pdf}}%
-    \put(0.8646999,0.04937368){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $T$\end{minipage}}}%
-    \put(-0.04823392,0.78698219){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1588345\unitlength}\centering $p$\end{minipage}}}%
-    \put(0.36497721,0.26218173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.31614902\unitlength}\raggedright Tripelpunkt\end{minipage}}}%
-    \put(0.73664049,0.65513769){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41149555\unitlength}\raggedright Kritischer Punkt\end{minipage}}}%
-    \put(0.17125229,0.41091675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07360083\unitlength}\raggedright s\end{minipage}}}%
-    \put(0.45402807,0.51807052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08531005\unitlength}\raggedright fl\end{minipage}}}%
-    \put(0.55773833,0.17766668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09200104\unitlength}\raggedright g\end{minipage}}}%
-    \put(0.3156459,0.04123495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_t$\end{minipage}}}%
-    \put(-0.00013067,0.29094458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $p_t$\end{minipage}}}%
-    \put(0.77267805,0.0450509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $T_c$\end{minipage}}}%
-    \put(-0.00277702,0.5886934){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17898384\unitlength}\raggedright $p_c$\end{minipage}}}%
+    \put(0.43748982,0.01935668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $V$\end{minipage}}}%
+    \put(-0.02440367,0.39254535){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $p$\end{minipage}}}%
+    \put(0.15094031,0.16223069){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.15995373\unitlength}\raggedright TP\end{minipage}}}%
+    \put(0.4063009,0.27478066){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20819375\unitlength}\raggedright KP\end{minipage}}}%
+    \put(0.08664409,0.20227726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03723791\unitlength}\raggedright fest\end{minipage}}}%
+    \put(0.30334232,0.29880688){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.07906827\unitlength}\raggedright flüssig\end{minipage}}}%
+    \put(0.24388453,0.08546264){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14349399\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(-0.00006611,0.14157805){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09055582\unitlength}\raggedright $p_t$\end{minipage}}}%
+    \put(-0.00140502,0.2549844){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09055582\unitlength}\raggedright $p_c$\end{minipage}}}%
+    \put(0.94527945,0.01935668){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T$\end{minipage}}}%
+    \put(0.48338597,0.39254535){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $p$\end{minipage}}}%
+    \put(0.57336088,0.196915){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03723791\unitlength}\raggedright fest\end{minipage}}}%
+    \put(0.6739291,0.11273765){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23346471\unitlength}\raggedright gasförmig-flüssig\end{minipage}}}%
+    \put(0.87895326,0.06721916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14349399\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(0.92943759,0.18821795){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_3$\end{minipage}}}%
+    \put(0.92943759,0.13997793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_2$\end{minipage}}}%
+    \put(0.93451548,0.10274003){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08036138\unitlength}\centering $T_1$\end{minipage}}}%
   \end{picture}%
 \endgroup%
