@@ -1,0 +1,141 @@
+\section{Statistische Physik}
+\subsection{Theorie der statistischen Gesamtheiten}
+\emph{Ziel}: Ableitung thermodynamischer Gesetze aus der mikroskopischen Dynamik. \\
+z.B. Gas, Übergang vom Mikrozustand ($6N$-Freiheitsgrade zum Makrozustand ($V, T, \mu$)). \\
+\emph{Idee}: Unkenntnis des Systemmikrozustandes. Daher: Mittelung über die statistische Gesamtheit von gleichartigen Systemen, die dem
+Makrozustand entsprechen. \\
+$\Rightarrow$ Informationstheoretisches Prinzip \\[\baselineskip]
+Informationsfunktion $I(w)$\\
+Gegeben: Schar von Ereignissen $i$ ($i=1, \ldots, n$) mit Auftrittswahrscheinlichkeit $w_i$.
+\begin{enumerate}[i)]
+    \item Beim Auftreten eines sicheren Ereignisses $k$, d.h. $w_k$ = 1, gewinnt man keine Information, daher $I(1)=0$.
+    \item Der Informationsgewinn ist größer beim Auftreten seltener Ereignisse $\Rightarrow I$ wächst monoton mit $\frac{1}{w}$
+    \item Der Informationsgewinn für unabhängige Ereignisse ist additiv. Daher $I(w_i w_j) = I(w_i)+I(w_j)$.
+\end{enumerate}
+i)-iii) legen die Funktion $I$ bis auf eine Konstante fest:
+\begin{equation}
+    I(w) = -C \ln w
+\end{equation}
+Der Mittelwert $S'$ der zu erwartenden Information ist
+\begin{equation}
+    S' := \sum_{i} w_i I(w_i) = - C \sum_i w_i ln(w_i) \qquad \text{Grad der Unkenntnis}
+\end{equation}
+Die Struktur der Gleichung ist identisch mit dem Ausdruck der Mischentropie, % TODO ref Mischentropie
+wenn man $C=k$ setzt. \\[\baselineskip]
+Allgemein sei $W_\nu$ die Wahrscheinlichkeit des Auftretens des Mikrozustands $\nu$. Im Gleichgewicht ist der Grad der Unkenntnis maximal,
+sodass:
+\begin{equation}
+    S = \max S' = \max \left( -k \sum_\nu w_\nu \ln w_\nu \right) \quad \text{mit} \quad \sum_\nu w_\nu = 1,
+\end{equation}
+wobei die Maximierung unter den mit dem Makrozustand kompatiblen Nebenbedingungen zu erfolgen hat.
+
+\subsubsection{Die drei Gesamtheiten}
+mikrokanonische, kanonische, großkanonische Gesamtheiten.
+\begin{enumerate}[i)]
+    \item Abgeschlossenes System \\
+    TODO: Bild Beispiele Realisierungen \\  % TODO Bild
+    Es wird nur über solche Realisierungen des Systems gemittelt, bei denen $V, N$ und $E$ fest sind \\
+    $\Rightarrow$ \emph{mikrokanonisches} Ensemble
+    \item System in Kontakt mit Wärmebad ($T$ fest) $\Rightarrow$ Energiefluktuationen \\
+    TODO: Bild System im Wärmebad \\ % TODO Bild
+    $V, N$ fest. $E_\nu$ variabel, aber so, dass $E=\sum_\nu w_\nu E_\nu$ ($E$ vorgegeben) \\
+    $\Rightarrow$ \emph{kanonisches} Ensemble
+    \item System offen für Energie und Teilchenaustausch ($T, \mu$ fest) $\Rightarrow V$ fest. \\
+    TODO: Bild System im Wärmebad mit variablem N \\  % TODO Bild
+    $E_\nu, N_\nu$ variabel, so dass $E=\sum_\nu w_\nu E_\nu$ und $N=\sum_\nu w_\nu N_\nu$ \\
+    $\Rightarrow$ \emph{großkanonisches} Ensemble
+\end{enumerate}
+Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge mikrokanonisch, kanonisch, großkanonisch.
+
+\begin{enumerate}[A)]
+    \item Die kanonische Gesamtheit\\
+    zu berechnen: Maximum von $S' = -k \sum_\nu w_\nu \ln w_\nu$ unter den Nebenbedingungen $\sum_\nu w_\nu = 1$ und $\sum_\nu w_\nu E_\nu = E$ \\[\baselineskip]
+    \underline{Methode der Lagrange-Multiplikatoren}:
+    \begin{enumerate}[i)]
+        \item Umschreiben der Nebenbedingungen $\sum_\nu w_\nu - 1 = 0$
+        \item Multiplikation der Nebenbedingungen mit den Lagrange-Multiplikatoren $-k \alpha$, $-k \beta$
+        \item Addition zu der zu optimierenden Funktion und \emph{freie} Variation der Variablen.
+    \end{enumerate}
+    d.h.
+    \begin{equation}
+        \begin{split}
+            & \delta \left[ \sum_\nu w_\nu \ln w_\nu - \alpha \left( \sum_\nu w_\nu - 1 \right) - \beta \left( \sum_\nu E_\nu w_\nu - E \right)  \right] = 0 \\
+            & \text{$k$ wurde wegdividiert, Konstante}
+        \end{split}
+    \end{equation}
+    Somit ist
+    \begin{equation}
+        \begin{split}
+            0 &= - \sum_\nu \delta w_\nu \ln w_\nu - \sum_\nu \delta w_\nu - \alpha \sum_\nu \delta w_\nu - \beta \sum_\nu E_\nu \delta w_\nu \\
+            &= \sum_\nu \delta w_\nu \underbrace{\left[-\ln w_\nu - 1 - \alpha - \beta E_\nu \right]}_{=0, \text{da $\delta w_\nu$ jetzt frei variierbar}} \\
+            \Rightarrow & w_\nu = \frac{e^{- \beta E_\nu}}{Z}, \qquad \text{mit } \frac{1}{Z} = e^{-1-\alpha}
+        \end{split}
+    \end{equation}
+    Weiterhin ist $\sum_\nu w_\nu = 1$
+    \begin{equation}
+        \Rightarrow Z = \sum_\nu e^{-\beta E_\nu} \Rightarrow w_\nu = \frac{e^{-\beta E_\nu}}{\sum_\nu e^{-\beta E_\nu}}
+    \end{equation}
+    Physikalische Bedeutung des Lagrange-Multiplikators $\beta$\\
+    Es ist
+    \begin{equation}
+        \begin{split}
+            E &= \sum_\nu E_\nu w_\nu = \frac{\sum_\nu E_\nu e^{-\beta E_\nu}}{\sum_\nu e^{-\beta E_\nu}}  \\
+            &= \frac{-\frac{\partial}{\partial \beta} \sum_\nu e^{-\beta E_\nu}}{\sum_\nu e^{-\beta E_\nu}} \\
+            &= \frac{-\frac{\partial}{\partial \beta} Z}{Z} = - \left( \frac{\partial}{\partial \beta} \ln Z \right)_{V, N}
+        \end{split}
+    \end{equation}
+    d.h.
+    \begin{equation}
+        E(\beta, V, N) = - \left( \frac{\partial}{\partial \beta} \ln Z \right)_{V, N}
+    \end{equation}
+    Andererseits ist
+    \begin{equation}
+        \begin{split}
+            S &= - k \sum_nu w_\nu \ln w_\nu = - \frac{k}{Z} \sum_\nu e^{-\beta E_\nu} \left( - \ln Z - \beta E_\nu \right) \\
+            &= k \ln Z + k \beta E
+        \end{split}
+    \end{equation}
+    d.h.
+    \begin{equation}
+        S(\beta, V, N) = k \ln Z + k \beta E
+    \end{equation}
+    Nun gilt die thermodynamische Beziehung $\pdi{S}{E}{V, N} = \frac{1}{T}$. Hier:
+    \begin{equation}
+        \begin{split}
+            \difd S =& k \underbrace{\pdi{\ln Z}{\beta}{V, N}}_{-E} \difd \beta + k \pdi{\ln Z}{V}{\beta, N} \difd V + k \pdi{\ln Z}{N}{\beta, V} \difd N \\
+            & + k E \difd \beta + k \beta \difd E \\
+            \Rightarrow & \pdi{S}{E}{V, N} = k \beta
+        \end{split}
+    \end{equation}
+    Verknüpfung zwischen der Thermodynamik und der statistischen Physik
+    \begin{equation}
+        \Rightarrow \beta = \frac{1}{k T}
+    \end{equation}
+    Weiterhin folgt, bei Ersetzung von $\beta \to \frac{1}{kT}$
+    \begin{equation}
+        S(T, V, N) = k \ln Z  + \frac{E}{T} \Rightarrow - k T \ln Z = E - ST = F(T, V, N)
+    \end{equation}
+    \begin{equation}
+        \Rightarrow F(T, V, N) = - k T \ln Z (T, V, N) \quad \text{mit } Z = \sum_\nu e^{- \frac{E_\nu}{k T}}
+    \end{equation}
+    Diese Gleichung verknüpft Thermodynamik und statistische Physik!
+    \item Die mikrokanonische Gesamtheit \\
+    Alle Realisierungen $\nu$ haben die gleiche Energie $E$. Spezialfall der kanonischen Gesamtheit.\\
+    Sei die Gesamtzahl der Realisierungen $W$
+    \begin{equation}
+        W := \sum_\nu 1
+    \end{equation}
+    Weiterhin ist
+    \begin{equation}
+        Z = \sum_\nu e^{- \frac{E_\nu}{k T}} = W e^{- \frac{E}{k T}}
+    \end{equation}
+    und
+    \begin{equation}
+        W_\nu = \frac{e^{-\frac{E}{kT}}}{Z} = \frac{1}{W}
+    \end{equation}
+    Daraus folgt für die Entropie
+    \begin{equation}
+        S = k \ln Z + \frac{E}{T} = k \ln W  \qquad \text{\textsc{Boltzmann}-Gleichung}
+    \end{equation}
+    aufgestellt von \textsc{Planck}
+\end{enumerate}
