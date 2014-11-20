@@ -1,0 +1,63 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'paramag_Tto0_2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{715.84423964bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.48089099)%
+    \put(0,0){\includegraphics[width=\unitlength]{paramag_Tto0_2.pdf}}%
+    \put(0.45703735,0.02556052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611732\unitlength}\centering $T$\end{minipage}}}%
+    \put(-0.03359137,0.4179679){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611732\unitlength}\centering $S$\end{minipage}}}%
+    \put(0.44031157,0.38153189){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22688774\unitlength}\raggedright $H=0$\end{minipage}}}%
+    \put(0.44031157,0.28784846){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18421504\unitlength}\raggedright $H=H_1$\end{minipage}}}%
+    \put(0.44031157,0.19049619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18263457\unitlength}\raggedright $H=H_2$\end{minipage}}}%
+    \put(0.14064128,0.03584914){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611732\unitlength}\centering $T_2$\end{minipage}}}%
+    \put(0.33788773,0.03354044){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611732\unitlength}\centering $T_1$\end{minipage}}}%
+    \put(0.5749434,0.37565034){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.482924\unitlength}\raggedright Anschalten von Magnetfeld,\\ Kontakt mit Wärmebad\\ $\rightarrow$ Entropie wird verringert\end{minipage}}}%
+    \put(0.12568859,0.4861848){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.42157609\unitlength}\raggedright Ausschalten von Magnetfeld,\\ kein Kontakt mit Wärmebad\end{minipage}}}%
+  \end{picture}%
+\endgroup%
