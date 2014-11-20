@@ -1,0 +1,63 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'pV-vanderWaals.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{520.0419079bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.73139835)%
+    \put(0,0){\includegraphics[width=\unitlength]{pV-vanderWaals.pdf}}%
+    \put(0.82057257,0.04863346){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14607182\unitlength}\centering $v$\end{minipage}}}%
+    \put(-0.01900514,0.7269736){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14607182\unitlength}\centering $p$\end{minipage}}}%
+    \put(0.58925202,0.64020716){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26082713\unitlength}\raggedright gasförmig\end{minipage}}}%
+    \put(0.81705965,0.48261518){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23309333\unitlength}\centering $T>T_c$\end{minipage}}}%
+    \put(0.75687786,0.38742489){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24832211\unitlength}\centering $T_c$\end{minipage}}}%
+    \put(0.81746494,0.25228309){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.23526887\unitlength}\centering $T<T_c$\end{minipage}}}%
+    \put(0.46556874,0.54899214){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09548626\unitlength}\raggedright KP\end{minipage}}}%
+    \put(0.41612952,0.03791853){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14389628\unitlength}\centering $v_c$\end{minipage}}}%
+    \put(-0.02899274,0.51243307){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.14389628\unitlength}\centering $p_c$\end{minipage}}}%
+  \end{picture}%
+\endgroup%
