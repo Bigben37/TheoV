@@ -138,4 +138,134 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
         S = k \ln Z + \frac{E}{T} = k \ln W  \qquad \text{\textsc{Boltzmann}-Gleichung}
     \end{equation}
     aufgestellt von \textsc{Planck}
+    \item Die großkanonische Gesamtheit \\
+    zu berechnen: Maximum von $S'=-k \sum_\nu w_\nu \ln w_\nu$ unter den Nebenbedingungen $\sum_\nu w_\nu - 1 = 0$, $\sum_\nu w_\nu E_\nu - E = 0$,
+    $\sum_\nu w_\nu N_\nu - N = 0$. \\
+    Lagrange Multiplikatoren $-\alpha k, - \beta k, - \gamma k$. Variation bezüglich $w_\nu$ ergibt:
+    \begin{equation}
+        \sum_\nu \delta w_\nu \left[ - \ln w_\nu - 1 - \alpha - \beta E - \gamma N_\nu \right] = 0
+    \end{equation}
+    $\delta w_\nu$ ist frei variierbar, somit ist die eckige Klammer Null und
+    \begin{equation}
+        w_\nu = \frac{1}{\mathcal{Z}} e^{- \beta E_\nu- \gamma N_\nu} \quad \text{mit} \quad
+        \mathcal{Z} := \sum_\nu e^{- \beta E_\nu - \gamma N_\nu} = \mathcal{Z}(\beta, V, \gamma)
+    \end{equation}
+    $\mathcal{Z}(\beta, V, G\gamma)$ ist die großkanonische (große) Zustandssumme. \\
+    Bestimmung von $\beta$ und $\gamma$:
+    \begin{equation}
+        \begin{split}
+            E &= \sum_\nu w_\nu E_\nu = \frac{1}{\mathcal{Z}} \sum_\nu E_\nu e^{- \beta E_\nu - \gamma N_\nu} \\
+            &= - \pdi{\ln \mathcal{Z}}{\beta}{V, \gamma} =: E(\beta, V, \gamma) \\
+            N &= \sum_\nu w_\nu N_\nu = \frac{1}{\mathcal{Z}} \sum_\nu N_\nu e^{- \beta E_\nu - \gamma N_\nu} \\
+            &= - \pdi{\ln \mathcal{Z}}{\gamma}{V, \beta} =: N(\beta, V, \gamma)
+        \end{split}
+    \end{equation}
+    Weiterhin ist die Entropie
+    \begin{equation}
+        \begin{split}
+            S =& - \frac{k}{\mathcal{Z}} \sum_\nu e^{-\beta E_\nu - \gamma N_\nu} \left( - \ln \mathcal{Z} - \beta E_\nu - \gamma N_\nu \right) \\
+            =& k \ln \mathcal{Z} + \beta k E + \gamma k N \\
+            \Rightarrow  \difd S =& k \pdi{\ln \mathcal{Z}}{\beta}{\gamma, V} \difd \beta + k \pdi{\ln \mathcal{Z}}{\gamma}{\beta, V} \difd \gamma +
+            k \pdi{\ln \mathcal{Z}}{V}{\beta, \gamma} \difd V \\
+            & + k \beta \difd E + k E \difd \beta + k \gamma \difd N + k N \difd \gamma \\
+            \difd S =& \pdi{\ln \mathcal{Z}}{V}{\beta, \gamma} \difd V + k \beta \difd E + k \gamma \difd N
+        \end{split}
+    \end{equation}
+    Festlegung der Parameter $\beta$ und $\gamma$. Zunächst ist $\beta = \frac{1}{k} \pdi{S}{E}{V, N} $; $\gamma = \frac{1}{k} \pdi{S}{N}{E, V}$.
+    Weiterhin gelten die thermodynamischen Beziehungen (aus $\difd E = T \difd S - p \difd V + \mu \difd N$).
+    \begin{equation}
+        \pdi{S}{E}{V, N} = \frac{1}{N}, \qquad \pdi{S}{N}{E, V} = - \frac{\mu}{T}
+    \end{equation}
+    Daher Verknüpfung zur Thermodynamik
+    \begin{equation}
+        \beta = \frac{1}{k T}, \qquad  \gamma = - \frac{\mu}{k T}
+    \end{equation}
+\end{enumerate}
+
+\paragraph{Folgerungen}
+\begin{enumerate}[i)]
+    \item
+    \begin{equation}
+        \begin{split}
+            \mathcal{Z}(T, V, \mu) &= \sum_\nu e^{\frac{\mu N_\nu - E_\nu}{k T}} \\
+            w_\nu &= e^{\frac{\mu N_\nu - E_\nu}{k T}} / \mathcal{Z}
+        \end{split}
+    \end{equation}
+    \item
+    \begin{equation}
+        S = k \ln \mathcal{Z} + \frac{E}{T} - \frac{\mu N}{T}
+    \end{equation}
+    \item Nachdem $\Omega = E - \mu N - T S = - p V$ ist, folgt
+    \begin{equation}
+        \Omega(T, V, \mu) = - k T \ln \mathcal{Z}(T, V, \nu)
+    \end{equation}
+\end{enumerate}
+Somit ist die zentrale Aufgabe der statistischen Physik die Berechnung der Zustands\-summen.
+
+\subsection{Die kanonische Zustandssumme}
+Zustandssumme und Zustandsintegral. \\
+Zustandssumme $\Rightarrow$ diskret-liegende Mikrozustände (z.B. Quantenmechanik). \\
+Für klassische Teilchen $\rightarrow$ kontinuierliche Änderungen $\rightarrow$ Zustandsintegral \\
+\emph{Mikrozustand}: Definiert durch $6N$-Koordinaten im Phasenraum ($q_1, \ldots, q_{3N}, p_1, \ldots, p_{3N}$) $\rightarrow$ \emph{Punkt} im
+$6N$-dim. \emph{Phasenraum}.
+\begin{enumerate}[i)]
+    \item klassisch: in jedem Volumen des Phasenraums beliebig viele Zustände
+    \item quantenmechanisch: \emph{Unschärferelation} $\rightarrow$ \emph{ein} Zustand in $\difd q \difd p = h$. \\
+    Folglich $\sum_\nu \cdots \rightarrow \int \frac{\difd^{3N} q \difd^{3N} p}{h} {3N} \cdots$ (Übergang zum Kontinuum und unterscheidbare Teilchen)
+\end{enumerate}
+\subsubsection*{Beispiel}
+\begin{enumerate}[i)]
+    \item Freies Teilchen im Würfel, Kantenlänge $a$ \\
+    Zustandssumme (kanonisch)
+    \begin{equation}
+        Z = \sum_\nu e^{- \frac{E_\nu}{k T}} \qquad E_\nu = \frac{1}{2 m} \left( p_x^2 + p_y^2 + p_z^2 \right)
+    \end{equation}
+    \begin{enumerate}[a)]
+        \item Quantisierung (quasiklassisch)
+        \begin{equation}
+            \begin{split}
+                & \oint p \difd q = n h, \quad N \in \mathbb{N} \Rightarrow 2 a \left| p_{x \nu}  \right| n h \\
+                & \Rightarrow \frac{p_{x \nu}^2}{2 m} = \frac{n^2 k^2}{8 m a^2} \qquad \alpha := \frac{h^2}{8 m a^2 k T}
+            \end{split}
+        \end{equation}
+        Weiterhin ist $Z = Z_x Z_y Z_z$ mit
+        \begin{equation}
+            Z_x = \sum_{n=1}^{\infty} e^{-n^2 \alpha} \simeq \int_{0}^{\infty} e^{-\alpha x^2} \difd x
+            = \frac{\sqrt{\pi}}{2 \sqrt{\alpha}} = a \left( \frac{2 \pi m k T}{h^2} \right)^{1/2}
+        \end{equation}
+        \begin{equation}
+            \begin{split}
+                & \Rightarrow Z = \underbrace{a^3}_{V} \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} = Z(V, T) = C V T^{3/2} \\
+                & \text{mit } C = \left( \frac{2 \pi m k }{h^2} \right)^{3/2}
+            \end{split}
+        \end{equation}
+        \begin{equation}
+            \begin{split}
+                & F = - k T \ln Z = - k T \ln \left( C V T^{3/2} \right) \\
+                & \Rightarrow - p = \pdi{F}{V}{T} = - \frac{k T}{V} \Rightarrow p V = k T
+            \end{split}
+        \end{equation}
+        Beinahe Zustandsgleichung des idealen Gases.
+        \item klassische Entsprechung
+        \begin{equation}
+            \begin{split}
+                & Z_x \rightarrow \frac{1}{h} \int_{0}^{a} \difd q_x \int_{-\infty}^{\infty} \difd p_x e^{-\frac{p_x^2}{2m kT}} \\
+                & = \frac{a}{h} \sqrt{2 m k T} \underbrace{\int_{-\infty}^{\infty} e^{-y^2} \difd y}_{\sqrt{\pi}} = a \left( \frac{2 \pi m k T}{h^2} \right)^{1/2}
+            \end{split}
+        \end{equation}
+        Ergebnis wie vorher $\Rightarrow$ Äquivalenz $\sum \cdots \rightarrow \int \cdots$ in diesem Fall bestätigt.
+    \end{enumerate}
+    \item $N$ unterscheidbare, nicht wechselwirkende Teilchen im Würfel. Klassisch:
+    \begin{equation}
+        \begin{split}
+            & Z = \frac{1}{h^{3N}} \int \difd^{3N} q \int \difd^{3N}p e^{- \frac{E_\nu}{kT}} = (Z_x)^{3N} \\
+            & F = - k T \ln Z = - k T \ln \left( C^N V^N T^{3N/2} \right) \\
+            & \Rightarrow - p = \pdi{F}{V}{T, N} = - \frac{N k T}{V} \Rightarrow p V = N k T
+        \end{split}
+    \end{equation}
+    Weiterhin
+    \begin{equation}
+        S = \pdi{F}{T}{V, N} = k N \ln (CV) + \frac{3}{2} k N \ln T + \frac{3N}{2} k
+    \end{equation}
+    Struktur der Gleichungen erinnert an das ideale Gas. \emph{Aber}: Problem: $S$ muss extensiv sein! D.h. $CV$ müsste intensiv sein!
 \end{enumerate}
