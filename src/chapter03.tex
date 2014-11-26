@@ -39,8 +39,8 @@ mikrokanonische, kanonische, großkanonische Gesamtheiten.
         \input{../img/realisationsMKE.pdf_tex}
         \caption{Beispiele für Realisierungen eines Systems.}
         \label{img:realisationsMKE}
-\end{figure}
-     Es wird nur über solche Realisierungen des Systems gemittelt, bei denen $V, N$ und $E$ fest sind \\
+    \end{figure}
+    Es wird nur über solche Realisierungen des Systems gemittelt, bei denen $V, N$ und $E$ fest sind \\
     $\Rightarrow$ \emph{mikrokanonisches} Ensemble
     \item System in Kontakt mit Wärmebad ($T$ fest) $\Rightarrow$ Energiefluktuationen
     \begin{figure}[H]
@@ -49,7 +49,7 @@ mikrokanonische, kanonische, großkanonische Gesamtheiten.
         \input{../img/systemInHeatBath.pdf_tex}
         \caption{System im Wärmebad.}
         \label{img:systemInHeatBath}
-\end{figure}
+    \end{figure}
     $V, N$ fest. $E_\nu$ variabel, aber so, dass $E=\sum_\nu w_\nu E_\nu$ ($E$ vorgegeben) \\
     $\Rightarrow$ \emph{kanonisches} Ensemble
     \item System offen für Energie und Teilchenaustausch ($T, \mu$ fest) $\Rightarrow V$ fest.
@@ -59,7 +59,7 @@ mikrokanonische, kanonische, großkanonische Gesamtheiten.
         \input{../img/OpenSystemInHeatBath.pdf_tex}
         \caption{Offenes System im Wärmebad.}
         \label{img:OpenSystemInHeatBath}
-\end{figure}
+    \end{figure}
     $E_\nu, N_\nu$ variabel, so dass $E=\sum_\nu w_\nu E_\nu$ und $N=\sum_\nu w_\nu N_\nu$ \\
     $\Rightarrow$ \emph{großkanonisches} Ensemble
 \end{enumerate}
@@ -231,7 +231,7 @@ $6N$-dim. \emph{Phasenraum}.
     \item quantenmechanisch: \emph{Unschärferelation} $\rightarrow$ \emph{ein} Zustand in $\difd q \difd p = h$. \\
     Folglich $\sum_\nu \cdots \rightarrow \int \frac{\difd^{3N} q \difd^{3N} p}{h} {3N} \cdots$ (Übergang zum Kontinuum und unterscheidbare Teilchen)
 \end{enumerate}
-\subsubsection*{Beispiel}
+\subsubsection{Beispiel}
 \begin{enumerate}[i)]
     \item Freies Teilchen im Würfel, Kantenlänge $a$ \\
     Zustandssumme (kanonisch)
@@ -286,4 +286,133 @@ $6N$-dim. \emph{Phasenraum}.
         S = \pdi{F}{T}{V, N} = k N \ln (CV) + \frac{3}{2} k N \ln T + \frac{3N}{2} k
     \end{equation}
     Struktur der Gleichungen erinnert an das ideale Gas. \emph{Aber}: Problem: $S$ muss extensiv sein! D.h. $CV$ müsste intensiv sein!
+    Dies ist hier nicht der Fall. Grund: \emph{Unterscheidbarkeit} der Teilchen. Man hat für \emph{un}untrescheidbare Teilchen (klassische
+    Statistik, \textsc{Boltzmann})
+    \begin{equation}
+        \sum_\nu \cdots \rightarrow \frac{1}{N!} \int \frac{\difd^{3N}q \difd^{3N}p}{h^{3N}} \cdots
+    \end{equation}
+    Diskussion von $N!$ vgl. Römer und Filk, Stat. Mechanik \\
+    Damit wird in $F$ $C^N$ durch $\frac{C^N}{N!}$ und für große N ist
+    \begin{equation}
+        N! \simeq N \ln N - N \qquad \text{(\textsc{Stirling}-Formel)}
+    \end{equation}
+    d.h.
+    \begin{equation}
+        \frac{C^N}{N!} \simeq \left( \frac{C e}{N} \right)^N
+    \end{equation}
+    Damit
+    \begin{equation}
+        S = k N \ln \underbrace{\left( \frac{C e V}{N} \right)}_{\text{intensiv}} + \frac{3}{2} k N \ln T + \frac{3 N}{2} k
+    \end{equation}
 \end{enumerate}
+
+\subsubsection{Das klassisch ideale Gas}
+$N$ groß, hohe Temperaturen
+\begin{equation}
+    \begin{split}
+        & F = - k T \ln Z = - N k T \ln \left[ \frac{V}{N} e \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} \right] \\
+        & S = N k \left[ \ln \frac{V}{N} + \frac{3}{2} \ln \left( \frac{2 \pi m k T}{h^2} \right)  \right] + \frac{5}{2} N k
+    \end{split}
+\end{equation}
+Damit
+\begin{equation}
+    E = F + TS = \frac{5}{2} N k T - N k T \ln e = \frac{3}{2} N k T
+\end{equation}
+Weiterhin
+\begin{equation}
+    H = E + pV = \frac{3}{2} N k T + N k T = \frac{5}{2} N k T
+\end{equation}
+Daraus folgen, nach einigen Schritten,
+\begin{equation}
+    c_v = \frac{3}{2} R , \quad c_p = \frac{5}{2} R
+\end{equation}
+mit $R=kN_A$, \emph{Gaskonstante}. \\
+Umschreibung von $S$ als Funktion von $T$ und $p$ ($\frac{p V}{N k T}$).
+\begin{equation}
+    \begin{split}
+        \frac{S}{Nk} &= - \ln p + \ln T + \ln k + \frac{3}{2} \ln T + \frac{3}{2} \ln \left( \frac{2 \pi m k}{h^2} \right) + \frac{5}{2} \ln e \\
+        &= - \ln p + \frac{5}{2} \ln T + \underbrace{\ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \left( e k \right)^{3/2} \right]}_{s_0/N_a k} \\
+        & \text{Formel von \textsc{Sackur-Tetrode}}
+    \end{split}
+\end{equation}
+$s_0$: Entropiekonstante (pro Mol)\\
+Experimentell ist die Formel sehr gut bestätigt.
+\paragraph{Zum Gibbsschen Paradoxon}
+TODO: Bild Gibbs \\ % TODO Bild
+Die berechnete Entropie liefert nun die Lösung des Paradoxons. Es ist
+\begin{equation}
+    \begin{split}
+        &  S(T, V, N) = \frac{5}{2} N k + N k \ln \left[ \frac{V}{N} \lambda^{-3}(T) \right] \\
+        & \text{mit} \quad \lambda(T) := \frac{h}{\sqrt{2 \pi m k T}} \quad \text{("`thermische"' Wellenlänge)}
+    \end{split}
+\end{equation}
+$\lambda$ ist verschieden (wegen $m$) für verschiedene Gase.
+\begin{enumerate}[A)]
+    \item Einheitliches Gas
+    \begin{enumerate}[i)]
+        \item Gesamtentropie des Systems bei vorhandener Wand
+        \begin{equation}
+            S_\text{A} = 2 \left\{ \frac{5}{2} N k + N k \ln \left[ \frac{V}{N} \lambda^{-3}(T) \right]  \right\}
+        \end{equation}
+        \item Gesamtentropie des Systems nach Wegnahme der Trennwand
+        \begin{equation}
+            S_\text{E} = \frac{5}{2} (2N) k + (2N)k \ln \left[ \frac{2 V}{2 N} \lambda^{-3}(T) \right] = S_\text{A}
+        \end{equation}
+    \end{enumerate}
+    \item zwei verschiedene Gase
+    \begin{enumerate}[i)]
+        \item Gesamtentropie des Systems bei vorhandener Wand
+        \begin{equation}
+            S_\text{A} = \frac{5}{2} \left( N_1 + N_2 \right) k + N_1 k \ln \left[ \frac{V}{N_1} \lambda_1^{-3}(T) \right] + N_2 k \ln \left[ \frac{V}{N_2} \lambda_2^{-3}(T) \right]
+        \end{equation}
+        \item Gesamtentropie des Systems nach Wegnahme der Trennwand
+        \begin{equation}
+            \begin{split}
+                S_\text{E} &= \frac{5}{2} \left( N_1 + N_2 \right) k + N_1 k \ln \left[ \frac{2 V}{N_1} \lambda_1^{-3}(T) \right] + N_2 k \ln \left[ \frac{2 V}{N_2} \lambda_2^{-3}(T) \right] \\
+                &= S_A + \underbrace{\left( N_1 + N_2 \right) k \ln 2}_{\text{Mischungsentropie!}}
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
+\subsubsection{Maxwellsche Geschwindigkeitsverteilung}
+Betrachten wir ein Teilchen im Würfel,
+\begin{equation}
+    Z = \sum_\nu e^{- \frac{E_\nu}{k T}} = V \left( \frac{2 \pi m k T}{h^2} \right)^{3/2}
+\end{equation}
+$Z$ kann formal als Integral über Energien aufgefasst werden,
+\begin{equation}
+    Z = \int_{0}^{\infty} \difd \epsilon\, g(\epsilon) e^{- \frac{\epsilon}{kT}}
+\end{equation}
+$g(\epsilon)\difd \epsilon$ Zustandsdichte; $g(\epsilon)$ bezeichnet die Anzahl der Zustände im
+Energieintervall \\ $[\epsilon, \epsilon + \difd \epsilon]$. Damit ist
+\begin{equation}
+    V \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} = \int_{0}^{\infty} \difd \epsilon\, g(\epsilon) e^{-\frac{\epsilon}{k T}}
+\end{equation}
+(im wesentlichen die \textsc{Laplace}-Transformation) \\
+Es folgt
+\begin{equation}
+    g(\epsilon) \difd \epsilon = \frac{2 \pi V}{h^3} (2m)^{3/2} \epsilon^{1/2} \difd \epsilon \quad \text{\textsc{Maxwell}(-\textsc{Boltzmann})-Verteilung}
+\end{equation}
+Beweis: Einsetzen! und Eindeutigkeit der inversen Laplace-Transformation.\\
+Übergang zum Teilchengesamtimpuls $p$ liefert
+\begin{equation}
+    \epsilon = \frac{p^2}{2 m} \qquad \difd \epsilon = \frac{p}{m} \difd p
+\end{equation}
+\begin{equation}
+    \difd \epsilon\, g(\epsilon) e^{-\frac{\epsilon}{k T}} \sim \difd \epsilon\, \epsilon^{1/2} e^{-\frac{\epsilon}{k T}} \sim \difd p\, p^2 e^{-\frac{p^2}{2 m k T}}
+\end{equation}
+Normierte Wahrscheinlichkeitsdichte, dass bei der Temperatur $T$ der Gesamtimpuls eines Teilchens zwischen $p$ und $p+\difd p$ liegt:
+\begin{equation}
+    w(p)\difd p = \frac{4 \pi}{(2 \pi m k T)^{3/2}} p^2 e^{- \frac{p^2}{2 m k T}} \difd p \qquad \text{nicht WW-Teilchen}
+\end{equation}
+Hinweis: Die Faktoren $p^2 \difd p$ und $\epsilon^{1/2} \difd \epsilon$ sind Folge der \emph{drei}-Dimensionalität des Raumes.
+
+\subsection{Die mikrokanonische Zustandssumme}
+\subsubsection{Der Liouvillesche Satz}
+Klassisch ist ein geschlossenes System von $N$ Teilchen durch einen Punkt \\ $(q_1,\ldots q_{3N}, p_1, \ldots, p_{3N})$ im $6N$-dimensionalen Phasenraum
+$\Gamma$ eindeutig beschreiben. Zeitliche Änderungen des Systems führen zu einer Trajektorie des Punktes im $\Gamma$-Raum. Mit 
+$H(q_1,\ldots q_{3N}, p_1, \ldots, p_{3N})$ Hamiltonfunktion des Systems lauten die Bewegungsgleichungen
+\begin{equation}
+    \dot{p}_i = - \frac{\partial H}{\partial q_i} \qquad \dot{q}_i = \frac{\partial H}{p_i}
+\end{equation}
+Die Trajektorie ist entweder geschlossen oder sie schneidet sich nie.
