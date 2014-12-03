@@ -1,5 +1,6 @@
 \section{Statistische Physik}
 \subsection{Theorie der statistischen Gesamtheiten}
+\label{sub:theo:statsums}
 \emph{Ziel}: Ableitung thermodynamischer Gesetze aus der mikroskopischen Dynamik. \\
 z.B. Gas, Übergang vom Mikrozustand ($6N$-Freiheitsgrade zum Makrozustand ($V, T, \mu$)). \\
 \emph{Idee}: Unkenntnis des Systemmikrozustandes. Daher: Mittelung über die statistische Gesamtheit von gleichartigen Systemen, die dem
@@ -221,6 +222,7 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
 Somit ist die zentrale Aufgabe der statistischen Physik die Berechnung der Zustands\-summen.
 
 \subsection{Die kanonische Zustandssumme}
+\label{sub:sum_canon}
 Zustandssumme und Zustandsintegral. \\
 Zustandssumme $\Rightarrow$ diskret-liegende Mikrozustände (z.B. Quantenmechanik). \\
 Für klassische Teilchen $\rightarrow$ kontinuierliche Änderungen $\rightarrow$ Zustandsintegral \\
@@ -515,3 +517,118 @@ Iteration ergibt
 \begin{equation}
     C_n = \frac{\pi^{n/2}}{\Gamma \left( \frac{n+2}{2} \right)} \qquad \qquad \square
 \end{equation}
+\begin{equation}
+    \begin{split}
+        \Rightarrow \ln V_n &= \frac{n}{2} \ln \left( \pi R \right)^2 - \ln \Gamma \left( \frac{n}{2} + 1 \right) \\
+        &\simeq \frac{n}{2} \ln \left( \pi R \right)^2 - \frac{n}{2} \ln \frac{n}{2} + \frac{n}{2} \\
+        &= \frac{n}{2} \ln \left( \frac{2 \pi e R^2}{n} \right) \qquad \text{für $n$ groß}
+    \end{split}
+\end{equation}
+Damit
+\begin{equation}
+    \begin{split}
+        & \ln \Phi(E) = \frac{3 N}{2} \ln \left( \frac{4 \pi m e}{3 N} \right) + \frac{3 N }{2} \ln E \\
+        \Rightarrow & \Phi(E) = \left( \frac{4 \pi m e}{3 N} \right)^{3N/2} E^{3 N / 2}
+    \end{split}
+\end{equation}
+und
+\begin{equation}
+    \begin{split}
+        & \frac{\Phi(E + \Delta E) - \Phi(E)}{\Delta E} = \frac{\difd \Phi}{\difd E} = \left( \frac{4 \pi m e}{3 N} \right)^{3N/2} \left( \frac{3 N}{2} \right) E^{3N/2-1} \\
+        & \simeq \left( \frac{4 \pi m e E}{3N} \right)^{3N/2} = \Phi(E) \qquad \text{für sehr große $N$}
+    \end{split}
+\end{equation}
+Hinweis: Für sehr große Dimensionen liegt der Hauptanteil des Kugelvolumens unmittelbar unterhalb der Oberfläche!\\
+Damit
+\begin{equation}
+    W = \frac{V^n}{N! h^{3N}} \left( \frac{4 \pi m e E}{3 N} \right)^{3N/2} = \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N = W(V, N, E)
+\end{equation}
+Mikrokanonische Zustandssumme:
+\begin{equation}
+    Z = W e^{-\frac{E}{k T}} \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N = \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N e^{-\frac{E}{k T}}
+\end{equation}
+Entropie:
+\begin{equation}
+    S = k \ln W = k N \ln \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right] = S(V, N, E)
+\end{equation}
+Zugang zur Thermodynamik (implizit $E(S, V, N)$). \\
+Nun ist
+\begin{equation}
+    \begin{split}
+        & \frac{1}{T} = \pdi{S}{E}{V, N} = \frac{3}{2} k N \frac{1}{E} \\
+        & \Rightarrow E = \frac{3}{2} N k T
+    \end{split}
+\end{equation}
+Folglich, für das ideale Gas
+\begin{equation}
+    S(T, V, N) = k N \ln \left[ \frac{V}{N} \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} e^{5/2} \right]
+\end{equation}
+wie in \ref{sub:sum_canon} bereits abgeleitet.
+\paragraph{Fazit}
+In der Regel ist \emph{kanonisch arbeiten} einfacher.
+
+\subsection{Der Gleichverteilungssatz der Energie}
+Wir berechnen kanonisch den Mittelwert der Energie. Wie bei \ref{sub:theo:statsums} ist 
+\begin{equation}
+    E = \frac{\sum_\nu E_\nu e^{- E_\nu / kT}}{E_\nu e^{-E\nu / kT}}
+\end{equation}
+was sich im Kontinuum schreibt
+\begin{equation}
+    E = \frac{\int \difd^{3N} \textbf{q} \, \difd^{3N} \textbf{p} \, E(\textbf{p}, \textbf{q}) e^{-E(\textbf{p}, \textbf{q})/kT}}{\int \difd^{3N} \textbf{q} \, \difd^{3N} \textbf{p} \, e^{-E(\textbf{p}, \textbf{q})/kT}}
+\end{equation} 
+(unterscheidbare und nicht unterscheidbare Teilchen, \textsc{Maxwell-Boltzmann} Statistik, d.h. relativ hohe Temperatur). \\
+für $N$ nicht wechselwirkende Teilchen ist
+\begin{equation}
+    E(\textbf{q}, \textbf{p}) = \sum_{i=1}^{N} \epsilon_i(\vec{p}_i, \vec{q}_i)
+\end{equation}
+Die Ausführung der Integration vereinfacht sich zu
+\begin{equation}
+    \begin{split}
+        E &= \sum_{i=1}^{N} \frac{\int \difd^3 \vec{p}_i \, \difd^3 \vec{q}_i \, \epsilon_i(\vec{p}_i, \vec{q}_i) e^{- \epsilon_i(\vec{p}_i, \vec{q}_i) / kT}}{\int \difd^3 \vec{p}_i \, \difd^3 \vec{q}_i \, e^{- \epsilon_i(\vec{p}_i, \vec{q}_i) / kT}} \\
+        &= N \frac{\int \difd^3 \vec{p} \, \difd^3 \vec{q} \, \epsilon(\vec{p}, \vec{q}) e^{- \epsilon(\vec{p}, \vec{q})(kT)}}{\int \difd^3 \vec{p} \, \difd^3 \vec{q} \, e^{- \epsilon(\vec{p}, \vec{q})(kT)}}
+    \end{split}
+\end{equation}
+für identische Teilchen. \\
+Sollten die Teilchen neben der Translation innere Freiheitsgrade aufweisen (Vibration, Rotation), so ist analog ($x_i$ verallgemeinerte Koordinaten und Impulse)
+\begin{equation}
+    E = N \frac{\int \difd x_1 \cdots \difd x_g \, \epsilon(x_1, \ldots, x_g) e^{- \epsilon / kT}}{\int \difd x_1 \cdots \difd x_g \, e^{- \epsilon / kT}}
+\end{equation}
+Falls $\epsilon$ separiert, d.h. falls gilt
+\begin{equation}
+    \epsilon = \epsilon_f(x_1, \ldots, x_f) + e_g(x_{f+1}, \ldots, x_g),
+\end{equation}
+folgt:
+\begin{equation}
+    \begin{split}
+        & E = E_f + E_g \\
+        & \text{mit} \quad E_f = N \frac{\int \difd x_1 \cdots \difd x_f \, \epsilon_f \, e^{-\epsilon_f / kT}}{\int \difd x_1 \cdots \difd x_f \, e^{-\epsilon_f / kT}} \\
+        & \text{und} \quad E_g = N \frac{\int \difd x_{f+1} \cdots \difd x_g \, \epsilon_g \, e^{-\epsilon_g / kT}}{\int \difd x_{f+1} \cdots \difd x_g \, e^{-\epsilon_g / kT}}
+    \end{split}
+\end{equation}
+Seien nun diejenigen Koordinaten und Impulse zum Satz ($x_1, \ldots, x_f$) zusammengefasst, die \emph{quadratisch} in die Energie $\epsilon_f$ eingehen. \\
+\underline{Beispiele}
+\begin{itemize}
+    \item kinetische Bewegung $\frac{p_i^2}{2 m}$
+    \item harmonischer Oszillator $\frac{m \omega^2 q^2_i}{2}$
+\end{itemize}
+\underline{Behauptung}: Jede solche Variable trägt den Faktor $N \frac{k T}{2}$ zu $E$ bei (Gleichverteilungssatz).
+\underline{Beweis} (etwas allgemeiner). Sei $\epsilon_f (x_1, \ldots, x_f)$ eine homogene Funktion 2. Grades in $(x_1, \ldots, x_f)$. Dann
+(\textsc{Euler}scher Satz)
+\begin{equation}
+    \begin{split}
+        & e_f(x_1, \ldots, x_f) = \frac{1}{2} \left( \frac{\partial \epsilon_f}{\partial x_1} x_1 + \ldots + \frac{\partial \epsilon_f}{\partial x_f} x_f \right) \\
+        \Rightarrow & \int e^{- \epsilon_f / kT} \epsilon_f \difd x_1 \cdots \difd x_f = \frac{1}{2} \int e^{- \epsilon_f / kT} \left( \frac{\partial \epsilon_f}{\partial x_1} x_1 + \ldots + \frac{\partial \epsilon_f}{\partial x_f} x_f \right) \difd x_1 \cdots \difd x_f
+    \end{split}
+\end{equation}
+Nun ist
+\begin{equation}
+    \begin{split}
+        & \int e^{- \epsilon_f / kT} x_1 \frac{\partial \epsilon_f}{\partial x_1} \difd x_1 = - k T \int x_1 \frac{\partial}{\partial x_1} \left( e^{- \epsilon_f / kT} \right) \\
+        & \overset{ \text{P.I.}}{=} \underbrace{\left. - k T x_1 e^{- \epsilon_f / kT} \right|_{x_1 = -\infty}^{x_1 = + \infty}}_{=0} + k T \int 1 \cdot e^{- \epsilon_f / k T} \difd x_1
+    \end{split}
+\end{equation}
+Damit folgt
+\begin{equation}
+    E_f = N f \frac{k T}{2} \qquad \qquad \square
+\end{equation}
+\underline{Bemerkung} Physikalisch ist das Ergebnis nur für relativ hohe Temperaturen richtig. Es gibt Abweichungen bei tiefen Temperaturen (Quantenstatistik nötig!).
