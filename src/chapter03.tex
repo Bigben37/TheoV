@@ -632,3 +632,128 @@ Damit folgt
     E_f = N f \frac{k T}{2} \qquad \qquad \square
 \end{equation}
 \underline{Bemerkung} Physikalisch ist das Ergebnis nur für relativ hohe Temperaturen richtig. Es gibt Abweichungen bei tiefen Temperaturen (Quantenstatistik nötig!).
+
+\subsubsection{Die spezifische Wärme nach dem Gleichverteilungssatz}
+\begin{enumerate}[i)]
+    \item Das \emph{einatomige} ideale Gas $f=3$ (Translation) $E = E_f = \frac{3}{2} N k T$
+    \begin{equation}
+        \begin{split}
+            & c_v = \pdi{E}{T}{V} = \frac{3}{2} N k \\
+            & c_p = c_v + T \pdi{p}{t}{V} \pdi{V}{T}{p} = \frac{3}{2} N k + N k = \frac{5}{2} N k \\
+            & \text{da (ideales Gas): } pV = N k T \Rightarrow \pdi{V}{T}{p} = \frac{N k }{p}; \pdi{p}{T}{V} = \frac{N k}{V}
+        \end{split}
+    \end{equation}
+    \item Das \emph{zweiatomige} ideale Gas (2 Rotationsfreiheitsgrade) \\
+    TODO: Bild zweiatomiges Gas mit Rotationsrichtungen \\ % TODO Bild
+    \begin{equation}
+        \epsilon = \frac{1}{2 m} \left( p_x^2 + p_y^2 + p_z^2 \right) + \frac{1}{2 I} \left( L_\xi^2 + L_\eta^2 \right)
+    \end{equation}
+    Somit
+    \begin{equation}
+        c_v = \frac{5}{2} N k \quad \text{und} \quad c_p = \frac{7}{2} N k
+    \end{equation}
+    Vernachlässigt wurden:
+    \begin{enumerate}[a)]
+        \item Rotation um die $\zeta$-Achse (Modell hier: Massenpunkte $I_3 = 0$)
+        \item Schwingungen des Moleküls (Quanteneffekt, wird später diskutiert)
+    \end{enumerate}
+    \item Drei- und mehratomige Gase $f = 6$ (3 Rotationsfreiheitsgrade)
+    \begin{equation}
+        \Rightarrow c_v = \frac{6}{2} N k = 3 N k \quad c_v = 4 N k
+    \end{equation}
+    \item Der Festkörper als System von $N$-dreidimensionalen Oszillatoren $\Rightarrow$ pro Oszillator (Atom) 6 thermodynamische Freiheitsgrade
+    \begin{equation}
+        \Rightarrow c_v = \frac{6}{2} N k = 3 N k \quad \text{Satz von \textsc{Dulong-Petit}}
+    \end{equation}
+    Viele Abweichungen, z.B. Diamant. Grund: Quanteneffekte.
+\end{enumerate}
+\paragraph{Das ideale zweiatomige Gas} Quantenmechanische Korrekturen \\
+\underline{Hier}: semiklassische Behandlung (\textsc{Maxwell-Boltzmann} Statistik) \\
+$N$ untereinander nicht wechselwirkende Moleküle
+\begin{equation}
+    Z = \frac{1}{N!} = z^N \quad \text{mit} \quad z = \sum_i e^{\frac{\epsilon_i}{k T}}    % TODO z geschwungen
+\end{equation}
+Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_j^\text{tr} + \epsilon_k^\text{rot} + \epsilon_l^\text{vib}$
+\begin{equation}
+    \begin{split}
+        \Rightarrow z &= \sum_{j, k, l} e^{-\epsilon_j^\text{tr} / kT} e^{-\epsilon_k^\text{rot} / kT} e^{-\epsilon_l^\text{vib} / kT} \\
+        &= \underbrace{\sum_j e^{-\epsilon_j^\text{tr} / kT}}_{z_\text{tr}} \underbrace{\sum_k e^{-\epsilon_k^\text{rot} / kT}}_{z_\text{rot}} \underbrace{\sum_l e^{-\epsilon_l^\text{vib} / kT}}_{z_\text{vib}} \\
+        \Rightarrow Z &= Z_\text{tr} Z_\text{rot} Z_\text{vib} \quad \text{mit} \quad Z_\text{tr} = \frac{1}{N!} \left( z_\text{tr} \right)^N; Z_\text{rot} = \left( z_\text{rot} \right)^N; Z_\text{vib} = \left( z_\text{vib} \right)^N \\
+        F &= - k T \ln Z \Rightarrow F = F_\text{tr} + F_\text{rot} + F_\text{vib} \quad \text{mit} \quad F_\text{tr} = - k T \ln Z_\text{tr}, \text{ usw.} \\
+        S &= - \pdi{F}{T}{V, N} \Rightarrow S = S_\text{tr} + S_\text{rot} + S_\text{vib} \quad \text{mit} \quad S_\text{tr} = - \pdi{F_\text{tr}}{T}{V, N}, \text{ usw.} \\
+        E &= F + T S \Rightarrow E = E_\text{tr} + E_\text{rot} + _\text{vib} \quad \text{mit} \quad E_\text{tr} = F_\text{tr} + T S_\text{tr}, \text{ usw.}
+    \end{split}
+\end{equation}
+\begin{enumerate}[A)]
+    \item Rotation
+    \begin{enumerate}[a)]
+        \item zunächst $AB$-Moleküle (unterscheidbare Atome) \\
+        TODO: Bild zweiatomiges Molekül mit Trägheitsmoment + Rotationsenergie \\ % TODO Bild
+        \underline{Quantenmechanik}: $\vec{L}$ und z.B. $L_z$ sind quantisiert.
+        \begin{equation}
+            \begin{split}
+                L &= \abs{\vec{L}} \sqrt{l(l+1)} \hbar \quad L_z = m \hbar  \\
+                l &= 0, 1, 2, \ldots m = -l, -l+1, \ldots, l &
+            \end{split}
+        \end{equation}
+        \begin{equation}
+            z_\text{rot} = \sum_{l=0}^{\infty} (zl + 1) e^{-l(l+1) \theta_\text{rot} / T}, \quad \text{mit} \quad \theta_\text{rot} = \frac{\hbar^2}{2 I k}
+        \end{equation}
+        z.B. $\theta_\text{rot} = 64K$ für HD (Wasserstoff-Deuterium), $\theta_\text{rot} = 2.4K$ für NO \\
+        \underline{Folgerungen}
+        \begin{enumerate}[i)]
+            \item Für $\theta_\text{rot} >> T$ trägt im wesentlichen nur der Term mit $l=0$ zur Summe bei.
+            \begin{equation}
+                \Rightarrow z_\text{rot} \simeq 1 \text{ für } T << \theta_\text{rot}
+            \end{equation}
+            Wegen $F_\text{rot} = - k T \ln z_\text{rot} \simeq 0$ trägt die Rotation zur freien Energie für $T << \theta_\text{rot}$ nicht bei.
+            $\Rightarrow$ \emph{Einfrieren} des Rotationsfreiheitsgrades (ähnlich wie \textsc{Planck} die diskreten Zustände entdeckt hat).
+            \item Sei nun $T >> \theta_\text{rot}$. Integraldarstellung
+            \begin{equation}
+                \begin{split}
+                    & z_\text{rot} \simeq \int_{0}^{\infty} \difd x \left( 2 x + 1 \right) e^{-x(x+1) \theta_\text{rot} / T} = \frac{T}{\theta_\text{rot}} \\
+                    & \text{mit } y = x(x+1) \frac{\theta_\text{rot}}{T} \quad \difd y = (2x+1)\difd x \, \frac{\theta_\text{rot}}{T}
+                \end{split}
+            \end{equation}
+            \begin{equation}
+                \begin{split}
+                    & Z_\text{rot} \simeq \pdi{T}{\theta_\text{rot}}{}^N; \quad F_\text{rot} \simeq - N k T \ln \left( \frac{T}{\theta_\text{rot}} \right); \\
+                    & S_\text{rot} = - \pdi{F_\text{rot}}{T}{V, N} \simeq N k + Nk \ln \left( \frac{T}{\theta_\text{rot}} \right) \\
+                    & E_\text{rot} = F_\text{rot} + T S_\text{rot} \simeq N k T \\
+                    & \Rightarrow c_V^\text{rot} = \pdi{E}{T}{V, N} = N k, \quad \text{wie vorher}
+                \end{split}
+            \end{equation}
+        \end{enumerate}
+        \item Für Moleküle aus zwei gleichen Atomen, z.B. H$_2$, D$_2$, O$_2$, treten (aufgrund der Ununterscheidbarkeit der Atomkerne) weitere
+        quantenmechanische Effekte bei tiefen Temperaturen auf. Wichtig bei H$_2$. \\
+        $\Rightarrow$ Para- und Orthowasserstoff \\
+        Hauptanteil zur Rotationsenergie stammt von den Kernen. 2 Einstellungen des Gesamtspins der Kerne
+        \begin{equation}
+            \begin{cases}
+                \text{Singulett (Para-H$_2$)} \\
+                \text{Triplett (Ortho-H$_2$)}
+            \end{cases}
+        \end{equation}
+        Para H$_2 \rightarrow$ Ortswellenfunktion gerade $\rightarrow l$ in der $z_\text{rot}$-Summe ist gerade \\
+        Ortho H$_2 \rightarrow$ Ortswellenfunktion ungerade $\rightarrow l$ in der $z_\text{rot}$-Summe ist ungerade
+        \begin{equation}
+            \begin{split}
+                & \Rightarrow z_\text{rot} = 1 \cdot z_\text{rot}^\text{g} + 3 \cdot z_\text{rot}^\text{u} \\
+                & \text{mit}
+                \begin{cases}
+                    z_\text{rot}^{\text{g}} = \sum_{l=0, 2, 4, \ldots} (2l+1)e^{l(l+1) \theta_\text{rot} / T}   \\
+                    z_\text{rot}^{\text{u}} = \sum_{l=1, 3, 5, \ldots} (2l+1)e^{l(l+1) \theta_\text{rot} / T}
+                \end{cases} \\
+                & Z_\text{rot} = z_\text{rot}^N = \left( z_\text{rot}^\text{g} + 3 \cdot z_\text{rot}^\text{u} \right)
+            \end{split}
+        \end{equation}
+        Nun ist
+        \begin{equation}
+            \begin{split}
+                & F = - k T \ln Z_\text{rot} \Rightarrow E = k T^2 \pdi{\ln Z_\text{rot}}{T}{V, N} \\
+                & \Rightarrow c_V^\text{rot} = N k T \left( \frac{\partial^2 \left( T \ln z_\text{rot} \right) }{\partial T^2} \right)_{V, N}
+            \end{split}
+        \end{equation}
+        Einsetzen von $z_\text{rot}$ wie oben angegeben brachte (zunächst) keine gute Übereinstimmung mit dem Experiment.
+    \end{enumerate}
+\end{enumerate}
