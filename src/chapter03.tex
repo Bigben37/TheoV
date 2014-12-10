@@ -754,6 +754,120 @@ Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_
                 & \Rightarrow c_V^\text{rot} = N k T \left( \frac{\partial^2 \left( T \ln z_\text{rot} \right) }{\partial T^2} \right)_{V, N}
             \end{split}
         \end{equation}
-        Einsetzen von $z_\text{rot}$ wie oben angegeben brachte (zunächst) keine gute Übereinstimmung mit dem Experiment.
+        Einsetzen von $z_\text{rot}$ wie oben angegeben brachte (zunächst) keine gute Übereinstimmung mit dem Experiment. \\
+        \underline{Grund}: Bei Änderung der Temperatur kommen die Kernspins nur sehr langsam ins Gleichgewicht (über mehrere Tage).
+        Gemessen wurde daher praktisch eine metastabile Mischung von ortho- und para-H$_2$.
+        $\Rightarrow z_\text{rot}^\text{m.s.} = \left( z_\text{rot}^\text{g} \right)^{N/4} \left( z_\text{rot}^\text{u} \right)^{3N/4} $.
+        Diese Formel ist in gutem Einklang mit den Messungen. \\
+        \underline{Lösung des Problems} (experimentell) Messungen von \textsc{Bonhoeffer} und \textsc{Harteck} (1926). Katalysator
+        der ortho-para-Umwandlung: Aktivkohle!!
     \end{enumerate}
+    \item Vibration \\
+    \underline{Annahme}: Entkopplung der Vibration von der Rotation \\
+    Näherung: Harmonischer Oszillator, Eigenfrequenz $\nu$. Quantelung der Energie
+    $\epsilon_n = \left( n + \frac{1}{2} \right) h \nu = \epsilon_0 + n h \nu, \epsilon_0 = \frac{h \nu}{2}$
+    \begin{equation}
+        \begin{split}
+            \Rightarrow & Z_\text{vib} = \left( z_\text{vib} \right)^N \Rightarrow F_\text{vib} = - k T \ln Z_\text{vib} = N \epsilon_0 + N k T \ln \left( 1 - e^{- h \nu / kT} \right)  \\
+            \text{da} &\quad  z_\text{vib} = e^{-\epsilon_0/kT} \sum_{n=0}^{\infty} e^{-h\nu n/kT} = \frac{e^{-\epsilon_0 / kT}}{1 - e^{- h \nu / kT}} \\
+            E_\text{vib} &= k T^2 \pdi{\ln Z_\text{vib}}{T}{V, N} = N k T^2 \left( \frac{\epsilon_0}{k T^2} + \frac{e^{-h \nu / k T}}{1 - e^{- h \nu / kT}} \frac{h \nu}{k T^2} \right) \\
+            &= N \epsilon_0 + \frac{N h \nu}{e^{h \nu / k T} - 1}
+        \end{split}
+    \end{equation}
+    Mit $\theta_\text{vib} = \frac{h \nu}{k}$ ist
+    \begin{equation}
+        E_\text{vib} =
+        \begin{cases}
+            N \epsilon_0 + N h \nu e^{- h \nu / kT} & \text{für } T << \theta_\text{vib} \\
+            N \epsilon_0 + N k T & \text{für } T >> \theta_\text{vib}
+        \end{cases}
+    \end{equation}
+    $\theta_\text{vib}$ ist $310\,$K für $\text{J}_2$, $4140\,$K für HCl, $6340\,$K für H$_2$. Bei Zimmertemperatur ist daher für H$_2$ $T<<\theta_\text{vib}$ und
+    \begin{equation}
+        c_V^\text{vib} = \pdi{E_\text{vib}}{T}{V, N} \simeq \frac{N h^2 \nu^2}{k T^2} e^{- h \nu / k T} = N k \left( \frac{\theta_\text{vib}}{T} \right)^2 e^{- \theta_\text{vib} / T} << 1  \left( \text{für } \theta_\text{vib} >> T \right)
+    \end{equation}
+    Dagegen folgt erst für $T >> \theta_\text{vib}$ dass
+    \begin{equation}
+        c_V^\text{vib} = N k \qquad \text{(Gleichverteilungssatz)}
+    \end{equation}
+    TODO: Bild $c_V^\text{vib}$-$T$ Diagramm \\% TODO Bild
+    In der Regel ist der Vibrationsgrad von zweiatomigen Molekülen \emph{eingefroren}. \\[\baselineskip]
+    \underline{Das Einstein-Modell des Kristalls}: $N$ ungekoppelte 3-dim. Oszillatoren der gleichen Frequenz $\nu$.
+    Frequenzspektrum pro Oszillator $\epsilon_n = h \nu \left( n + \frac{1}{2} \right), (n=0, 1, 2, \ldots)$. Wie vorhin ist
+    \begin{equation}
+        z_\text{vib} = \frac{e^{-\epsilon_0 / kT}}{1-e^{h \nu / kT}}
+    \end{equation}
+    und jetzt $Z = \left( z_\text{vib} \right)^{3N}$
+    Daher
+    \begin{equation}
+        c_v =
+        \begin{cases}
+            3 N k \left( \frac{\theta_\text{vib}}{T} \right)^2 e^{- \theta_\text{vib} / T} & \text{für } T << \theta_\text{vib} \\
+            3 N k & \text{für } T >> \theta_\text{vib}
+        \end{cases}
+        \qquad \left( \text{\textsc{Dulong-Petit}} \right) 
+    \end{equation}
+    Damit ist $\lim_{T \to 0} c_V(T) = 0$ in Übereinstimmung mit dem 3. HS. Dagegen ist die Abnahme von $c_V(T)$ mit $T \to 0$ zu stark.\\
+    \underline{Abhilfe} \textsc{Debye}-Modell (Ansammlung von Oszillatoren verschiedener Frequenz, insbesondere solcher mit sehr tiefen Frequenzen).
 \end{enumerate}
+
+\subsection{Die großkanonische Zustandssumme}
+Man hat für die großkanonische Gesamtheit ($\nu$: Summe über die Systeme des Ensembles, Mikrozustände)
+\begin{equation}
+    \begin{split}
+    & N = \sum_\nu = w_\nu N_\nu, \qquad E = \sum_\nu w_\nu E_\nu \\
+    & w_\nu = \frac{1}{\mathcal{Z}} e^{- E_\nu / kT + \mu N_\nu / kT} \\
+    & \mathcal{Z} = \sum_\nu e^{-E_\nu / k T + \mu N_\nu / kT} \quad \text{großkanonische Zustandssumme}
+    \end{split}
+\end{equation}
+Diese Summe kann als eine Doppelsumme über Teilchenzahl und Energien aufgefasst werden. Man hat
+\begin{equation}
+    \mathcal{Z} = \sum_{N_\nu \text{-variabel}} e^{\mu N_\nu / k T} \underbrace{Z(N_\nu)}_{(*)} \overset{(**)}{=} \sum_{N_\nu} e^{\mu N_\nu / kT} \frac{1}{N!} z^{N_\nu} \ \text{mit } z = \sum_i e^{\epsilon_i / kT}
+\end{equation}
+$(*)$ kanonische Zustandssumme, $N_\nu$ ist jeweils fest. \\
+$(**)$ z.B. Maxwell-Boltzmann und nicht wechselwirkende Teilchen\\
+\underline{Beispiel}: Ideales Gas $z = V (2 \pi m k T / h^2)^{3/2}$ und 
+\begin{equation}
+    \label{eq:grosskan_summe:idealesGas}
+    \mathcal{Z} = \sum_N \frac{1}{N!} \left( e^{\mu / kT} z \right)^N = \exp \left( e^{\mu/kT} z \right) = \exp \left[ e^{\mu/kT} V \left( 2 \pi m k T/ h^2 \right)^{3/2} \right]
+\end{equation}
+Folglich: Großkanonisches Potential
+\begin{equation}
+    \label{eq:grosskan_pot:idealesGas}
+    \Omega = - k T \ln \mathcal{Z} = - k T \left[ e^{\mu/kT} V \left( 2 \pi m k T/ h^2 \right)^{3/2} \right] = \Omega(T, V, \mu) = - p V
+\end{equation}
+Zur Erinnerung:
+\begin{equation}
+    \difd \Omega = S \difd T - p \difd V - N \difd \mu
+\end{equation}
+\begin{equation}
+    \Rightarrow N = - \pdi{\Omega}{\mu}{T, V} = - \frac{\Omega}{k T} \Rightarrow p V = N k T
+\end{equation}
+und
+\begin{equation}
+    \mathcal{Z} = e^{- \Omega / k T} = e^N
+\end{equation}
+Weiterhin folgt:
+\begin{equation}
+    \label{eq:grosskan_entropie:idealesGas}
+    S = - \pdi{\Omega}{T}{V, \mu} = - \frac{\Omega}{T} + \frac{\mu}{k} \frac{\Omega}{T^2} - \frac{3}{2} \frac{\Omega}{T} = Nk \left( \frac{5}{2} - \frac{\mu}{k T} \right)
+\end{equation}
+\begin{equation}
+    \begin{split}
+        E & = \Omega + TS + \mu N \\
+        & = - N k T + \frac{5}{2} N k T - N \mu + \mu N = \frac{3}{2} N k T
+    \end{split}
+\end{equation}
+Außerdem von \autoref{eq:grosskan_pot:idealesGas}:
+\begin{equation}
+    e^{-\mu / k T} = \left( 2 \pi m k T / h^2 \right)^{3/2} \frac{k T}{p} \Rightarrow \mu(T, p) = k T \ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \left( k T \right)^{5/2} / p \right]
+\end{equation}
+Eingesetzt in \autoref{eq:grosskan_entropie:idealesGas}
+\begin{equation}
+    \begin{split}
+        S(T, p, N) &= N k \frac{5}{2} + N k \ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \left( k T \right)^{5/2} / p \right] \\
+        &= N k \ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \frac{ \left( k T e \right)^{5/2}}{p} \right] \\
+        \Rightarrow S(T, V, N) &= N k \ln \left[ \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} e^{5/2} \frac{V}{N} \right]
+    \end{split}
+\end{equation}
+wie bisher gehabt.
