@@ -23,7 +23,7 @@ Der Mittelwert $S'$ der zu erwartenden Information ist
 \end{equation}
 Die Struktur der Gleichung ist identisch mit dem Ausdruck der Mischentropie (siehe Kapitel \ref{sub:mischentropie}),
 wenn man $C=k$ setzt. \\[\baselineskip]
-Allgemein sei $W_\nu$ die Wahrscheinlichkeit des Auftretens des Mikrozustands $\nu$. Im Gleichgewicht ist der Grad der Unkenntnis maximal,
+Allgemein sei $w_\nu$ die Wahrscheinlichkeit des Auftretens des Mikrozustands $\nu$. Im Gleichgewicht ist der Grad der Unkenntnis maximal,
 sodass:
 \begin{equation}
     S = \max S' = \max \left( -k \sum_\nu w_\nu \ln w_\nu \right) \quad \text{mit} \quad \sum_\nu w_\nu = 1,
@@ -158,11 +158,11 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
     \end{equation}
     aufgestellt von \textsc{Planck}
     \item Die großkanonische Gesamtheit \\
-    zu berechnen: Maximum von $S'=-k \sum_\nu w_\nu \ln w_\nu$ unter den Nebenbedingungen $\sum_\nu w_\nu - 1 = 0$, $\sum_\nu w_\nu E_\nu - E = 0$,
+    zu berechnen: Maximum von $S'=-k \sum_\nu w_\nu \ln w_\nu$ unter den Nebenbedingungen $\sum_\nu w_\nu - 1 = 0$, $\sum_\nu w_\nu E_\nu - E = 0$ und
     $\sum_\nu w_\nu N_\nu - N = 0$. \\
     Lagrange Multiplikatoren $-\alpha k, - \beta k, - \gamma k$. Variation bezüglich $w_\nu$ ergibt:
     \begin{equation}
-        \sum_\nu \delta w_\nu \left[ - \ln w_\nu - 1 - \alpha - \beta E - \gamma N_\nu \right] = 0
+        \sum_\nu \delta w_\nu \underbrace{\left[ - \ln w_\nu - 1 - \alpha - \beta E - \gamma N_\nu \right]}_{=0} = 0
     \end{equation}
     $\delta w_\nu$ ist frei variierbar, somit ist die eckige Klammer Null und
     \begin{equation}
@@ -203,14 +203,14 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
 
 \paragraph{Folgerungen}
 \begin{enumerate}[i)]
-    \item
+    \item Zustandssumme:
     \begin{equation}
         \begin{split}
             \mathcal{Z}(T, V, \mu) &= \sum_\nu e^{\frac{\mu N_\nu - E_\nu}{k T}} \\
             w_\nu &= e^{\frac{\mu N_\nu - E_\nu}{k T}} / \mathcal{Z}
         \end{split}
     \end{equation}
-    \item
+    \item Entropie:
     \begin{equation}
         S = k \ln \mathcal{Z} + \frac{E}{T} - \frac{\mu N}{T}
     \end{equation}
@@ -871,3 +871,128 @@ Eingesetzt in \autoref{eq:grosskan_entropie:idealesGas}
     \end{split}
 \end{equation}
 wie bisher gehabt.
+
+\subsubsection{Dichteschwankungen des idealen Gases}
+\underline{Anwendung}: \textsc{Brown}sche Bewegung, Himmelblau \\[\baselineskip]
+Bestimmung der mittleren quadratischen Schwankung der Teilchenzahl \\
+\begin{equation}
+    N = <N_\nu> = \sum_\nu w_\nu N_\nu
+\end{equation}
+allgemein
+\begin{equation}
+    <A_\nu> := A_\nu w_\nu \qquad (A_\nu \text{ beliebig})
+\end{equation}
+\begin{equation}
+    \begin{split}
+    <(N_\nu - N)^2> &= <N_\nu^2 - 2 N N\nu + N^2> \\ 
+    &= <N_\nu^2> - 2 N \underbrace{<N_\nu>}_{N} + N^2 \\
+    &= <N_\nu^2> - N^2
+    \end{split}
+\end{equation}
+Bestimmen wir nun $<N_\nu^2>$. Es ist
+\begin{equation}
+    N \mathcal{Z} = \sum_\nu N_\nu e^{\mu N_\nu / kT - E_\nu / kT}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Rightarrow \pdi{N \mathcal{Z}}{\mu}{T, V}& = \frac{1}{k T} \sum_\nu N_\nu^2 e^{\mu N_\nu / k T - E_\nu / k T} \\
+        &= \frac{\mathcal{Z}}{k T} \sum_\nu N_\nu^2 w_\nu = \frac{\mathcal{Z}}{k T} <N_\nu^2> \\
+        \Rightarrow <N_\nu^2> &= \frac{k T}{\mathcal{Z}} \pdi{(N \mathcal{Z})}{\mu}{T, V} \\
+        &= k T N \pdi{(\ln Z)}{\mu}{T, V} + kT \pdi{N}{\mu}{T, V}
+    \end{split}
+\end{equation}
+Ideales Gas
+\begin{equation}
+    \Rightarrow k T N \pdi{(\ln Z)}{\mu}{T, V} \overset{\text{\ref{eq:grosskan_summe:idealesGas}}}{=} k T N \frac{1}{k T} \ln \mathcal{Z} = N \ln \mathcal{Z} = N^2
+\end{equation}
+Außerdem
+\begin{equation}
+    k T \pdi{N}{\mu}{T, V} = \frac{k T}{\pdi{\mu}{N}{T, V}}
+\end{equation}
+da $\mu(T, V, N) = - k T \ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \frac{ \left( k T \right)^{3/2} V}{N} \right]$
+\begin{equation}
+    \begin{split}
+        \Rightarrow & \pdi{\mu}{N}{T, V} = \frac{k T}{N} \\
+        \Rightarrow & k T \pdi{N}{\mu}{T, V} = N
+    \end{split}
+\end{equation}
+\begin{equation}
+    \Rightarrow k T \pdi{N}{\mu}{T, V} = N \quad \Rightarrow \quad <N_\nu^2> = N^2 + N
+\end{equation}
+und schließlich
+\begin{equation}
+    \left\langle(N_\nu - N)^2\right\rangle = N  % TODO command for <> with rangle/langle, replace all <>
+\end{equation}
+Die mittlere relative Schwankung ist
+\begin{equation}
+    \frac{\sqrt{<(N_\nu - N)^2>}}{N} = \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}} = \sqrt{\frac{k T}{p V}}
+\end{equation}
+\underline{Folgerungen}
+\begin{enumerate}
+    \item Für makroskopische Systeme ($N \sim 10^{23}$) sind die Schwankungen unbeachtlich.
+    \item Dagegen sind im mikroskopischen Bereich die Schwankungen fundamental \\
+    $\Rightarrow$ \textsc{Brown}sche Bewegung
+    \item Schwankungen wachsen mit $\sqrt{T}$ und sind umgekehrt proportional zu $\sqrt{V}$ und zu $\sqrt{p}$.
+    \item Für die Ableitung war die statistische Betrachtung wichtig (Ergebnis liegt außerhalb der engen Thermodynamik).
+\end{enumerate}
+\subsubsection{Exakte Statistik nichtunterscheidbarer Teilchen}
+\begin{enumerate}[A)]
+    \item \textsc{Bose-Einstein} Statistik \\
+    Vorausgesetzt: Bosonen (Teilchen mit ganzzahligem Spin), nicht durch das \textsc{Pauli}-Verbot eingeschränkt. \\
+    \underline{Beispiele}: Photonen, Phononen, $^4$He.\\
+    \underline{Voraussetzung}: Nicht wechselwirkende Teilchen (ideales Bose-Gas)\\
+    Seien die zulässigen Energien eines Teilchens $\epsilon_i (i= 0, 1, 2, \ldots)$ Ein Zustand $\nu$ des Systems ist durch die
+    Besetzungszahlen $n_i^{(\nu)}$ eindeutig definiert ($n_i^{(\nu)} = 0, 1, 2, \ldots$), ununterscheidbare Bose-Teilchen! \\
+    Gesamtzahl der Teilchen $N_\nu = \sum_\nu n_i^{(\nu)}$, Gesamtenergie $E_\nu = \sum_i \epsilon_i n_i^{(\nu)}$. \\
+    Berechnung der großkanonischen Zustandssumme $\mathcal{Z}_\text{BE}$
+    \begin{equation}
+        \begin{split}
+            \mathcal{Z}_\text{BE} &= \sum_\nu e^{- E_\nu / kT + \mu N_\nu / k T} = \sum_\nu e^{\sum_i n_i^{(\nu)} \left( \frac{\mu - \epsilon_i}{k T} \right) } \\
+            &= \sum_\nu \prod_i \left( e^{\frac{\mu - \epsilon_i}{k T}} \right)^{n_i^{(\nu)}}
+        \end{split}
+    \end{equation}
+    Die Summe über $\nu$ geht über alle Möglichkeiten, die $n_i^{(\nu)}$ auszuwählen. Somit
+    \begin{equation}
+        \begin{split}
+            \mathcal{Z}_\text{BE} &= \prod_i \left[ \sum_{n_i^{(\nu)} = 0}^{\infty} \left( e^{\frac{\mu - \epsilon_i}{k T}} \right)^{n_i^{(\nu)}} \right] \\
+            &= \prod_i \frac{1}{1 - e^{(\mu - \epsilon_i)} / k T}
+        \end{split}
+    \end{equation}
+    Die geometrische Reihe lässt sich nur unter der Annahme, dass $e^{(\mu - \epsilon_i) / kT} < 1$, bestimmen,
+    sonst ist $\mathcal{Z}_\text{BE}$ unbeschränkt. D.h. $\epsilon_i > \mu \quad \forall i$ \\
+    Bezeichnung: $\sigma := e^{mu / kT}$ ($\sigma$: Fugazität)\\
+    \underline{Folgerungen} aus $\mathcal{Z}_\text{BE}$
+    \begin{enumerate}[i)]
+        \item Großkanonisches Potential
+        \begin{equation}
+            \Omega_\text{BE} = - k T \ln \mathcal{Z}_\text{BE} = k T \sum_i \ln \left( 1 - e^{(\mu - \epsilon_i) / k T} \right) = - p V
+        \end{equation}
+        \item Mittlere Gesamtteilchenzahl
+        \begin{equation}
+            \begin{split}
+                N_\text{BE} &= - \pdi{\Omega_\text{BE}}{\mu}{T, V} = \sum_i \frac{e^{(\mu - \epsilon_i) / k T}}{1 - e^{(\mu - \epsilon_i) / k T}} \\
+                \Rightarrow N_\text{BE} &= \sum_i \frac{1}{e^{(\epsilon_i - \mu) / k T} - 1}
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+    \item \textsc{Fermi-Dirac} Statistik \\
+    Vorausgesetzt: Fermionen (Teilchen mit halbzahligem Spin), \textsc{Pauli}-Verbot! \\
+    Beispiele: Protonen, Elektronen, $^3$He $\Rightarrow n_i^{(\nu)} = 0$ oder $1$ \\
+    Nicht wechselwirkende Teilchen (Fermi-Gas)
+    \begin{equation}
+        \begin{split}
+            \Rightarrow \mathcal{Z}_\text{FD} &= \sum_\nu e^{-E_\nu / k T + \mu N / k T} \\
+            &= \prod_i \left[ \sum_{n_i^{(\nu)} = 0}^1 \left( e^{(\mu - \epsilon_i) / k T} \right)^{n_i^{(\nu)}}  \right] \\ 
+            &= \prod_i \left[ 1 + e^{(\mu - \epsilon_i) / k T} \right] \\
+            \Rightarrow \Omega_\text{FD} &= - k T \ln \mathcal{Z}_\text{FD} \\
+            &= - k T \sum_i \ln \left( 1 + e^{(\mu - \epsilon_i) / kT} \right) = - p V \\
+            \Rightarrow N_\text{FD} &= - \pdi{\Omega_\text{FD}}{\mu}{T, V} = \sum_i \frac{e^{(\mu - \epsilon_i) / k T}}{1 + e^{(\mu - \epsilon) / k T}} \\
+            \Rightarrow N_\text{FD} &= \sum_i \frac{1}{e^{(\epsilon_i - \mu) / kT} + 1}
+        \end{split}
+    \end{equation}
+\end{enumerate}
+\paragraph{Kommentare} 
+$N_{i, \text{BD}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu + 1)}}$ sind die mittleren 
+Besetzungszahlen der Niveaus $\epsilon_i$. Sei die Grundzustandsenergie auf Null normiert, $\epsilon_0 = 0$. Daraus folgt, da $N_{i, \text{BE}}$ nicht 
+negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$. \\
+TODO Bild Fermi-Statistik % TODO Bild
