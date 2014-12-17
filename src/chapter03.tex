@@ -982,7 +982,7 @@ Die mittlere relative Schwankung ist
     \begin{equation}
         \begin{split}
             \Rightarrow \mathcal{Z}_\text{FD} &= \sum_\nu e^{-E_\nu / k T + \mu N / k T} \\
-            &= \prod_i \left[ \sum_{n_i^{(\nu)} = 0}^1 \left( e^{(\mu - \epsilon_i) / k T} \right)^{n_i^{(\nu)}}  \right] \\ 
+            &= \prod_i \left[ \sum_{n_i^{(\nu)} = 0}^1 \left( e^{(\mu - \epsilon_i) / k T} \right)^{n_i^{(\nu)}}  \right] \\
             &= \prod_i \left[ 1 + e^{(\mu - \epsilon_i) / k T} \right] \\
             \Rightarrow \Omega_\text{FD} &= - k T \ln \mathcal{Z}_\text{FD} \\
             &= - k T \sum_i \ln \left( 1 + e^{(\mu - \epsilon_i) / kT} \right) = - p V \\
@@ -990,9 +990,142 @@ Die mittlere relative Schwankung ist
             \Rightarrow N_\text{FD} &= \sum_i \frac{1}{e^{(\epsilon_i - \mu) / kT} + 1}
         \end{split}
     \end{equation}
+    \underline{Kommentare}
+    $N_{i, \text{BD}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu + 1)}}$ sind die mittleren
+    Besetzungszahlen der Niveaus $\epsilon_i$. Sei die Grundzustandsenergie auf Null normiert, $\epsilon_0 = 0$. Daraus folgt, da $N_{i, \text{BE}}$ nicht
+    negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$. \\
+    TODO Bild Fermi-Statistik % TODO Bild
+    \item \textsc{Maxwell-Boltzmann} Statistik: keine Wechselwirkung, ununterscheidbare Teilchen (klassische Näherung !) \\
+    \begin{equation}
+        \mathcal{Z}_\text{MB} = \sum_N e^{\mu N / k T} \frac{1}{N!} z^N \quad \text{mit} \quad z = \sum_i e^{-\epsilon_i / k T}
+    \end{equation}
+    Damit ist
+    \begin{equation}
+        \begin{split}
+            \mathcal{Z}_\text{MB} &= \exp \left( e^{\mu / kT} z \right)  \\
+            &= \exp \left[ \sum_i e^{(\mu - \epsilon_i) / kT} \right] \\
+            &= \prod_i \exp \left[ e^{(\mu - \epsilon_i) / k T} \right]
+        \end{split}
+    \end{equation}
 \end{enumerate}
-\paragraph{Kommentare} 
-$N_{i, \text{BD}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu + 1)}}$ sind die mittleren 
-Besetzungszahlen der Niveaus $\epsilon_i$. Sei die Grundzustandsenergie auf Null normiert, $\epsilon_0 = 0$. Daraus folgt, da $N_{i, \text{BE}}$ nicht 
-negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$. \\
-TODO Bild Fermi-Statistik % TODO Bild
+
+\subsection{Die idealen Bose- und Fermi-Gase}
+Voraussetzungen hier: Strukturlose Teilchen (ohne innere Freiheitsgrade) \\
+$\Rightarrow \epsilon_i$ kinetische Energie, $\epsilon_i = \frac{p_i^2}{2 m}$, Fugazität $\sigma = e^{\mu / kT}$
+\begin{equation}
+    \begin{split}
+        \frac{p V}{k T} &= - \frac{\Omega}{ k T} = \ln Z \\
+        &=
+        \begin{cases}
+            \pm \sum_i \ln \left( 1 \pm \sigma e^{-\epsilon_i / k T} \right) & \begin{pmatrix} + \text{FD} \\ - \text{BE} \end{pmatrix} \\
+            \sum_i \sigma e^{\epsilon_i / k T} & (\text{MB})
+        \end{cases}
+    \end{split}
+\end{equation}
+\begin{equation}
+    N = - \pdi{\Omega}{\mu}{T, V} = 
+    \begin{cases}
+        \sum_i \left[ \sigma^{-1} e^{\epsilon_i / k T} \right]^{-1} & \begin{pmatrix} + \text{FD} \\ - \text{BE} \end{pmatrix} \\
+        \sum_i \sigma e^{-\epsilon_i / k T} & (\text{MB})
+    \end{cases}
+\end{equation}
+\subsubsection{Berücksichtigung des Spins}
+Für Teilchen mit Spin $s$ gibt es $(2s+1) \equiv Q$ Einstellmöglichkeiten des Spins. \\
+Daher: Zahlenfaktor $Q$, falls $\epsilon_i$ spinunabhängig, z.B. 2 für Spin $\frac{1}{2}$ \\
+Übergang zum Kontinuum liefert (3 dimensional):
+\begin{equation}
+    \begin{split}
+        \frac{p V}{k T} &= \pm Q \frac{4 \pi V}{h^3} \int_0^\infty \difd p\, p^2 \ln \left( 1 \pm \sigma e^{- \frac{p^2}{2 m k T}} \right) \quad \begin{pmatrix} \text{FD} \\ \text{BE} \end{pmatrix} \\
+        N &= - \pdi{\Omega}{\mu}{T, V} = Q \frac{4 \pi V}{h^3} \int_0^\infty \frac{\difd p \, p^2}{\sigma^{-1} e^{\frac{p^2}{2 m k T}} \pm 1} \quad \begin{pmatrix} \text{FD} \\ \text{BE} \end{pmatrix}
+    \end{split}
+\end{equation}
+\underline{Vorsicht}: $p$: Druck (links), $p$: Impuls (rechts) \\
+\underline{Behauptung}: Für alle drei Gase (FD, BE, MB) gilt $p V = \frac{2}{3} E$\\
+MB: schon bekannt \\ % TODO Ref
+FD, BE:
+\begin{equation}
+    \begin{split}
+    E &= \sum_i \epsilon_i N_i = \sum_i \frac{\epsilon_i}{\sigma^{-1} e^{\epsilon_i / k T} \pm 1} \quad \begin{pmatrix} \text{FD} \\ \text{BE} \end{pmatrix} \\
+    &\rightarrow Q \frac{4 \pi V}{h^3} \int_0^\infty \frac{\difd p \, p^2 \left( \frac{p^2}{2 m} \right) }{\sigma^{-1} e^{\frac{p^2}{2 m k T}} \pm 1} \quad \begin{pmatrix} \text{FD} \\ \text{BE} \end{pmatrix}
+    \end{split}
+\end{equation}
+Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
+\begin{equation}
+    \begin{split}
+        \int_0^\infty p^2 \ln \left( 1 \pm \sigma e^{-\alpha p^2} \right) \overset{!}{=} \pm \frac{3}{2} \alpha \int_0^\infty \frac{\difd p \, p^4 \sigma e^{-\alpha p^2}}{1 \pm \sigma e^{-\alpha p^2}}
+    \end{split}
+\end{equation}
+\underline{Beweis}: Partielle Integration
+\begin{equation}
+    \begin{cases}
+        f(p) = p^3 & f'(p) = 3p^2 \\
+        g(p) = \ln \left( 1 \pm \sigma e^{-\alpha p^2} \right) & g'(p) = \mp \frac{2 \alpha \sigma p e^{-\alpha p^2}}{1 \pm \sigma e^{- \alpha p^2}}
+    \end{cases}
+    \qquad \square
+\end{equation}
+\begin{enumerate}[A)]
+    \item Das ideale Fermi-Gas \\
+    Sei $\lambda(T) := \frac{h}{ \left( 2 \pi m k T \right)^{1/2} }$ die thermische Wellenläng; $\sigma = e^{\mu / kT}$. Wir führen ein (mit Reihenentwicklung):
+    \begin{equation}
+        \begin{split}
+            f_{5/2}(\sigma) &:= \frac{4}{\sqrt{\pi}} \int_0^\infty \difd x \, x^2 \ln \left( 1 + \sigma e^{-x^2} \right) = \sum_{j=1}^\infty \frac{(-1)^{j+1} \sigma^j}{j^{5/2}} \\
+            f_{3/2}(\sigma) &:= \sigma \frac{\difd}{\difd \sigma} f_{5/2} = \frac{4}{\sqrt{\pi}} \int_0^\infty \frac{\difd x \, x^2}{\sigma^{-1} e^{x^2} + 1} = \sum_{j=1}^{\infty} \frac{(-1)^{j+1} \sigma^j}{j^{3/2}}
+        \end{split}
+    \end{equation}
+    Umschreibung der Beziehungen oben ergibt (Spin $\frac{1}{2}$, $Q = 2$)
+    \begin{equation}
+        \begin{split}
+            - \frac{\Omega}{k T V} &= \frac{p}{k T} = \frac{2}{\lambda^3} f_{5/2} (\sigma) \\
+            \frac{N}{V} &= \frac{2}{\lambda^3} f_{3/2} (\sigma) \\
+            E &= \frac{3 k T V}{\lambda^3} f_{5/2} (\sigma)
+        \end{split}
+    \end{equation}
+    Damit folgt für die Entropie
+    \begin{equation}
+        \begin{split}
+            S &= \frac{1}{T} (p V + E - \mu N) \\
+            &= \frac{1}{T} \left( \frac{5}{3}E - \mu N \right) \\
+            &= \frac{k V}{\lambda^3} \left[ 5 f_{5/2}(\sigma) - 2 \frac{\mu}{k T} f_{3/2} (\sigma) \right] 
+        \end{split}
+    \end{equation}
+    Um diese Größe als Funktion ihrer natürlichen Variablen zu schreiben, muss $\sigma$ eliminiert werden. Keine einfache Aufgabe! \\
+    \underline{Daher}: Näherungslösung für Spezialfälle.
+    \begin{enumerate}[i)]
+        \item $\sigma < 1$ (schwache Entartung, Verhalten ähnlich einem klassischen Gas) $\Rightarrow \mu < 0$
+        \begin{equation}
+            \lambda^3 \frac{N}{V} = 2 F_{3/2}(\sigma) = 2 \left( \sigma - \frac{\sigma^2}{2^{3/2}} + \ldots \right)
+        \end{equation}
+        und damit, näherungsweise:
+        \begin{equation}
+            \begin{split}
+                \sigma^{(0)} &= \frac{\lambda^3 N}{2 V} \\
+                \sigma^{(1)} &= \frac{\lambda^3 N}{2 V} + \frac{1}{2^{3/2}} \left( \frac{\lambda^3 N}{2 V} \right)^2 \\
+                \sigma &= \frac{\lambda^3 N}{2 V} + \frac{1}{2^{3/2}} \left( \frac{\lambda^3 N}{2 V} \right)^2 + \ldots
+            \end{split}
+        \end{equation}
+        \underline{Man beachte}: Entwicklung nach Potenzen von $\frac{N}{V}$. Damit folgt die \emph{VIRIAL-Entwicklung}
+        \begin{equation}
+            \begin{split}
+                \frac{p V}{N k T} &= \frac{2 V}{\lambda^3 N} f_{5/2} (\sigma) \\
+                &= \frac{2 V}{\lambda^3 N} \left[ \frac{\lambda^3 N}{2 V} + \frac{1}{2^{3/2}} \left( \frac{\lambda^3 N}{2 V} \right)^2 - \frac{1}{2^{5/2}}  \left( \frac{\lambda^3 N}{2 V} \right)^2 + \ldots \right] \\
+                &= 1 + \underbrace{\frac{1}{2^{5/2}} \frac{\lambda^3 N}{2 V} + \ldots}_{\text{quantenmech. Korrektur}}
+            \end{split}
+        \end{equation}
+        und
+        \begin{equation}
+            \begin{split}
+                E &= 3 k T \frac{V}{\lambda^3} f_{5/2}(\sigma) = \frac{3}{2} N k T \left( 1 + \frac{1}{2^{5/2}} \frac{\lambda^3 N}{2 V}+ \ldots \right) \\
+                c_V &= \pdi{E}{T}{V} = \frac{3}{2} N k \left[ 1 + \frac{1}{2^{5/2}} \frac{\lambda^3 N}{2 V} - \frac{3}{2} \frac{1}{2^{5/2}} \frac{\lambda^3 N}{2 V} + \ldots \right] \\
+                &= \frac{3}{2} N k \left( 1 - \frac{1}{2^{7/2}} \frac{\lambda^3 N}{2 V} + \ldots \right)  \\
+                \mu &= k T \ln \sigma = k T \ln \left[ \frac{\lambda^3 N}{2 V} + \frac{1}{2^{3/2}}\left( \frac{\lambda^3 N}{2 V} \right)^3 + \ldots \right]
+            \end{split}
+        \end{equation}
+        Für wachsendes $T$ und wachsendem $\frac{V}{N}$ gehen die Gleichungen in die Ausdrücke des klassischen Gases über.
+        \begin{equation}
+            \begin{split}
+                & \frac{p V}{N k T} \to 1; \quad E \to \frac{3}{2} N k T; \quad c_V \to \frac{3}{2} N k; \\
+                & \mu \to \mu_\text{MB} = k T \ln \left( \frac{\lambda^3 N}{2 V} \right) \to - \infty \qquad \left( \frac{N}{V} \to 0, T \to \infty \right) 
+            \end{split}
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
