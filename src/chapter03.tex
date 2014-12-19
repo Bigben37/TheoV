@@ -507,7 +507,7 @@ Zu bestimmen: $W$ (in dieser diskreten Form sehr schwierig!) \\
     W = \sum_\nu 1 \xrightarrow{(*)} \frac{1}{N! \, h^{3N}} \frac{1}{\Delta E} \int_{E \leq H(\textbf{q}, \textbf{p}) \leq E + \Delta E} \difd^{6N} \tau
 \end{equation}
 $(*)$ Hier wurde die Dichte konstant vorausgesetzt. \\
-TODO: Bild Integration \\ % TODO Bild
+TODO: Bild Integration \\ % TODO Bild? Hab ich nicht, wo ist das Bild?
 Die Berechnung des Integrals ist immer noch sehr schwierig.
 \paragraph{Spezialfall} Ideales Gas $H(\textbf{p}) = \sum_{i=1}^{3N} \frac{p_i^2}{2 m}$.
 \begin{equation}
@@ -835,7 +835,15 @@ Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_
     \begin{equation}
         c_V^\text{vib} = N k \qquad \text{(Gleichverteilungssatz)}
     \end{equation}
-    TODO: Bild $c_V^\text{vib}$-$T$ Diagramm \\% TODO Bild
+    
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.5\textwidth}
+        \input{../img/CvvibTDiagram.pdf_tex}
+        \caption{capt.}
+        \label{img:CvvibTDiagram}
+\end{figure}
+
     In der Regel ist der Vibrationsgrad von zweiatomigen Molekülen \emph{eingefroren}. \\[\baselineskip]
     \underline{Das Einstein-Modell des Kristalls}: $N$ ungekoppelte 3-dim. Oszillatoren der gleichen Frequenz $\nu$.
     Frequenzspektrum pro Oszillator $\epsilon_n = h \nu \left( n + \frac{1}{2} \right), (n=0, 1, 2, \ldots)$. Wie vorhin ist
