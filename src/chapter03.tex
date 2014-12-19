@@ -427,7 +427,7 @@ $H(q_1,\ldots q_{3N}, p_1, \ldots, p_{3N})$ Hamiltonfunktion des Systems lauten 
     \dot{p}_i = - \frac{\partial H}{\partial q_i} \qquad \dot{q}_i = \frac{\partial H}{p_i}
 \end{equation}
 Die Trajektorie ist entweder geschlossen oder sie schneidet sich nie. \\
-Ein Ensemble von Systemen entspricht einer Menge von Punkten in $\Gamma$. \\
+Ein Ensemble von Systemen entspricht einer Menge von Punkten in $\Gamma$.
 
 \begin{figure}[H]
         \centering
@@ -840,7 +840,8 @@ Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_
         \centering
         \def\svgwidth{0.5\textwidth}
         \input{../img/CvvibTDiagram.pdf_tex}
-        \caption{capt.}
+        \caption{Theoretische und gemessene Abhängigkeit der Wärmekapazität $c_V^\text{vib}$
+        von der Temperatur.}
         \label{img:CvvibTDiagram}
 \end{figure}
 
@@ -1046,8 +1047,16 @@ Die mittlere relative Schwankung ist
     \underline{Kommentare}
     $N_{i, \text{BD}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu + 1)}}$ sind die mittleren
     Besetzungszahlen der Niveaus $\epsilon_i$. Sei die Grundzustandsenergie auf Null normiert, $\epsilon_0 = 0$. Daraus folgt, da $N_{i, \text{BE}}$ nicht
-    negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$. \\
-    TODO Bild Fermi-Statistik % TODO Bild
+    negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$.
+    
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.5\textwidth}
+        \input{../img/FermiDiracStat.pdf_tex}
+        \caption{Fermi-Dirac-Statistik zur Beschreibung der Besetzung von Energiezuständen bei Fermionen.}
+        \label{img:FermiDiracStat}
+\end{figure}
+
     \item \textsc{Maxwell-Boltzmann} Statistik: keine Wechselwirkung, ununterscheidbare Teilchen (klassische Näherung !) \\
     \begin{equation}
         \mathcal{Z}_\text{MB} = \sum_N e^{\mu N / k T} \frac{1}{N!} z^N \quad \text{mit} \quad z = \sum_i e^{-\epsilon_i / k T}
