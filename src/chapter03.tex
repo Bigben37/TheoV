@@ -506,7 +506,7 @@ Zu bestimmen: $W$ (in dieser diskreten Form sehr schwierig!) \\
     W = \sum_\nu 1 \xrightarrow{(*)} \frac{1}{N! \, h^{3N}} \frac{1}{\Delta E} \int_{E \leq H(\textbf{q}, \textbf{p}) \leq E + \Delta E} \difd^{6N} \tau
 \end{equation}
 $(*)$ Hier wurde die Dichte konstant vorausgesetzt. \\
-TODO: Bild Integration \\ % TODO Bild? Hab ich nicht, wo ist das Bild?
+TODO: Bild Integration \\ % TODO Bild? || Hab ich nicht, wo ist das Bild? || McKenzie/Leena fragen
 Die Berechnung des Integrals ist immer noch sehr schwierig.
 \paragraph{Spezialfall} Ideales Gas $H(\textbf{p}) = \sum_{i=1}^{3N} \frac{p_i^2}{2 m}$.
 \begin{equation}
@@ -707,7 +707,7 @@ Damit folgt
 \underline{Hier}: semiklassische Behandlung (\textsc{Maxwell-Boltzmann} Statistik) \\
 $N$ untereinander nicht wechselwirkende Moleküle
 \begin{equation}
-    Z = \frac{1}{N!} = z^N \quad \text{mit} \quad z = \sum_i e^{\frac{\epsilon_i}{k T}}    % TODO z geschwungen
+    Z = \frac{1}{N!} = z^N \quad \text{mit} \quad z = \sum_i e^{\frac{\epsilon_i}{k T}}
 \end{equation}
 Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_j^\text{tr} + \epsilon_k^\text{rot} + \epsilon_l^\text{vib}$
 \begin{equation}
@@ -929,28 +929,28 @@ wie bisher gehabt.
 \underline{Anwendung}: \textsc{Brown}sche Bewegung, Himmelblau \\[\baselineskip]
 Bestimmung der mittleren quadratischen Schwankung der Teilchenzahl \\
 \begin{equation}
-    N = <N_\nu> = \sum_\nu w_\nu N_\nu
+    N = \avg{N_\nu} = \sum_\nu w_\nu N_\nu
 \end{equation}
 allgemein
 \begin{equation}
-    <A_\nu> := A_\nu w_\nu \qquad (A_\nu \text{ beliebig})
+    \avg{A_\nu} := A_\nu w_\nu \qquad (A_\nu \text{ beliebig})
 \end{equation}
 \begin{equation}
     \begin{split}
-        <(N_\nu - N)^2> &= <N_\nu^2 - 2 N N\nu + N^2> \\
-        &= <N_\nu^2> - 2 N \underbrace{<N_\nu>}_{N} + N^2 \\
-        &= <N_\nu^2> - N^2
+        \avg{(N_\nu - N)^2} &= \avg{N_\nu^2 - 2 N N\nu + N^2} \\
+        &= \avg{N_\nu^2} - 2 N \underbrace{\avg{N_\nu}}_{N} + N^2 \\
+        &= \avg{N_\nu^2} - N^2
     \end{split}
 \end{equation}
-Bestimmen wir nun $<N_\nu^2>$. Es ist
+Bestimmen wir nun $\avg{N_\nu^2}$. Es ist
 \begin{equation}
     N \mathcal{Z} = \sum_\nu N_\nu e^{\mu N_\nu / kT - E_\nu / kT}
 \end{equation}
 \begin{equation}
     \begin{split}
         \Rightarrow \pdi{N \mathcal{Z}}{\mu}{T, V}& = \frac{1}{k T} \sum_\nu N_\nu^2 e^{\mu N_\nu / k T - E_\nu / k T} \\
-        &= \frac{\mathcal{Z}}{k T} \sum_\nu N_\nu^2 w_\nu = \frac{\mathcal{Z}}{k T} <N_\nu^2> \\
-        \Rightarrow <N_\nu^2> &= \frac{k T}{\mathcal{Z}} \pdi{(N \mathcal{Z})}{\mu}{T, V} \\
+        &= \frac{\mathcal{Z}}{k T} \sum_\nu N_\nu^2 w_\nu = \frac{\mathcal{Z}}{k T} \avg{N_\nu^2} \\
+        \Rightarrow \avg{N_\nu^2} &= \frac{k T}{\mathcal{Z}} \pdi{(N \mathcal{Z})}{\mu}{T, V} \\
         &= k T N \pdi{(\ln Z)}{\mu}{T, V} + kT \pdi{N}{\mu}{T, V}
     \end{split}
 \end{equation}
@@ -970,15 +970,15 @@ da $\mu(T, V, N) = - k T \ln \left[ \left( \frac{2 \pi m}{h^2} \right)^{3/2} \fr
     \end{split}
 \end{equation}
 \begin{equation}
-    \Rightarrow k T \pdi{N}{\mu}{T, V} = N \quad \Rightarrow \quad <N_\nu^2> = N^2 + N
+    \Rightarrow k T \pdi{N}{\mu}{T, V} = N \quad \Rightarrow \quad \avg{N_\nu^2} = N^2 + N
 \end{equation}
 und schließlich
 \begin{equation}
-    \left\langle(N_\nu - N)^2\right\rangle = N  % TODO command for <> with rangle/langle, replace all <>
+    \avg{(N_\nu - N)^2} = N
 \end{equation}
 Die mittlere relative Schwankung ist
 \begin{equation}
-    \frac{\sqrt{<(N_\nu - N)^2>}}{N} = \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}} = \sqrt{\frac{k T}{p V}}
+    \frac{\sqrt{\avg{(N_\nu - N)^2}}}{N} = \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}} = \sqrt{\frac{k T}{p V}}
 \end{equation}
 \underline{Folgerungen}
 \begin{enumerate}
