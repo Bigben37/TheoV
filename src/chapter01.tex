@@ -120,7 +120,7 @@ Die innere Energie ist eine Zustandsgröße.
     \begin{enumerate}[i)]
         \item Magnetisierung der Probe
         \begin{equation}
-            -A_1 = \int K \difd x \int M \frac{\difd H'}{\difd x} \difd x = \int_{0}^{H} M \difd H'
+            -A_1 = \int K \difd x = \int M \frac{\difd H'}{\difd x} \difd x = \int_{0}^{H} M \difd H'
         \end{equation}
         \item Magnetisierung des Feldes bei fester Magnetisierung
         \begin{equation}
@@ -283,7 +283,7 @@ Alle anderen nicht-mechanischen Größen ($\delta Q, T, \ldots$) können aus $S$
 \begin{equation}
     S = S_1(E_1, V_1, N_1) + S_2 (E_2, V_2, N_2)
 \end{equation}
-Im Gleichgewicht:
+Im Gleichgewicht (Entropie maximal):
 \begin{equation}
     \label{eq:derivationT:equilibrium}
     0 = \difd S = \pd{S_1(E_1, V_1, N_1)}{E_1} \difd E_1 + \pd{S_2 (E_2, V_2, N_2)}{E_2} \difd E_2
@@ -383,7 +383,7 @@ Im Gleichgewicht: $\difd S = 0$
     \begin{split}
         \difd S_1 &= \pdi{S_1}{E_1}{V_1, N_1} \difd E_1 + \pdi{S_1}{V_1}{E_1, N_1} \difd V_1 + \pdi{S_1}{N_1}{E_1, V_1} \difd N_1 \\
         & \Rightarrow \difd E_1 = \underbrace{T_1 \difd S_1}_{\delta Q} - \underbrace{p_1 \difd V_1}_{\text{mech. Arbeit}}
-        \underbrace{- T_1 \pdi{S_1}{N_1}{E_1, V_1}}_{\mu_1} \difd N1
+        \underbrace{- T_1 \pdi{S_1}{N_1}{E_1, V_1}}_{\mu_1} \difd N_1
     \end{split}
 \end{equation}
 $\mu$: Chemisches Potential
@@ -740,8 +740,8 @@ Gasströmung bei konstant gehaltenen Druckwerten $p_1, p_2$. Irreversibler Proze
 \begin{equation}
     \begin{split}
         \difd E &= \difd E_1 + \difd E_2 = - p_1 \difd V_1 - p \difd V_2 \\
-        & \overset{p_1, p_2 = \const}{=} - \difd (p_1 V_1) - \difd (p_2, V_2) \\
-        & \Rightarrow \difd (E_1 + p_1 V_1) + \difd (E_2 p_2 V_2) = 0
+        & \overset{p_1, p_2 = \const}{=} - \difd (p_1 V_1) - \difd (p_2 V_2) \\
+        & \Rightarrow \difd (E_1 + p_1 V_1) + \difd (E_2 + p_2 V_2) = 0
     \end{split}
 \end{equation}
 $\Rightarrow$ Die Gesamtenthalpie $H = E + p V$ bleibt erhalten.\\
@@ -786,7 +786,7 @@ Im Versuch ist $\delta p$ negativ (Druckverminderung)
 \end{enumerate}
 
 \subsection{Thermodynamische Potentiale}
-Bereits kennengelernt $E(S, V, n), F(T, V, N), H(S, p, N), G(T, p, N)$ und Varianten, z.B. $S(E, V, N)$. Die obigen Potentiale
+Bereits kennengelernt $E(S, V, N), F(T, V, N), H(S, p, N), G(T, p, N)$ und Varianten, z.B. $S(E, V, N)$. Die obigen Potentiale
 sind durch sogenannte \emph{Legendre-Transformationen} miteinander verknüpft. \\
 Allgemeines Schema: Sei $P(x_1, \ldots, x_n)$ ein thermodynamisches Potential mit
 \begin{equation}
@@ -805,10 +805,10 @@ d.h. $Q_i = Q(x_1, \ldots, x_{i-1}, K_i, x_{i+1}, \ldots, x_n)$ und
 \end{equation}
 Die beiden Potentiale $P$ und $Q$ enthalten die gleichen Information. Es ist eine Frage der Zweckmäßigkeit, welches thermodynamisches Potential
 im Spezialfall benutzt wird. \\
-$x_1, \ldots, x_i, \ldots, x_n \to $ natürliche Variable von $P$; \\
-$x_1, \ldots, k_i, \ldots, x_n \to$ natürliche Variable von $Q_i$ \\
+$x_1, \ldots, x_i, \ldots, x_n \to $ natürliche Variablen von $P$; \\
+$x_1, \ldots, k_i, \ldots, x_n \to$ natürliche Variablen von $Q_i$ \\
 Zum Informationsverlust bei beliebigen Transformationen und zur heuristischen Begründung der Legendre-Transformation siehe z.B. A. u. H. §3.23. \\[\baselineskip]
-Damit enthalten $E, F, G$ und $H$ als Funktion ihrer natürlichen Variablen die gleiche INformation
+Damit enthalten $E, F, G$ und $H$ als Funktion ihrer natürlichen Variablen die gleiche Information
 \begin{equation}
     \begin{split}
         & F(T, V, N) = E - ST \\
@@ -866,7 +866,8 @@ G = E - TS + pV & \difd G = - S \difd T + V \difd p + \mu \difd N & G(T, p, N) \
 Es gibt noch weitere zwei thermodynamische Potentiale, welche allerdings ungebräuchlich sind.
 
 \subsection{3. Hauptsatz der Thermodynamik}
-Auch bekannt als \textsc{Nerst}'sches Theorem (1906) \\
+Auch bekannt als \textsc{Nern
+st}'sches Theorem (1906) \\
 Die Entropie eines homogenen, realen Stoffes ist bei $T=0$ Null. \\
 Mathematisch formuliert:
 \begin{equation}
