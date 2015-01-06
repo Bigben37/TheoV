@@ -52,5 +52,6 @@
     \put(0,0){\includegraphics[width=\unitlength]{2atomicGasRotationDirections.pdf}}%
     \put(0.84717325,0.4740269){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20906237\unitlength}\raggedright $\chi$\end{minipage}}}%
     \put(0.2498564,0.54800039){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20906237\unitlength}\raggedright $\xi$\end{minipage}}}%
+    \put(0.44887413,0.23277332){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.20906237\unitlength}\raggedright $\eta$\end{minipage}}}%
   \end{picture}%
 \endgroup%
