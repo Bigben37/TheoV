@@ -50,6 +50,5 @@
   \makeatother%
   \begin{picture}(1,0.5089944)%
     \put(0,0){\includegraphics[width=\unitlength]{phaseSpace.pdf}}%
-    \put(0.11857893,0.41297887){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66520681\unitlength}\raggedright $\Gamma$\end{minipage}}}%
   \end{picture}%
 \endgroup%
