@@ -193,7 +193,7 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
     Festlegung der Parameter $\beta$ und $\gamma$. Zunächst ist $\beta = \frac{1}{k} \pdi{S}{E}{V, N} $; $\gamma = \frac{1}{k} \pdi{S}{N}{E, V}$.
     Weiterhin gelten die thermodynamischen Beziehungen (aus $\difd E = T \difd S - p \difd V + \mu \difd N$).
     \begin{equation}
-        \pdi{S}{E}{V, N} = \frac{1}{N}, \qquad \pdi{S}{N}{E, V} = - \frac{\mu}{T}
+        \pdi{S}{E}{V, N} = \frac{1}{T}, \qquad \pdi{S}{N}{E, V} = - \frac{\mu}{T}
     \end{equation}
     Daher Verknüpfung zur Thermodynamik
     \begin{equation}
@@ -216,7 +216,7 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
     \end{equation}
     \item Nachdem $\Omega = E - \mu N - T S = - p V$ ist, folgt
     \begin{equation}
-        \Omega(T, V, \mu) = - k T \ln \mathcal{Z}(T, V, \nu)
+        \Omega(T, V, \mu) = - k T \ln \mathcal{Z}(T, V, \mu)
     \end{equation}
 \end{enumerate}
 Somit ist die zentrale Aufgabe der statistischen Physik die Berechnung der Zustands\-summen.
@@ -532,7 +532,7 @@ Allgemein ist das Volumen $V_n$ einer $n$-dim. Kugel mit Radius $R$:
 Andererseits
 \begin{equation}
     \begin{split}
-        V_n &= 2^n \int_{0}^{R} \difd x_n \int_{0}^{\sqrt{R^2 - x_n^2}} \difd x_{n-1} \int_{0}^{\sqrt{R^2 - x_n^2 - x_{n-1}^2}} \difd x_{n-1} \cdots \\
+        V_n &= 2^n \int_{0}^{R} \difd x_n \int_{0}^{\sqrt{R^2 - x_n^2}} \difd x_{n-1} \int_{0}^{\sqrt{R^2 - x_n^2 - x_{n-1}^2}} \difd x_{n-2} \cdots \\
         & = 2 \int_{0}^{R} \difd x_n C_{n-1} \left( R^2 - x_n^2 \right)^{(n-1)/2} \\
         & \overset{x_n = R y}{=} 2 R^n C_{n-1} \int_{0}^{1} \difd y (1-y^2)^{(n-1)/2} \\
         & \overset{y = \sin \vartheta}{=} 2 R^n C_{n-1} \int_0^{\pi/2} \difd \vartheta \cos^n \vartheta \\
