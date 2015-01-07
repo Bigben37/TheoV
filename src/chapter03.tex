@@ -1287,8 +1287,129 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
                 S &= \frac{1}{T} \left( \frac{5}{3} E - \mu N \right) \\
                 \Rightarrow S &\simeq \frac{N \epsilon_\text{F}}{T} \frac{\pi^2}{2} \left( \frac{k T}{\epsilon_\text{F}} \right)^2 \\
                 &= \frac{N \pi^2 k^2 T}{2 \epsilon_\text{F}} = c_V \\
-                \Rightarrow \lim_{T \to 0} S(T) \to 0 \qquad \text{3. HS.}
+                \Rightarrow & \lim_{T \to 0} S(T) \to 0 \qquad \text{3. HS.}
             \end{split}
         \end{equation}
+    \end{enumerate}
+    \textbf{Anwendung} des Fermi-Gases: Leitungselektronen in Metall \\
+    \underline{Modell} (Festkörperphysik): Freies Elektronengas zur Erklärung der Leitfähigkeit.\\
+    \underline{Frage}: Beitrag der Leitungselektronen zur spezifischen Wärme? Klassische Vermutung:
+    \begin{equation}
+        \underbrace{c_V^\text{L}}_{\text{Leiter}} = \underbrace{c_V^\text{G}}_{Gitter} + \underbrace{c_V^\text{E}}_{\text{Elektronen}} \overset{?}{=} \underbrace{3 N k}_{\text{Dulong-Petit}} + \underbrace{\frac{3}{2} N k}_{\text{Gleichverteilungssatz}}
+    \end{equation}
+    Formel steht im Widerspruch zum Experiment \\
+    \underline{Grund} Fermitemperatur
+    \begin{equation}
+        \theta_F = \frac{\epsilon_F}{k} = \frac{\mu}{k} = \frac{h^2}{2 m k} \left( \frac{3 N}{8 \pi V} \right)^{2/3}
+    \end{equation}
+    ist für Kupfer z.B. 50000$\,$K. Daher sind bereits bei Zimmertemperatur stark entartet.
+    \begin{equation}
+        c_V^\text{E} = \frac{N \pi^2 k^2}{2 \epsilon_F} T
+    \end{equation}
+    Andererseits ist (Ableitung später)
+    \begin{equation}
+        c_V^\text{G} = \frac{12 \pi^4 k^4 N}{5 h^3 \nu_D^3} T^3
+    \end{equation}
+    daher
+    \begin{equation}
+        \frac{c_V^\text{L}}{T} = A T^2 + B
+    \end{equation}
+    bei tiefen Temperaturen. Experimentell sehr gut erfüllt. Die Leitungselektronen überwiegen bei sehr tiefen Temperaturen.
+    
+    \item Das ideale Bose-Gas\\
+    Hier: Nicht wechselwirkende Bosonen. Für Teilchenspin 0 ist $Q=1$
+    \begin{equation}
+        \begin{split}
+            \frac{p}{k T} &= - \frac{4 \pi}{h^3} \int_0^\infty \difd p \, p^2 \ln \left( 1 - \sigma e^{-p^2 / (2 m k T)} \right)  \\
+            \frac{N}{V} &= \frac{4 \pi}{h^3} \int_0^\infty \frac{\difd p \, p^2}{\sigma^{-1} e^{-p^2 / (2 m k T)} - 1}
+        \end{split}
+    \end{equation}
+    Einführen neuer Funktionen
+    \begin{equation}
+        \begin{split}
+            g_{5/2} &:= - \frac{4}{\sqrt{\pi}} \int_0^\infty \difd x \, x^2 \ln \left( 1 - \sigma e^{-x^2} \right) = \sum_{j=1}^\infty  \frac{\sigma^j}{j^{5/2}} \\
+            g_{3/2} &:= \sigma \frac{\difd}{\difd \sigma} g_{5/2}(\sigma) = \frac{4}{\sqrt{\pi}} \int_0^\infty \frac{\difd x \, x^2}{\sigma^{-1} e^{x^2} - 1} = \sum_{j=1}^\infty \frac{\sigma^j}{j^{3/2}}
+        \end{split}
+    \end{equation}
+    Damit sind
+    \begin{equation}
+        \frac{p}{k T} = \frac{1}{\lambda^3} g_{5/2}(\sigma); \quad \frac{N}{V} = \frac{1}{\lambda^3} g_{3/2}(\sigma) \quad \text{mit} \quad \lambda = \frac{h}{\sqrt{2 \pi m k T}}, \quad \sigma = e^{\mu / k T}
+    \end{equation}
+    \begin{enumerate}[i)]
+        \item Schwache Entartung, $\sigma << 1$
+        \begin{equation}
+            \begin{split}
+                \Rightarrow & \lambda^3 \frac{N}{V} = g_{3/2}(\sigma) = \sigma + \frac{1}{2^{3/2}} \sigma^2 \\
+                \Rightarrow & \lambda^3 \frac{N}{V} << 1 \quad \text{und} \\
+                & \sigma^{(0)} = \lambda^3 \frac{N}{V} \\
+                & \sigma^{(1)} = \lambda^3 \frac{N}{V} - \frac{1}{2^{3/2}} \left( \lambda^3 \frac{N}{V} \right)^2 + \ldots = \lambda^3 \frac{N}{V} \left[ 1 - \frac{1}{2^{3/2}} \left( \lambda^3 \frac{N}{V}\right) + \ldots \right] \\
+                \Rightarrow & \frac{ p V}{k T} = \frac{V}{h^3} g_{5/2} (\sigma) = \frac{V}{\lambda^3} \left[ \sigma + \frac{1}{2^{5/2}} \sigma^2 + \ldots \right] \\
+                & \qquad = N \left[ 1 + \left( - \frac{1}{2^{3/2}} + \frac{1}{2^{5/2}} \right) \left( \lambda^3 \frac{N}{V} \right) + \ldots \right]
+            \end{split}
+        \end{equation}
+        somit Zustandsgleichung
+        \begin{equation}
+            p V = N k T \left[ 1 - \frac{1}{2^{5/2}} \lambda^3 \frac{N}{V} + \ldots \right]
+        \end{equation}
+        Da ideales Gas:
+        \begin{equation}
+            E = \frac{3}{2} p V = \frac{3}{2} N k T \left( 1 - \frac{1}{2^{5/2}} \lambda^3 \frac{N}{V} + \ldots \right)
+        \end{equation}
+        \begin{equation}
+            \begin{split}
+                c_V &= \pdi{E}{T}{V} = \frac{3}{2} N k \left( 1 - \frac{1}{2^{5/2}} \lambda^3 \frac{N}{V} + \frac{3}{2} \frac{1}{2^{5/2}} \lambda^3 \frac{N}{V} + \ldots \right) \\
+                &= \frac{3}{2} N k \left( 1 + \frac{1}{2^{7/2}} \lambda^3 \frac{N}{V} + \ldots \right)
+            \end{split}
+        \end{equation}
+        Somit bekommt man für $\lambda \to 0$ ($h \to 0$ oder $T \to \infty$) oder für $\frac{N}{V} \to 0$ die klassischen Ergebnisse
+        \item Starke Entartung, $\sigma \to 1$ ($\mu < 0$), d.h. $\lim^- \sigma = 1$ \\
+        (\textsc{Bose-Einstein} Kondensation) \\
+        zur Erinnerung
+        \begin{equation}
+            N = \sum_i N_i = \sum_i \frac{1}{\sigma^{-1} e^{\epsilon_i / k T}-1}
+        \end{equation}
+        Mit $\epsilon_0 = 0$ divergiert der Summand für $i=0$ wenn $\sigma \to 1$. Daher Vorsicht!
+        \begin{equation}
+            \begin{split}
+                N &= \frac{1}{\sigma^{-1} - 1} + \sum_{i \neq 0} \frac{1}{\sigma^{-1} e^{\epsilon_i / k T} - 1} \\
+                & \rightarrow \frac{\sigma}{1 - \sigma} + \frac{4 \pi V}{h^3} \int_0^\infty \frac{\difd p \, p^2}{\sigma^{-1} e^{p^2 / (2 m k T)} - 1} \\
+                \Rightarrow N &= \underbrace{\frac{\sigma}{1 - \sigma}}_{N_0} + \underbrace{\frac{V}{\lambda^3} g_{3/2} (\sigma)}_{N_g}
+            \end{split}
+        \end{equation}
+        (sinnvoll, weil $g_{3/2}(1)$ endlich; die Reihe $\sum_{j=1}^\infty \frac{1}{j^{3/2}}$ konvergiert) \\
+        $N_0$: Mittlere Teilchenzahl im Grundzustand \\
+        $N_g$: Mittlere Teilchenzahl in der \emph{Gasphase} \\
+        Für $\sigma << 1$ ist $N_0$ viel kleiner als 1 und daher unbeachtlich. Dagegen divergiert $N_0$ für $\sigma \to 1$ \\
+        Eine ähnliche Überlegung für $p V$ ergibt (oder beachten, dass $N = \sigma \frac{\difd}{\difd \sigma} \left( \frac{p V}{k T} \right) $ ist):
+        \begin{equation}
+            \frac{p V}{k T} = - \ln(1-\sigma) + \frac{V}{\lambda^3} g_{5/2}(\sigma)
+        \end{equation}
+        Man beachte, dass für $\sigma = 1$ die Reihendarstellungen $g_{3/2}(\sigma)$ und $g_{5/2}(\sigma)$ konvergieren. Es ist $g_{3/2}(1) = 2.612\ldots$
+        und $g_{5/2}=1.341\ldots$. Beide Funktionen sind monoton wachsend auf $0 \leq \sigma \leq 1$ \\
+        $\Rightarrow$ Maximaler Wert für $N_g$:
+        \begin{equation}
+            N_g^\text{max} = \frac{V}{\lambda^3} g_{3/2}(1) = \frac{V (2 \pi m k T)^{3/2}}{h^3} g_{3/2}(1)
+        \end{equation}
+        d.h. bei vorgegebenen $\frac{N}{V}$ ist
+        \begin{equation}
+            T_c := \frac{h^2}{2 \pi m k} \left[ \frac{N}{V g_{3/2}(1)} \right]^{2/3} \quad \text{Grenztemperatur}
+        \end{equation}
+        Für $T<T_c$ ist ein guter Teil der Bosonen im Grundzustand. \\
+        Eine genaue Analyse ergibt:
+        \begin{equation}
+            \begin{split}
+                T > T_c: &
+                \begin{cases}
+                    N \simeq N_g = g_{3/2}(\sigma) V \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} \\
+                    N_0 \simeq 0
+                \end{cases} \\
+                T < T_c: &
+                \begin{cases}
+                    N_g = g_{3/2}(1) V \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} = N \left( \frac{T}{T_c} \right)^{3/2} \\
+                    N_0 = N \left( 1 - \left( \frac{T}{T_C} \right)^{3/2} \right) 
+                \end{cases}
+            \end{split}
+        \end{equation}
+        TODO Bild Bose/Einstein Kondensat $N_0/N$ über $T_c$
     \end{enumerate}
 \end{enumerate}
