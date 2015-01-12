@@ -866,7 +866,7 @@ Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_
 Man hat für die großkanonische Gesamtheit ($\nu$: Summe über die Systeme des Ensembles, Mikrozustände)
 \begin{equation}
     \begin{split}
-        & N = \sum_\nu = w_\nu N_\nu, \qquad E = \sum_\nu w_\nu E_\nu \\
+        & N = \sum_\nu w_\nu N_\nu, \qquad E = \sum_\nu w_\nu E_\nu \\
         & w_\nu = \frac{1}{\mathcal{Z}} e^{- E_\nu / kT + \mu N_\nu / kT} \\
         & \mathcal{Z} = \sum_\nu e^{-E_\nu / k T + \mu N_\nu / kT} \quad \text{großkanonische Zustandssumme}
     \end{split}
@@ -1406,10 +1406,156 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
                 T < T_c: &
                 \begin{cases}
                     N_g = g_{3/2}(1) V \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} = N \left( \frac{T}{T_c} \right)^{3/2} \\
-                    N_0 = N \left( 1 - \left( \frac{T}{T_C} \right)^{3/2} \right) 
+                    N_0 = N \left( 1 - \left( \frac{T}{T_C} \right)^{3/2} \right)
                 \end{cases}
             \end{split}
         \end{equation}
-        TODO Bild Bose/Einstein Kondensat $N_0/N$ über $T_c$
+        TODO Bild Bose/Einstein Kondensat $N_0/N$ über $T_c$\\
+        Berechnung der mittleren Energie $E$
+        \begin{equation}
+            E = \sum_i \epsilon_i N_i \overset{\epsilon_0=0}{=} \sum_{i \neq 0} \frac{\epsilon_i}{\sigma^{-1} e^{\epsilon_i / k T} - 1} \rightarrow \frac{3}{2} \frac{V k T}{\lambda^3} g_{5/2}(\sigma)
+        \end{equation}
+        Damit ist
+        \begin{equation}
+            E =
+            \begin{cases}
+                \frac{3}{2} \frac{V k T}{\lambda^3} g_{5/2}(\sigma) & T > T_c \\
+                \frac{3}{2} \frac{V k T}{\lambda^3} g_{5/2}(1) & T < T_c
+            \end{cases}
+        \end{equation}
+        und da $p = \frac{2}{3} \frac{E}{V}$
+        \begin{equation}
+            \Rightarrow p =
+            \begin{cases}
+                \frac{k T}{\lambda^3} g_{5/2}(\sigma) & T > T_c \\
+                \frac{k T}{\lambda^3} g_{5/2}(1) T < T_c
+            \end{cases}
+        \end{equation}
+        Für $T > T_c$ ist der Druck nur von der Temperatur (und nicht, implizit über $\sigma$, auch noch vom Volumen) abhängig. D.h. Volumenverminderung
+        bei konstantem $T$, $T < T_c$ verringert nur die Anzahl der Bosonen in der Gasphase - \emph{Einstein-Kondensation}. \\
+        Die spezifische Wärme $c_V = \pdi{E}{T}{V}$ ist in der Tieftemperaturphase
+        \begin{equation}
+            c_V = \frac{3}{2} V k g_{5/2}(1) \frac{\partial}{\partial T} \underbrace{\left( \frac{T}{\lambda^3} \right)}_{\propto T^{5/2}} = \frac{15}{4} \frac{V k }{\lambda^3} g_{5/2}(1) \propto T^{3/2}
+        \end{equation}
+        TODO Bild: $\lambda$-Übergang in Helium \\ %TODO Bild
+        Entropie des Bose-Gases:
+        \begin{equation}
+            \begin{split}
+                S &= \frac{1}{T} \left( E + pV - \mu N \right) = \frac{1}{T} \left( \frac{5}{3} E - \mu N \right) = \frac{1}{T} \left( \frac{5}{3} E - N k T \ln \sigma \right) \\
+                \Rightarrow S &=
+                \begin{cases}
+                    \frac{5}{2} \frac{V k}{\lambda^3} g_{5/2}(\sigma) - N k \ln \sigma & T > T_c \\
+                    \frac{5}{2} \frac{V k}{\lambda^3} g_{5/2}(1) = \frac{2}{3} c_V \propto T^{3/2} & T < T_c
+                \end{cases}
+            \end{split}
+        \end{equation}
+        Man beachte:
+        \begin{equation}
+            \lim_{T \to 0} S = 0 = \lim_{T \to 0} c_V
+        \end{equation}
+        Somit erfüllt das ideale Bose-Gas den 3. HS. \\
+        \underline{Anwendung} Suprafluidität von von He${}^4$II\\
+        $\lambda$-Übergang bei $T=2.18\,$K, theoretischer Wert (ohne Wechselwirkung) $T_c = 3.14\ldots\,$K
     \end{enumerate}
+\end{enumerate}
+\subsection{Photonen und Phononen}
+\begin{enumerate}[A)]
+    \item Photonen-Gas (A. + H., Kap III, §17-18)\\
+    Modell für die elektromagnetische Hohlraumstrahlung (Vakuum) \\
+    System unabhängiger harmonische Oszillatoren der Frequenzen $\nu_i$ \\
+    Quantisierung $\epsilon_i = h \nu_i \left( \frac{1}{2} + n_i \right), \quad n_i = 0, 1, 2, \ldots$ \\
+    Teilchenbild: Photonen
+    \begin{enumerate}[i)]
+        \item Impuls $\vec{p}_i = \hbar \vec{k}_i$
+        \item Energie $\epsilon_i = h \nu_i = \hbar \omega_i = c p_i$
+        \item Spin: 1; \textbf{2} Einstellmöglichkeiten - entsprechen jeweils einer links- oder rechts-zir\-ku\-lar polarisierten elektromagnetischen Welle.
+        Linear-polarisierte Wellen schreiben sich als Linearkombination aus zirkular-polarisierte Wellen. Es gibt genau \textbf{2} linear-unabhängige 
+        Polarisationsrichtungen bei vorgegebener Ausbreitungsrichtung $\vec{k}$.
+    \end{enumerate}
+    \underline{Daher}: System nicht wechselwirkender Photonen (Bosonen) $\Rightarrow$ ideales Bo\-se-Gas\\
+    \underline{Hinweis}: Die Gesamtzahl der Photonen ist \underline{keine} Erhaltungsgröße (es gibt Ab\-sorp\-tions- und Emissionsprozesse).
+    Im Gleichgewicht stellt sich $N$ derart ein, dass die freie Energie $F$ bei vorgegebenen $T$ und $V$ minimal wird.
+    \begin{equation}
+        \Rightarrow \pdi{F}{N}{T, V} = 0
+    \end{equation}
+    Andererseits, da $\difd F = - p \difd V - S \difd T + \mu \difd N$ ist
+    \begin{equation}
+        \begin{split}
+            & \Rightarrow \pdi{F}{N}{T, V} = \mu \\
+            & \Rightarrow \mu = 0
+            & \Rightarrow e^{\mu / k T} \equiv 1
+        \end{split}
+    \end{equation}
+    \underline{Folgerung}:
+    \begin{equation}
+        \mu(T, V, N) = 0 \Rightarrow N = N(T, V)
+    \end{equation}
+    Beim Photonengas ist $N$ \underline{keine} unabhängige Variable. \\
+    \underline{Das \textsc{Planck}sche Strahlungsgesetz}\\
+    Sei $N_i$ die mittlere Anzahl der Photonen im Schwingunszustand $i$. \\
+    Bose-Verteilung, $\mu = 0 \Rightarrow N_i = \frac{1}{e^{\epsilon_i / k T} - 1}, \epsilon_i = h \nu_i$
+    \begin{equation}
+        \begin{split}
+            N &= \sum_i N_i \rightarrow 2 \frac{4 \pi V}{h^3} \int_0^\infty \frac{\difd p \, p^2}{e^{\epsilon / k T} - 1} \\
+            &\overset{\epsilon = c p}{=} 2 \frac{4 \pi V}{h^3 c^3} \int_0^\infty \frac{\difd \epsilon \, \epsilon^2}{e^{\epsilon / k T} - 1}
+        \end{split}
+    \end{equation}
+    oder, als Funktion der Frequenz
+    \begin{equation}
+        N = \frac{8 \pi V}{c^3} \int_0^\infty \frac{\nu^2 \difd \nu}{e^{h \nu / k T} - 1}
+    \end{equation}
+    \underline{Lesart} 
+    \begin{equation}
+    N = \int_0^\infty N(\nu) D(\nu) \difd \nu
+    \end{equation}
+    \begin{itemize}
+        \item $N(\nu)$: Anzahl der Photonen pro Zustand der Frequenz $\nu$: $N(\nu) = \frac{1}{e^{h \nu / k T} - 1}$
+        \item $D(\nu)\difd \nu$: Anzahl der Zustände im Intervall $[\nu, \nu + \difd \nu]$: $D(\nu) = \frac{8 \pi V \nu^2}{c^3}$
+    \end{itemize}
+    Energie des Photonengases (ohne Nullpunktsenergie)
+    \begin{equation}
+        \begin{split}
+            E &= \sum_i \epsilon_i N_i \rightarrow \int_0^\infty h \nu N(\nu) D(\nu) \difd \nu = \frac{8 \pi V}{c^3} \int_0^\infty \frac{h \nu^2 \difd \nu}{e^{h \nu / k T} - 1} \\
+            &=: V \int_0^\infty u(\nu, T) \difd \nu
+        \end{split}
+    \end{equation}
+    mit $u(\nu, T)$ Energiedichte der Strahlung pro Frequenzeinheit
+    \begin{equation}
+        u(\nu, T) = \frac{8 \pi h}{c^3} \frac{\nu^3}{e^{h \nu / k T} - 1} \quad \text{\textsc{Planck}sches Strahlungsgesetz}
+    \end{equation}
+    Die gesamte Energiedichte ist
+    \begin{equation}
+        \begin{split}
+            u(T) &= \int_0^\infty u(\nu, T) \difd \nu = \frac{8 \pi h}{c^3} \int_0^\infty \frac{nu^3 \difd \nu}{e^{h \nu / k T} - 1} \\
+            &\overset{x = \frac{h \nu}{k T}}{=} \frac{8 \pi}{c^3 h^3} (k T)^{4} \underbrace{\int_0^\infty \frac{x^3 \difd x}{e^x - 1}}_{\frac{\pi^4}{15}} \\
+            \Rightarrow u(T) &= a T^4 \quad \text{mit} \quad a = \frac{8 \pi^5 k^4}{15 c^3 h^3}
+        \end{split}
+    \end{equation}
+    Für die ausgestrahlte Energie pro Zeiteinheit $I$, gilt daher
+    \begin{equation}
+        I = C T^4 \quad \text{\textsc{Stefan-Boltzmann} Gesetz}
+    \end{equation}
+    \underline{Das \textsc{Wien}sche Verschiebungsgesetz}\\
+    Sei $u(\lambda, T)$ die Energiedichte der Strahlung pro Wellenlängeneinheit
+    \begin{equation}
+        \begin{split}
+            u(T) &= \int_0^\infty u(\nu, T) \difd \nu = \frac{8 \pi h}{c^3} \int_0^\infty \frac{\nu^3 \difd \nu}{e^{h \nu / k T} - 1} \\
+            &\overset{\nu = \frac{c}{\lambda}}{=} 8 \pi h c \int_0^\infty \frac{1}{\lambda^5} \frac{\difd \lambda}{e^{h c / \lambda k T} - 1} \\
+            &=: \int_0^\infty u(\lambda, T) \difd \lambda \\
+            & \Rightarrow u(\lambda, T) = \frac{8 \pi h c}{\lambda^5 \left( e^{h c / \lambda k T} - 1 \right)}
+        \end{split}
+    \end{equation}
+    Bei welcher Wellenlänge ($T$ vorgegeben) ist $u(\lambda, T)$ maximal? $\alpha := \frac{h c}{k T}$ \\
+    $u$ maximal $\Rightarrow \lambda^5 \left( e^{\alpha / \lambda} - 1 \right) $ minimal
+    \begin{equation}
+        \begin{split}
+            \Rightarrow & 5 \lambda^4 \left( e^{\alpha / \lambda} -1 \right)- \lambda^3 \alpha e^{\alpha / \lambda} \overset{!}{=} 0 \\
+            \overset{x := \frac{\alpha}{\lambda}}{\Rightarrow} & x e^x = 5(e^x - 1) \overset{ \text{numerisch}}{\Rightarrow} x = 4.965\ldots
+        \end{split}
+    \end{equation}
+    Somit ist
+    \begin{equation}
+        \lambda_\text{max} \cdot T = \frac{h c}{k} \frac{1}{4.965} \quad \text{\textsc{Wien}sches Verschiebungsgesetz}
+    \end{equation}
+    Das Maximum von $u(\lambda, T)$ verschiebt sich it steigender Temperatur zu kleineren Wellenlängen
 \end{enumerate}
