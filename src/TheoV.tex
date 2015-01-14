@@ -7,7 +7,7 @@
 \usepackage{textgreek}
 
 \usepackage[fleqn]{amsmath}  % math
-\usepackage{amssymb}
+\usepackage{amssymb, bbm}
 
 \usepackage{graphicx} %graphics
 \usepackage{color} 
@@ -56,6 +56,8 @@
 
 \usepackage{cancel} % to cancel out terms in equations
 
+\usepackage{mathrsfs} % Ralph Smith Formal Script 
+
 % NEW COMMANDS
 \newcommand{\difd}{\mathrm{d}}  % differential d
 \newcommand{\const}{\text{const.}}  % const. in equations
@@ -63,6 +65,9 @@
 \newcommand{\pdi}[3]{\left( \pd{#1}{#2} \right)_{#3}}
 \newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\avg}[1]{\left\langle#1\right\rangle}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle#1\right|}
+\DeclareMathOperator{\Sp}{Sp}
 
 % DOCUMENT SETTINGS
 \title{Theoretische Physik V}
@@ -104,4 +109,7 @@ Der Quellcode dieses Skriptes kann online unter \url{https://github.com/Bigben37
 
 \newpage
 \input{chapter03.tex}
+
+\newpage
+\input{chapter04.tex}
 \end{document}

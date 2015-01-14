@@ -1557,5 +1557,111 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
     \begin{equation}
         \lambda_\text{max} \cdot T = \frac{h c}{k} \frac{1}{4.965} \quad \text{\textsc{Wien}sches Verschiebungsgesetz}
     \end{equation}
-    Das Maximum von $u(\lambda, T)$ verschiebt sich it steigender Temperatur zu kleineren Wellenlängen
+    Das Maximum von $u(\lambda, T)$ verschiebt sich it steigender Temperatur zu kleineren Wellenlängen \\
+    \underline{Zustandsgleichung des Photonengases}
+    Anfang 3.6: %TODO Ref Kapitel 3.6
+    \begin{equation}
+        p V = - \Omega_\text{BE} = k T \ln \mathcal{Z}_\text{BE} = - k T \sum_i \ln \left( 1 - e^{(\mu - \epsilon_i) / k T} \right)
+    \end{equation}
+    Hier aber $\mu = 0$.
+    \begin{equation}
+        p V =  - k T \sum_i \ln \left( 1 - e^{-\epsilon_i / k T} \right) \rightarrow - k T \frac{8 \pi V}{c^3} \int_0^\infty \nu^2 \ln \left( 1 - e^{-h \nu / k T} \right) \difd \nu
+    \end{equation}
+    Partielle Integration liefert
+    \begin{equation}
+        \begin{cases}
+            f(\nu) = \frac{\nu^3}{3} & f'(\nu) = \nu^2 \\
+            g(\nu) = \ln \left( 1 - e^{-h \nu / k T} \right) & g'(\nu) = \frac{h/(kT)}{e^{h \nu / k T} - 1}
+        \end{cases}
+    \end{equation}
+    \begin{equation}
+        p V = \frac{8 \pi V h}{3 c^3} \int_0^\infty \frac{\nu^3 \difd \nu}{e^{h \nu / k T} - 1} = \frac{E}{3}
+    \end{equation}
+    Da $E = V u(T)$, hängt der Druck nur von der Temperatur ab. \\
+    Man beachte den Unterschied: Für Photonen $E = 3 p V$; dagegen gilt für Materieteilchen $E = \frac{3}{2} p V$. \\
+    \underline{Grund}: So häufig bei einem Faktor 2, ist der Grund relativistische Mechanik. \\
+    Materieteilchen: $\epsilon_i = \frac{m v_i^2}{2} = \frac{v_i p_i}{2}$ ($p_i$ Impuls)\\
+    Photonen: $\epsilon_i = c p_i$ \ldots und der Faktor $\frac{1}{2}$ wird durch alle Mittelungen mitgeschleppt.
+    \item Phononen (\textsc{Debye}-Modell) \\
+    \underline{Idee}: von Einstein (bereits besprochen): Das Gitter wird als eine Ansammlung von $3N$ nicht wechselwirkenden  %TODO Ref
+    harmonischen Oszillatoren beschrieben \\
+    \underline{Zusatz} von Debye: Satz von Eigenfrequenzen: $\nu_i$ \\
+    Damit sind die Energien $\epsilon_i = h \nu_i \left( n_i + \frac{1}{2} \right) \quad n_i \in \mathbb{N}$
+    \begin{equation}
+        \begin{split}
+            Z &= e^{- \sum_{i=1}^{3N} \left( h \nu_i / 2 k T \right)} \prod_{i=1}^{3N} \frac{1}{1 - e^{- h \nu_i / k T}} \\
+            F &= - k T \ln Z = \underbrace{\sum_{i=1}^{3N} \frac{h \nu_i}{2}}_{E_0} + k T \sum_{i=1}^{3N} \ln \left[ 1 - e^{- h \nu_i / k T} \right] \\
+            E &= F + T S = F - T \pdi{F}{T}{V, N} = E_0 + \sum_{i=1}^{3N} \frac{h \nu_i}{e^{h \nu_i/kT} -1}
+        \end{split}
+    \end{equation}
+    \underline{Problem}: Auswertung der Summe. \\
+    Wir benutzen die Analogie zu den Photonen.
+    \begin{enumerate}
+        \item Ausbreitungsvektor $\vec{k}$, $k = \frac{2 \pi \nu}{c_S}, \quad c_S$: Schallgeschwindigkeit. \\
+        Dies ist eine sehr gute Näherung für akustische Phononen (Genaueres: Festkörperphysik Vorlesung!)
+        \item Es gibt 3 Phononenzweige (1 longitudinal, 2 transversal zu $\vec{k}$). \\
+        Somit hat man die Entsprechung:
+        \begin{equation}
+            \sum_i f(\nu_i) \rightarrow 3 \frac{4 \pi V}{c_S^3} \int \difd \nu \, \nu^2 f(\nu)
+        \end{equation}
+    \end{enumerate}
+    Man beachte aber, dass $ \sum_{i=1}^{3N} 1 = 3 N$, somit muss die Integration durch eine maximale Frequenz $\nu_D$ (\textsc{Debye}-Frequenz)
+    beschränkt sein. Es ist
+    \begin{equation}
+        \begin{split}
+            3 N &= 3 \frac{4 \pi V}{c_S^3} \int_{0}^{\nu_D} \difd \nu \, \nu^2 = \frac{4 \pi V}{c_S^3} \nu_D^3 \\
+            \Rightarrow \nu_D &= \left( \frac{3 N}{4 \pi V} \right)^{1/3} c_S 
+        \end{split}
+    \end{equation}
+    Damit ist die Energie:
+    \begin{equation}
+        \begin{split}
+            E &= E_0 + \frac{12 \pi V}{c_S^3} \int_{0}^{\nu_D} \frac{h \nu^3 \difd \nu}{e^{h \nu / k T} - 1} \\
+            &\overset{x=\frac{h \nu}{kT}}{=} E_0 + \overbrace{\frac{12 \pi V}{c_S^3 h^3} (kT)^4 \int_{0}^{\theta_D / T} \frac{x^3 \difd x}{e^x - 1}}_{3 N k T \mathscr{D} \left( \frac{\theta_D}{T} \right) } \quad \text{mit} \quad \theta_D = \frac{h \nu_D}{k} \\
+            E &= 3 N k T \mathscr{D} \left( \frac{\theta_D}{T} \right) \quad \mathscr{D}: \text{\textsc{Debye}-Funktion und } 3N = \frac{4 \pi V}{c_S^3} \nu_D^3 \\
+        \end{split}
+    \end{equation}
+    d.h.
+    \begin{equation}
+        \mathscr{D}(y) := \frac{3}{y^3} \int_{0}^{y} \frac{x^3 \difd x}{e^x - 1} =
+        \begin{cases}
+            \frac{3}{y^3} \underbrace{\int_{0}^{\infty} \frac{x^3 \difd x}{e^x - 1}}_{\pi^4 / 15} = \frac{\pi^4}{5 y^3} & y >> 1 \\
+            \frac{3}{y^3} \int_0^y x^2 \difd x = 1 & y << 1
+        \end{cases}
+    \end{equation}
+    Somit
+    \begin{equation}
+        \begin{split}
+            E &=
+            \begin{cases}
+                E_0 + \frac{3 \pi^4}{5} N k \frac{T^4}{\theta_D^3} & T << \theta_D\\
+                E_0 + 3 N k T & T >> \theta_D
+            \end{cases} \\
+            \overset{\text{pro Mol}}{\Rightarrow} c_V &=
+            \begin{cases}
+                \frac{12 \pi^4}{5} N_A k \left( \frac{T}{\theta_D} \right)^3 & T << \theta_D \quad \text{(3. HS)} \\
+                3 N_A k & T >> \theta_D \quad \text{(\textsc{Dulong. Petit})}
+            \end{cases}
+        \end{split}
+    \end{equation}
+    $Z$ und $\mathcal{Z}$ sind fundamental. \\
+    Und zum Schluss eine kompakte Formel für $Z$. \\
+    Sei $\hat{H}$ Hamilton Operator mit diskretem Spektrum $\epsilon_i, i=1, 2, \ldots$ und $\{\ket{i}\}$ ein entsprechender ON Basis-Satz,
+    $\hat{H}\ket{i} = \epsilon_i \ket{i}$. In der Matrix-Darstellung dieses Satzes ist $\hat{H}$ diagonal. Damit aber auch
+    \begin{equation}
+        \hat{H}^n = \text{TODO Matrix}
+    \end{equation}
+    und
+    \begin{equation}
+        e^{- \beta ß \hat{H}} = \text{TODO Matrix}
+    \end{equation}
+    mit $\beta = \frac{1}{k T}$\\
+    Dann ist
+    \begin{equation}
+        \sum_{i=1}^{\infty} e^{- \beta \epsilon_i} = Z = \Sp \left( e^{- \beta \hat{H}} \right)
+    \end{equation}
+    Die eingerahmte Formel ist Basis-unabhängig, da für jede unitäre Transformation $\hat{U}$ des Hilbert-Raumes gilt
+    \begin{equation}
+    \Sp \left( \hat{U}^{-1} e^{-\beta \hat{H}} \hat{U} \right) = \Sp \left( e^{-\beta \hat{H}} \underbrace{\hat{U} \hat{U}^{-1}}_{\mathbbm{1}} \right) = \Sp \left( e^{-\beta \hat{H}} \right) 
+\end{equation}
 \end{enumerate}
