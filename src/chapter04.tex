@@ -89,30 +89,131 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
             &= \left[2 \cosh \left( \frac{h}{kT} \right) \right]^N
         \end{split}
     \end{equation}
+    oder, allgemein, für $2s+1$ Spineinstellungen
+    \begin{equation}
+        Z = \left[ \frac{\sinh \left[ (2s+1) h / kT \right]}{\sinh (h/kT)} \right]^N
+    \end{equation}
+    \begin{equation}
+        \begin{split}
+            F &= - k T \ln Z = - N k T \ln \left[  \frac{\sinh \left[ (2s+1) h / kT \right]}{\sinh (h/kT)} \right] \quad \text{(extensiv)}
+        \end{split}saturiert.
+    \end{equation}
+    Magnetisierung:
+    \begin{equation}
+        m = \pdi{F}{h}{T, N} = N k T \frac{1}{k T} \underbrace{\left\{ (2s+1) \coth \left[ (2s+1) h/kT \right] - \coth(h/kT)  \right\}}_{*} \quad \text{(extensiv)}
+    \end{equation}
+    $(*)$: Struktur wird benutzt zur Definition der \textsc{Brillouin}-Funktion $B_s(x)$
+    \begin{equation}
+        B_s(x) := \frac{2s+1}{2s} \coth \left[ \frac{2s+1}{2s} x \right] - \frac{1}{2s} \coth \left( \frac{x}{2s} \right)
+    \end{equation}
+    Damit:
+    \begin{equation}
+        m = N 2 s B_s \left( \frac{2 s h}{k T} \right)
+    \end{equation}
+    TODO Bild $B_s$ Funktion \\ %TODO Bild
+    Für tiefe Temperaturen und hohe Felder ist $x \gg 1$, d.h. $B_s \simeq 1 \Rightarrow m = 2 s N$, die Magnetisierung ist saturiert. \\
+    Für hohe Temperaturen, so dass $x \ll 1$, hat man $\coth(x) \sim \frac{1}{x} + \frac{x}{3} + \ldots$.
+    $\Rightarrow B_s(x) = \frac{1}{3} \frac{1+s}{s} x$. Folglich $m = \frac{4 N s (s+1) h}{3 k T}$. $\Rightarrow$ Suszeptibilität $\chi = N \frac{C}{T}$ (\textsc{Curie}-Gesetz).
+    Paramagnetisches Veralten. "`Kritische Temperatur"' $T_c = 0$. Kein Wunder, da keine Wechselwirkung zwischen den Spins!
+    
+    \item Wechselwirkende Spins: die Molekularfeldnäherung \\
+    (mean-field approximation MFA) \\
+    Ising Modell $\mathscr{H} = - h \sum_i \sigma_i - J \sum_{\text{NN Paare}} \sigma_i \sigma_j$ \\
+    \underline{Idee} Auf den i-ten Spin wirkt das effektive Feld
+    \begin{equation}
+        h_\text{eff} = h + J \sum_\text{\text{NN zu } i} \sigma_j
+    \end{equation}
+    Näherung:
+    \begin{equation}
+        h_\text{eff} = h + J \sum_{\text{NN zu } i} \avg{\sigma_j} = h + J q \avg{\sigma}
+    \end{equation}
+    \begin{description}
+        \item[$q$] Anzahl der NN
+        \item[$\avg{\sigma}$] wegen Symmetrie des Problems
+    \end{description}
+    Damit, eingeschränkt auf den i-ten Spin: $\mathscr{H}_i = - h_\text{eff} \sigma _i$
+    \begin{equation}
+        \begin{split}
+            Z_i &= \sum_\nu e^{h_\text{eff} \sigma_{i \nu} / kT} = e^{-h_\text{eff} / kT} + e^{h_\text{eff} / k T} = 2 \cosh \left( \frac{h_\text{eff}}{kT} \right) \\
+            \avg{\sigma_i} &= \frac{\sum_\nu \sigma_{i \nu} e^{h_\text{eff} \sigma_{i \nu} / k T}}{Z} = \tanh \left( \frac{h_\text{eff}}{k T} \right)
+        \end{split}
+    \end{equation}
+    Konsistenz: da $\avg{\sigma_i} = \avg{\sigma}$ sein soll, erhalten wir die Beziehung
+    \begin{equation}
+        \avg{\sigma} = \tanh \left( \frac{h_\text{eff}}{k T} \right)
+    \end{equation}
+    z.B. für $h = 0 \Rightarrow \avg{\sigma} = \tanh (J q \avg{\sigma} / k T)$ Selbstkonsistenzbeziehung \\
+    Graphische Darstellung
+    \begin{equation}
+        x = \frac{ J q \avg{\sigma}}{k T} \text{  und  } \avg{\sigma} = \frac{x k T}{J q} \quad \Rightarrow \quad \frac{x k T}{J q} = \tanh x
+    \end{equation}
+    TODO Bild graphische Lösungen von Gleichung oben\\ % TODO Bild
+    \underline{Diskussion}
+    \begin{itemize}
+        \item Für große $T$ nur eine Lösung: $x = 0 \Rightarrow \avg{\sigma} = 0$
+        \item Für kleine $T$ drei Lösungen $x = 0$ (instabil) und $\sigma = \pm \frac{x_0 k T}{J q} \neq 0$
+    \end{itemize}
+    d.h. bei kleinen Temperaturen gibt es eine spontane Magnetisierung bei \emph{Abwesenheit} eines äußeren Feldes
+    $\Rightarrow$ ferromagnetisches Verhalten. \\
+    Kritische Temperatur $T_c$: die Gerade ist tangent an $\tanh x \Rightarrow k T_c = J q$
+    \begin{equation}
+        \Rightarrow T_c = \frac{J q}{k}
+    \end{equation}
+    Verhalten von $\avg{\sigma}$ im ferromagnetischen Bereich, $T \leq T_c, h = 0$
+    \begin{enumerate}[i)]
+        \item $T \to 0, \avg{\sigma} \to \pm 1$ \\
+        TODO Bild $\avg{\sigma}$-$T$-Diagramm \\ % TODO Bild
+        oder genauer, da
+        \begin{equation}
+            \begin{split}
+                \tanh x &= \frac{e^x - e^{-x}}{e^x + e^{-x}} = \frac{1 - e^{-2x}}{1 + e^{-2x}} \overset{x \to \infty}{\simeq} 1 - 2 e^{-2x} \\
+                \Rightarrow \avg{\sigma} &\simeq 1 - 2 e^{- 2 J q \avg{\sigma} / k T} \\
+                \Rightarrow \avg{\sigma} &\simeq 1 - 2 e^{-2 T_c / T}
+            \end{split}
+        \end{equation}
+        \item $T \to T_c^-, \avg{\sigma} \to 0$
+        oder genauer, da $\tanh x \simeq x - \frac{x^3}{3}$ für $x \ll 1$
+        \begin{equation}
+            \begin{split}
+                \Rightarrow &\avg{\sigma} \overset{x=\frac{T_c}{T}\avg{\sigma}}{=} \frac{T_c}{T} \avg{\sigma} - \frac{1}{3} \left( \frac{T_c}{T} \right)^3 \avg{\sigma}^3 \\
+                \Rightarrow &\avg{\sigma}^2 = 3 \left( \frac{T}{T_c} \right)^3 \left[ \frac{T_c - T}{T} \right] \simeq 3 \left( 1 - \frac{T}{T_c} \right) \\
+                \Rightarrow &\avg{\sigma} = \pm \sqrt{3} \left( 1 - \frac{T}{T_c} \right)^{1/2} \sim \pm \left( T_c - T \right)^{1/2}
+            \end{split}
+        \end{equation}
+        $1/2$: kritischer Exponent \\
+        \underline{Experimentell} (Fe, Ni, Co) ist das Verhalten von $\avg{\sigma}$ bestätigt (Ausnahme: Umgebung von $T_c$: kritisches Verhalten)
+    \end{enumerate}
+    Die mittlere Energie des Systems in der MFA ist (h = 0):
+    \begin{equation}
+        \avg{\mathscr{H}} = \avg{- J \sum_\text{NNPaar} \sigma_i \sigma_j} \simeq - J \sum_{NN Paar} \avg{\sigma_i} \avg{\sigma_j} = - \frac{N J q}{2} \avg{\sigma}^2 = E(T)
+    \end{equation}
+    spezifische Wärme
+    \begin{equation}
+        \label{eq:MFA_specHeat}
+        c_{h=0} = \pdi{E}{T}{h=0} = - N J q \avg{\sigma} \pd{\avg{\sigma}}{T}
+    \end{equation}
+    Damit ist
+    \begin{itemize}
+        \item für $T > T_c$ ist $E(T) \equiv 0 \Rightarrow c_{h=0} = 0$
+        \item für $T \to T_C^-$ ist $E(T) = - \frac{3 N j q}{2} \left( 1 - \frac{T}{T_c} \right)$ \\
+        $\Rightarrow c_{h=0} = \frac{3}{2} \frac{N j q}{T_c} = \frac{3}{2} N k$
+        \item für $T \to 0$ ist $E(T) = - \frac{N J q}{2} \left[ 1 - 2 e^{-2 T_c / T} \right]^2$ \\
+        $\Rightarrow c_{h=0} \simeq 4 N k \left( \frac{T_c}{T} \right)^2 e^{-2 T_c / T}$ \\
+        Bemerkung: $\lim_{T \to 0} c_{h = 0} = 0$ (Übereinstimmung mit dem 3. HS)
+    \end{itemize}
+    TODO Bild $c_{h=0}$-$T$-Diagramm für MFA \\ % TODO Bild
+    Was ist die Entropie des Systems?
+    \begin{enumerate}[i)]
+        \item Oberhalb $T_c$ gibt es keinen Entropiezuwachs mehr, da $c_{h=0} = 0$ \\
+        Bei $T_c$ hat man:
+        \begin{equation}
+            \begin{split}
+                S(T_c) &= \int_{0}^{T_c} \frac{c_{h=0}(T) \difd T}{T} \overset{\text{\eqref{eq:MFA_specHeat}}}{=} - N J q \int_1^0 \frac{\avg{\sigma} \difd \avg{\sigma}}{T} \\
+                & \overset{(*)}{=} N k \int_0^1 \arctanh (x) \difd x = N k \ln 2
+            \end{split}
+        \end{equation}
+        (*): $\avg{\sigma}=x, J q x = k T \arctanh(x)$ \\
+        Kombinatorisch war dies zu erwarten; bei sehr tiefen Temperaturen ($T \to 0$) sind alle Spins parallel geordnet (2 Realisierungen). 
+        Bei sehr hohen Temperaturen hat man $2^N$ Realisierungen der Spineinrichtungen $S = k \ln \left( 2^N \right)  = N k \ln 2$
+    \end{enumerate}
 \end{enumerate}
-oder, allgemein, für $2s+1$ Spineinstellungen
-\begin{equation}
-    Z = \left[ \frac{\sinh \left[ (2s+1) h / kT \right]}{\sinh (h/kT)} \right]^N
-\end{equation}
-\begin{equation}
-    \begin{split}
-        F &= - k T \ln Z = - N k T \ln \left[  \frac{\sinh \left[ (2s+1) h / kT \right]}{\sinh (h/kT)} \right] \quad \text{(extensiv)}
-    \end{split}saturiert.
-\end{equation}
-Magnetisierung:
-\begin{equation}
-    m = \pdi{F}{h}{T, N} = N k T \frac{1}{k T} \underbrace{\left\{ (2s+1) \coth \left[ (2s+1) h/kT \right] - \coth(h/kT)  \right\}}_{*} \quad \text{(extensiv)}
-\end{equation}
-$(*)$: Struktur wird benutzt zur Definition der \textsc{Brillouin}-Funktion $B_s(x)$
-\begin{equation}
-    B_s(x) := \frac{2s+1}{2s} \coth \left[ \frac{2s+1}{2s} x \right] - \frac{1}{2s} \coth \left( \frac{x}{2s} \right) 
-\end{equation}
-Damit:
-\begin{equation}
-    m = N 2 s B_s \left( \frac{2 s h}{k T} \right) 
-\end{equation}
-TODO Bild $B_s$ Funktion \\ %TODO Bild
-Für tiefe Temperaturen und hohe Felder ist $x \gg 1$, d.h. $B_s \simeq 1 \Rightarrow m = 2 s N$, die Magnetisierung ist saturiert. \\
-Für hohe Temperaturen, so dass $x \ll 1$, hat man $\coth(x) \sim \frac{1}{x} + \frac{x}{3} + \ldots$. 
-$\Rightarrow B_s(x) = \frac{1}{3} \frac{1+s}{s} x$. Folglich $m = \frac{4 N s (s+1) h}{3 k T}$. $\Rightarrow$ Suszeptibilität $\chi = N \frac{C}{T}$ (\textsc{Curie}-Gesetz).
-Paramagnetisches Veralten. "`Kritische Temperatur"' $T_c = 0$. Kein Wunder, da keine Wechselwirkung zwischen den Spins!
