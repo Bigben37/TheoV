@@ -238,7 +238,92 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
             \end{split}
         \end{equation}
         (*): $\avg{\sigma}=x, J q x = k T \arctanh(x)$ \\
-        Kombinatorisch war dies zu erwarten; bei sehr tiefen Temperaturen ($T \to 0$) sind alle Spins parallel geordnet (2 Realisierungen). 
+        Kombinatorisch war dies zu erwarten; bei sehr tiefen Temperaturen ($T \to 0$) sind alle Spins parallel geordnet (2 Realisierungen).
         Bei sehr hohen Temperaturen hat man $2^N$ Realisierungen der Spineinrichtungen $S = k \ln \left( 2^N \right)  = N k \ln 2$
+        \item Betrachten wir die Situation beim Anlegen eines Feldes $h \neq 0$ und $T$ groß. Selbstkonsistenz bedeutet:
+        \begin{equation}
+            \avg{\sigma} \tanh \left( \frac{h_\text{eff}}{k T} \right) \simeq \frac{h_\text{eff}}{k T} = \frac{h + J q \avg{\sigma}}{k T} \Rightarrow \avg{\sigma} = \frac{h}{k T - J q} = \frac{h}{k (T - T_c)}
+        \end{equation}
+        Daraus folgt für die Suszeptibilität ($m \sim \avg{\sigma}$):
+        \begin{equation}
+            \chi = \frac{C}{T - T_c} \qquad \text{\textsc{Curie-Weiss} Gesetz}
+        \end{equation}
+        Das \textsc{Curie-Weiss} Gesetz ist in der Regel experimentell sehr gut bestätigt. Die so bestimmte Temperatur $T_c$ liegt etwas oberhalb der
+        Phasenübergangstemperatur (Nickel $T_{C, \text{CW}} = 650\,$K, $T_{C, \text{PÜ}}=631\,$K)
     \end{enumerate}
+    \item Wechselwirkende Spins: die Bethe-Näherung \\
+    \underline{Idee}: Man betrachtet eine Gruppe: zentraler Spin und $q$ NN. Die Wechselwirkung des zentralen Spins wird exakt die der NN Spins
+    mit der Umgebung nur näherungsweise berücksichtigt:
+    \begin{equation}
+        \mathscr{H} = - h \sigma_0 - J \sum_{j=1}^{q} \sigma_0 \sigma_j - \left( h + h_\text{eff}' \right) \sum_{j=1}^{q} \sigma_j
+    \end{equation}
+    $h_\text{eff}'$ wird selbstkonsistent aus $\avg{\sigma_0} = \avg{\sigma_j} \ (j \in \left[ 1; q \right])$ bestimmt. Zustandssumme:
+    \begin{equation}
+        \begin{split}
+            Z &= \sum_{\sigma_0 \sigma_j = \pm 1} e^{\alpha \sigma_0 + (\alpha + \alpha') \sum_{j=0}^{q} \sigma_j + \gamma \sum_{j=1}^{q} \sigma_0 \sigma_j} \\
+            & \text{mit}  \quad \alpha = \frac{h}{k T}, \quad \alpha' = \frac{h_\text{eff}'}{k T}, \quad \gamma = \frac{J}{k T}
+        \end{split}
+    \end{equation}
+    Nun ist $Z = Z_+ + Z_-$, wobei
+    \begin{equation}
+        \begin{split}
+            Z_\pm &= \sum_{\sigma_j = \pm 1} e^{\pm \alpha + (\alpha + \alpha' \pm \gamma) \sum_{j=1}^{q} \sigma_j} \\
+            &= e^{\pm \alpha} \left[ 2 \cosh (\alpha + \alpha' \pm \gamma) \right]^q
+        \end{split}
+    \end{equation}
+    \begin{equation}
+        \begin{split}
+            \avg{\sigma_0} &= \frac{1}{Z} \sum_{\sigma_0 \sigma_j} \sigma_0 e^{\alpha \sigma_0 + (\alpha + \alpha') \sum_{j=1}^{q} \sigma_j + \gamma \sum_{j=1}^{q} \sigma_0 \sigma_j} \\
+            &= \frac{Z_+ - Z_-}{Z} \\
+            \avg{\sigma_j} &= \frac{1}{q} \avg{ \sum_{j=1}^{q} \sigma_j} = \frac{1}{q} \left( \frac{1}{Z} \pd{Z}{\alpha'} \right) \\
+            &= \frac{1}{Z} \left[ Z_+ \tanh (\alpha + \alpha' + \gamma) + Z_- \tanh (\alpha + \alpha' - \gamma) \right]
+        \end{split}
+    \end{equation}
+    Selbstkonsistenzbeziehung: $\avg{\sigma_0} = \avg{\sigma_j}$
+    \begin{equation}
+        Z_+ \left[ 1 - \tanh(\alpha + \alpha' + \gamma) \right] = Z_- \left[ 1 + \tanh (\alpha + \alpha' - \gamma) \right]
+    \end{equation}
+    $Z_+, Z_-$ eingesetzt:
+    \begin{equation}
+        \begin{split}
+            &e^{+\alpha} \left[ 1 - \tanh (\alpha + \alpha' + \gamma) \right] \left[ 2 \cosh (\alpha + \alpha' + \gamma) \right]^q \\
+            &= e^{-\alpha} \left[ 1 + \tanh (\alpha + \alpha' - \gamma) \right] \left[ 2 \cosh (\alpha + \alpha' - \gamma) \right]^q
+        \end{split}
+    \end{equation}
+    Mit $e^{\pm x} = \cosh x \pm \sinh x$
+    \begin{equation}
+        \begin{split}
+            & 2 e^{\alpha} e^{-(\alpha + \alpha' + \gamma)} \left[ 2 \cosh (\alpha + \alpha' + \gamma) \right]^{q-1} \\
+            &= 2 e^{-\alpha} e^{\alpha + \alpha' - \gamma} \left[ 2 \cosh (\alpha + \alpha' - \gamma) \right]^{q-1} \\
+            e^{2 \alpha'} &= \left\{ \frac{\cosh(\alpha + \alpha' + \gamma)}{\cosh (\alpha + \alpha' - \gamma)} \right\}^{q-1}
+        \end{split}
+    \end{equation}
+    \underline{Frage}: Gib es spontane Magnetisierung für $h=0$ (d.h. $\alpha = \frac{h}{k T} = 0$) \\
+    Selbstkonsistenzbeziehung:
+    \begin{equation}
+        \alpha' = \frac{q-1}{2} \ln \left\{ \frac{\cosh (\alpha' + \gamma)}{\cosh (\alpha' - \gamma)} \right\}
+    \end{equation}
+    \begin{enumerate}
+        \item ohne Wechselwirkung, $J = 0$, d.h. $\gamma = 0 \Rightarrow \alpha' = 0 \Rightarrow h_\text{eff}' = 0$ keine spontane Magnetisierung
+        \item mit Wechselwirkung, $J \neq 0$, hat man trotzdem immer $\alpha' = 0$ als mögliche Lösung. Gibt es weitere Lösung(en)? \\
+        Entwicklung der Selbstkonsistenzbeziehung für kleine $\alpha'$ liefert (um $\alpha' = 0$)
+        \begin{equation}
+            \alpha' = (q-1) \tanh \gamma \left[ \alpha' - \frac{(\alpha')^3}{3} \sech^2 \gamma + \ldots \right]
+        \end{equation}
+        Nichtverschwindende Lösung $\Rightarrow (q-1) \tanh \gamma > 1$, d.h.
+        \begin{equation}
+            \gamma > \gamma_c = \arctanh \left( \frac{1}{q - 1} \right) = \frac{1}{2} \ln \left( \frac{q}{q - 2} \right)
+        \end{equation}
+        Auf die Temperatur bezogen bedeutet dies $ \left( \gamma = \frac{J}{k T} \right)$:
+        \begin{equation}
+            T < T_c = \frac{2 J}{k \ln \left( \frac{q}{q-2} \right) }
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
+Folgerungen:
+\begin{enumerate}
+    \item Kein Phasenübergang des \textsc{Ising}-Modells bei endlicher Temperatur in einer Dimension, In der Bethe-Näherung ($T_c = 0$ für $q = 2$)
+    Unterschied zur MFA!
+    \item Für große $q$ ist $\ln \left( \frac{q}{q-2} \right) = - \ln \left( 1 - \frac{2}{q} \right) \simeq \frac{2}{q}$ \\
+    Im Grenzfall großer NN-Zahlen stimmen \textsc{Bethe}-Näherung und MFA überein. Beide Näherungen sind zufriedenstellend für hohe Dimensionen.
 \end{enumerate}
