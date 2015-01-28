@@ -340,7 +340,13 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
     \end{enumerate}
     \item Das Ising-Modell in einer Dimension \\
     Berechnung der Zustandssumme auf einem Ring mit $N$ Plätzen (periodische Randbedingung) \\
-    TODO Bild Ring  % TODO Bild
+    \begin{figure}[H]
+        \centering
+        \def\svgwidth{0.35\textwidth}
+        \input{../img/IsingRing.pdf_tex}
+        \caption{Eindimensionales, zyklisches Ising-Modell: Geschlossene Kette mit $N$ Plätzen.}
+        \label{img:IsingRing}
+\end{figure}
     \begin{equation}
         \begin{split}
             Z &= \sum_{\sigma_1 = \pm 1} \sum_{\sigma_2 = \pm 1} \cdots \sum_{\sigma_N = \pm 1} e^{\frac{J}{k T} \left( \sigma_1 \sigma_2 + \sigma_2 \sigma3 + \ldots + \sigma_N \sigma_1 \right) + \frac{h}{k T} \left( \sigma_1 + \ldots \sigma_N \right)} \\
