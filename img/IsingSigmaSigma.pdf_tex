@@ -1,0 +1,57 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'IsingSigmaSigma.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{491.40869302bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.57131183)%
+    \put(0,0){\includegraphics[width=\unitlength]{IsingSigmaSigma.pdf}}%
+    \put(-0.00272038,0.57902341){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.48837123\unitlength}\raggedright $\avg{\sigma_l, \sigma_{l'}}$\end{minipage}}}%
+    \put(0.02717765,0.45511684){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08090944\unitlength}\raggedleft 1\end{minipage}}}%
+    \put(0.9018429,0.03896739){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22579903\unitlength}\raggedright $kT/J$\end{minipage}}}%
+  \end{picture}%
+\endgroup%
