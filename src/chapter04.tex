@@ -2,11 +2,11 @@
 \subsection{Phasenübergänge: Magnetische Modelle}
 \underline{Idee} Wechselwirkende Spins auf Gitterplätzen \\
 \begin{figure}[H]
-        \centering
-        \def\svgwidth{0.2\textwidth}
-        \input{../img/WWSpins.pdf_tex}
-        \caption{Wechselwirkende Spins.}
-        \label{img:WWSpins}
+    \centering
+    \def\svgwidth{0.2\textwidth}
+    \input{../img/WWSpins.pdf_tex}
+    \caption{Wechselwirkende Spins.}
+    \label{img:WWSpins}
 \end{figure}
 \underline{Anwendungen}: Ferro- und Antiferromagnetismus, Ordnungs-Unordnungsübergänge in Legierungen. Gas-Flüssig und Flüssig-Fest Übergänge \\
 \underline{Effekt}: Kurzreichweitige Wechselwirkungen erzeugen unter Umständen langreichweitige Ordnung. \\
@@ -15,16 +15,16 @@
     \vec{\mu} ) = - g \mu_B \vec{s}
 \end{equation}
 \begin{itemize}
-  \item $\vec{\mu}$: Magnetisches Moment 
-  \item $g$: \textsc{Landé} Faktor, $g \simeq 2$
-  \item $\mu_B$: \textsc{Bohr}sches Magneton, $\mu_B = \frac{e \hbar}{2 m c}$
-  \item $\vec{s}$: Spinvariable $(s_z \pm \frac{1}{2})$
+    \item $\vec{\mu}$: Magnetisches Moment
+    \item $g$: \textsc{Landé} Faktor, $g \simeq 2$
+    \item $\mu_B$: \textsc{Bohr}sches Magneton, $\mu_B = \frac{e \hbar}{2 m c}$
+    \item $\vec{s}$: Spinvariable $(s_z \pm \frac{1}{2})$
 \end{itemize}
 \underline{Grund}: Verschiedene Energien der \emph{Orts}wellenfunktionen der Elektronen.  \\
-Energien, die zu verschiedenen Orientierungen der Spins gehören: $K_{ij} + J_{ij}$ 
+Energien, die zu verschiedenen Orientierungen der Spins gehören: $K_{ij} + J_{ij}$
 \begin{description}
-  \item[$K_{ij}$] Coulomb-Integral $K_{ij} = \int \Psi_i^*(1) \Psi_j^*(2) u_{ij} \Psi_j(2) \Psi_i(1) \difd \vec{r}_1 \difd \vec{r}_2$
-  \item[$J_{ij}$] Austauschintegral $J_{ij} = \int \Psi_i^*(1) \Psi_j^*(2) u_{ij} \Psi_j(1) \Psi_i(2) \difd \vec{r}_1 \difd \vec{r}_2$
+    \item[$K_{ij}$] Coulomb-Integral $K_{ij} = \int \Psi_i^*(1) \Psi_j^*(2) u_{ij} \Psi_j(2) \Psi_i(1) \difd \vec{r}_1 \difd \vec{r}_2$
+    \item[$J_{ij}$] Austauschintegral $J_{ij} = \int \Psi_i^*(1) \Psi_j^*(2) u_{ij} \Psi_j(1) \Psi_i(2) \difd \vec{r}_1 \difd \vec{r}_2$
 \end{description}
 und $u_{ij}$ effektives Potential. Somit ist die Energiedifferenz
 \begin{equation}
@@ -33,12 +33,12 @@ und $u_{ij}$ effektives Potential. Somit ist die Energiedifferenz
 Für $J_{ij} > 0$ ist der Zustand $\uparrow \uparrow$ bevorzugt (evtl. Ferromagnetismus) \\
 Für $J_{ij} < 0$ ist der Zustand $\uparrow \downarrow$ bevorzugt (evtl. Antiferromagnetismus)
 \begin{figure}[H]
-        \centering
-        \def\svgwidth{0.6\textwidth}
-        \input{../img/Frustration.pdf_tex}
-        \caption{Antiparallele, energetisch günstige Ausrichtung von Spins im quadratischen Gitter.
-        Beim Dreieck-Gitter ist die Minimierung der Energie unmöglich.}
-        \label{img:Frustration}
+    \centering
+    \def\svgwidth{0.6\textwidth}
+    \input{../img/Frustration.pdf_tex}
+    \caption{Antiparallele, energetisch günstige Ausrichtung von Spins im quadratischen Gitter.
+    Beim Dreieck-Gitter ist die Minimierung der Energie unmöglich.}
+    \label{img:Frustration}
 \end{figure}
 Im Weiteren: nur der Fall $J_{ij} > 0$ behandelt!
 \underline{Bild} \emph{Umschreibung} als effektive Wechselwirkung zwischen den Spins $s_i$ und $s_j$. Zunächst ist,
@@ -129,7 +129,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \input{../img/BrillouinFkt.pdf_tex}
         \caption{Brillouin-Funktion $B_s(x)$.}
         \label{img:BrillouinFkt}
-\end{figure}
+    \end{figure}
     Für tiefe Temperaturen und hohe Felder ist $x \gg 1$, d.h. $B_s \simeq 1 \Rightarrow m = 2 s N$, die Magnetisierung ist saturiert. \\
     Für hohe Temperaturen, so dass $x \ll 1$, hat man $\coth(x) \sim \frac{1}{x} + \frac{x}{3} + \ldots$.
     $\Rightarrow B_s(x) = \frac{1}{3} \frac{1+s}{s} x$. Folglich $m = \frac{4 N s (s+1) h}{3 k T}$. $\Rightarrow$ Suszeptibilität $\chi = N \frac{C}{T}$ (\textsc{Curie}-Gesetz).
@@ -172,7 +172,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \input{../img/SolMFA.pdf_tex}
         \caption{Graphische Lösung der obigen Gleichungen.}
         \label{img:SolMFA}
-\end{figure}
+    \end{figure}
     \underline{Diskussion}
     \begin{itemize}
         \item Für große $T$ nur eine Lösung: $x = 0 \Rightarrow \avg{\sigma} = 0$
@@ -188,12 +188,12 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
     \begin{enumerate}[i)]
         \item $T \to 0, \avg{\sigma} \to \pm 1$
         \begin{figure}[H]
-        \centering
-        \def\svgwidth{0.4\textwidth}
-        \input{../img/sigma_T_Diag.pdf_tex}
-        \caption{Mittlerer Spin $\avg{\sigma}$ in Abhängigkeit der Temperatur $T$.}
-        \label{img:sigma_T_Diag}
-		\end{figure}
+            \centering
+            \def\svgwidth{0.4\textwidth}
+            \input{../img/sigma_T_Diag.pdf_tex}
+            \caption{Mittlerer Spin $\avg{\sigma}$ in Abhängigkeit der Temperatur $T$.}
+            \label{img:sigma_T_Diag}
+        \end{figure}
         oder genauer, da
         \begin{equation}
             \begin{split}
@@ -238,7 +238,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \input{../img/C_T_MFA.pdf_tex}
         \caption{$c_{h=0}$-$T$-Diagramm für die Molekularfeldnäherung.}
         \label{img:C_T_MFA}
-\end{figure}
+    \end{figure}
     Was ist die Entropie des Systems?
     \begin{enumerate}[i)]
         \item Oberhalb $T_c$ gibt es keinen Entropiezuwachs mehr, da $c_{h=0} = 0$ \\
@@ -339,14 +339,14 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         Im Grenzfall großer NN-Zahlen stimmen \textsc{Bethe}-Näherung und MFA überein. Beide Näherungen sind zufriedenstellend für hohe Dimensionen.
     \end{enumerate}
     \item Das Ising-Modell in einer Dimension \\
-    Berechnung der Zustandssumme auf einem Ring mit $N$ Plätzen (periodische Randbedingung) \\
+    Berechnung der Zustandssumme auf einem Ring mit $N$ Plätzen (periodische Randbedingung)
     \begin{figure}[H]
         \centering
         \def\svgwidth{0.35\textwidth}
         \input{../img/IsingRing.pdf_tex}
         \caption{Eindimensionales, zyklisches Ising-Modell: Geschlossene Kette mit $N$ Plätzen.}
         \label{img:IsingRing}
-\end{figure}
+    \end{figure}
     \begin{equation}
         \begin{split}
             Z &= \sum_{\sigma_1 = \pm 1} \sum_{\sigma_2 = \pm 1} \cdots \sum_{\sigma_N = \pm 1} e^{\frac{J}{k T} \left( \sigma_1 \sigma_2 + \sigma_2 \sigma3 + \ldots + \sigma_N \sigma_1 \right) + \frac{h}{k T} \left( \sigma_1 + \ldots \sigma_N \right)} \\
@@ -403,7 +403,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \input{../img/IsingC_T.pdf_tex}
         \caption{Temperaturabhängigkeit der Wärmekapazität im Ising-Modell.}
         \label{img:IsingC_T}
-\end{figure}
+    \end{figure}
     Die Magnetisierung im Feld ($h \neq 0$) ist proportional zu:
     \begin{equation}
         \begin{split}
@@ -418,7 +418,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \input{../img/Isingm_T.pdf_tex}
         \caption{Magnetische Suszeptibilität im Ising-Modell.}
         \label{img:Isingm_T}
-\end{figure}
+    \end{figure}
     \begin{itemize}
         \item Bei hohen Feldern saturiert das System
         \item Bei niedrigen Feldern:
@@ -509,12 +509,12 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
             \xrightarrow{N \to \infty} \left( \frac{\lambda_-}{\lambda_+} \right)^{l' - l} &= \left[ \tanh \left( \frac{H}{k T} \right)  \right]^{l'-l}
         \end{split}
     \end{equation}
-    also für $T \neq 0$ exponentiell mit $\abs{l-l'}$ abnehmend. Die Reichweite (Korrelationsreichtweite) des geordneten Zustands divergiert für $T \to 0.$ \\
-\begin{figure}[H]
+    also für $T \neq 0$ exponentiell mit $\abs{l-l'}$ abnehmend. Die Reichweite (Korrelationsreichtweite) des geordneten Zustands divergiert für $T \to 0.$
+    \begin{figure}[H]
         \centering
         \def\svgwidth{0.5\textwidth}
         \input{../img/IsingSigmaSigma.pdf_tex}
         \caption{Temperaturabhängige Korrelation von zwei Spins im Ising-Modell.}
         \label{img:IsingSigmaSigma}
-\end{figure}
+    \end{figure}
 \end{enumerate}
