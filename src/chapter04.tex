@@ -430,7 +430,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
     Berechnung der Korrelation für $h=0$ (Wahrscheinlichkeit, dass die Spins bei $l$ und $l'$ gleichgerichtet sind).
     \begin{equation}
         \begin{split}
-            \avg{\sigma_l \sigma_{l'}} &= \frac{1}{Z} \sum_{\left\{ \sigma \right\}} V_{\sigma_1 \sigma_2} \cdots V_{\sigma_{l-1} \sigma_l} \sigma_l V_{\sigma_l \sigma_{l+1}} \cdots V_{\sigma_{l'-1} \sigma_{l'}} \sigma_{l'} V_{\sigma_{l'} \sigma_{l'+1}} \cdots V{\sigma_N \sigma_1} \\
+            \avg{\sigma_l \sigma_{l'}} &= \frac{1}{Z} \sum_{\left\{ \sigma \right\}} V_{\sigma_1 \sigma_2} \cdots V_{\sigma_{l-1} \sigma_l} \sigma_l V_{\sigma_l \sigma_{l+1}} \cdots V_{\sigma_{l'-1} \sigma_{l'}} \sigma_{l'} V_{\sigma_{l'} \sigma_{l'+1}} \cdots V_{\sigma_N \sigma_1} \\
             &= Z^{-1} \Sp \left[ V^l S V^{l'-l} S V^{N-l'} \right] \quad \text{mit} \quad S =
             \begin{pmatrix}
                 1 & 0 \\
@@ -438,26 +438,78 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
             \end{pmatrix}
         \end{split}
     \end{equation}
-	Eigenwerte von $V$ für $h=0$ ($B=0$): $\lambda_\pm = e^K \pm e^{-K}$, Eigenvektoren $\begin{pmatrix} 1 \\ 1 \end{pmatrix}$ und $\begin{pmatrix} 1 \\ -1 \end{pmatrix}$. \\
-	D.h. V wird durch $U = U^-1 = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\1 & -1 \end{pmatrix}$ diagonalisiert.
-\begin{equation}
-    \begin{split}
-    U^-1 V U &= \frac{1}{2}
-    \begin{pmatrix}
-        2 \lambda_+ & 0 \\
-        0 & 2 \lambda_-
-    \end{pmatrix} \\
-    \Sp \left[ V^l S V^{l'-l} S V^{N-l'} \right] &= \Sp \left[ U^{-1} V^l U U^{-1} S U U^{-1} V{l'-l} U U^{-1} S U U ^{-1} V^{N-l'} U \right] \\
-    U^{-1} S U=&
-    \begin{pmatrix}
-        0 & 1 \\
-        1 & 0
-    \end{pmatrix} \\
-    \avg{\sigma_l \sigma_{l'}} &= \frac{\lambda_+^{N-(l'-l)}\lambda_-^{l' - l} + \lambda_-^{N-(l'-l) \lambda_+^{l'-l}}}{\lambda_+^N + \lambda_-^N} \\
-    \xrightarrow{N \to \infty}  &\left( \frac{\lambda_-}{\lambda_+} \right)^{l' - l} = \left[ \tanh \left( \frac{H}{k T} \right)  \right]^{l'-l}
-    \end{split}
-\end{equation}
-also für $T \neq 0$ exponentiell mit $\abs{l-l'}$ abnehmend. Die Reichweite (Korrelationsreichtweite) des geordneten Zustands divergiert für $T \to 0.$ \\
+    Eigenwerte von $V$ für $h=0$ ($B=0$): $\lambda_\pm = e^K \pm e^{-K}$, Eigenvektoren
+    \begin{equation}
+        \begin{pmatrix}
+            1 \\ 1
+        \end{pmatrix} \quad \text{und} \quad
+        \begin{pmatrix}
+            1 \\ -1
+        \end{pmatrix}
+    \end{equation}
+    D.h. V wird durch
+    \begin{equation}
+        U = U^{-1} = \frac{1}{\sqrt{2}}
+        \begin{pmatrix}
+            1 & 1 \\
+            1 & -1
+        \end{pmatrix}
+    \end{equation}
+    diagonalisiert.
+    \begin{equation}
+        \begin{split}
+            U^{-1} V U &= \frac{1}{2}
+            \begin{pmatrix}
+                2 \lambda_+ & 0 \\
+                0 & 2 \lambda_-
+            \end{pmatrix} \\
+            & \Sp \left[ V^l S V^{l'-l} S V^{N-l'} \right] \\
+            &= \Sp \left[ U^{-1} V^l U U^{-1} S U U^{-1} V^{l'-l} U U^{-1} S U U ^{-1} V^{N-l'} U \right] \\
+            U^{-1} S U &= \frac{1}{2}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & -1
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 0 \\
+                0 & -1 \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & -1
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                0 & 1 \\
+                1 & 0
+            \end{pmatrix} \\
+            \avg{\sigma_l \sigma_{l'}} &= Z^{-1} \Sp \left[
+            \begin{pmatrix}
+                \lambda_+^l & 0 \\
+                0 & \lambda_-^l
+            \end{pmatrix}
+            \begin{pmatrix}
+                0 & 1 \\
+                1 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+                \lambda_+^{l'-l} & 0 \\
+                0 & \lambda_-^{l'-l}
+            \end{pmatrix}
+            \begin{pmatrix}
+                0 & 1 \\
+                1 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+                \lambda_+^{N - l'} & 0 \\
+                0 & \lambda_-^{N - l'}
+            \end{pmatrix}
+            \right] \\
+            &= \frac{\lambda_+^{N-(l'-l)}\lambda_-^{l' - l} + \lambda_-^{N-(l'-l) \lambda_+^{l'-l}}}{\lambda_+^N + \lambda_-^N} \\
+            \xrightarrow{N \to \infty} \left( \frac{\lambda_-}{\lambda_+} \right)^{l' - l} &= \left[ \tanh \left( \frac{H}{k T} \right)  \right]^{l'-l}
+        \end{split}
+    \end{equation}
+    also für $T \neq 0$ exponentiell mit $\abs{l-l'}$ abnehmend. Die Reichweite (Korrelationsreichtweite) des geordneten Zustands divergiert für $T \to 0.$ \\
 \begin{figure}[H]
         \centering
         \def\svgwidth{0.5\textwidth}
