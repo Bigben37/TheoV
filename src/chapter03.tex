@@ -489,11 +489,9 @@ des Systems.
     \centering
     \def\svgwidth{0.5\textwidth}
     \input{../img/phaseSpaceBall.pdf_tex}
-    \caption{capt.}
+    \caption{TODO: Caption}  % TODO caption
     \label{img:phaseSpaceBall}
 \end{figure}
-
-TODO: Caption % TODO Caption img:phaseSpaceBall
 
 Umgekehrt, lässt sich im Gleichgewicht $\rho$ in der Form $\rho=\rho(A_1, A_2, \ldots)$ schreiben, mit $A_i$ Erhaltunsgrößen der Systeme des Ensembles.
 
@@ -688,7 +686,7 @@ Damit folgt
     \end{equation}
     Vernachlässigt wurden:
     \begin{enumerate}[a)]
-        \item Rotation um die $\zeta$-Achse (Modell hier: Massenpunkte $I_3 = 0$)
+        \item Rotation um die $\zeta$-Achse (Modell hier: Massenpunkte, $I_3 = 0$)
         \item Schwingungen des Moleküls (Quanteneffekt, wird später diskutiert)
     \end{enumerate}
     \item Drei- und mehratomige Gase $f = 6$ (3 Rotationsfreiheitsgrade)
@@ -1069,6 +1067,7 @@ Die mittlere relative Schwankung ist
 \end{enumerate}
 
 \subsection{Die idealen Bose- und Fermi-Gase}
+\label{sub:idealBoseFermiGas}
 Voraussetzungen hier: Strukturlose Teilchen (ohne innere Freiheitsgrade) \\
 $\Rightarrow \epsilon_i$ kinetische Energie, $\epsilon_i = \frac{p_i^2}{2 m}$, Fugazität $\sigma = e^{\mu / kT}$
 \begin{equation}
@@ -1100,7 +1099,7 @@ N &= - \pdi{\Omega}{\mu}{T, V} = Q \frac{4 \pi V}{h^3} \int_0^\infty \frac{\difd
 \end{equation}
 \underline{Vorsicht}: $p$: Druck (links), $p$: Impuls (rechts) \\
 \underline{Behauptung}: Für alle drei Gase (FD, BE, MB) gilt $p V = \frac{2}{3} E$\\
-MB: schon bekannt \\ % TODO Ref
+MB: schon bekannt \\ 
 FD, BE:
 \begin{equation}
     \begin{split}
@@ -1570,8 +1569,8 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
         \lambda_\text{max} \cdot T = \frac{h c}{k} \frac{1}{4.965} \quad \text{\textsc{Wien}sches Verschiebungsgesetz}
     \end{equation}
     Das Maximum von $u(\lambda, T)$ verschiebt sich it steigender Temperatur zu kleineren Wellenlängen \\
-    \underline{Zustandsgleichung des Photonengases}
-    Anfang 3.6: %TODO Ref Kapitel 3.6
+    \underline{Zustandsgleichung des Photonengases} \\
+    Anfang \ref{sub:idealBoseFermiGas}
     \begin{equation}
         p V = - \Omega_\text{BE} = k T \ln \mathcal{Z}_\text{BE} = - k T \sum_i \ln \left( 1 - e^{(\mu - \epsilon_i) / k T} \right)
     \end{equation}
@@ -1595,7 +1594,7 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
     Materieteilchen: $\epsilon_i = \frac{m v_i^2}{2} = \frac{v_i p_i}{2}$ ($p_i$ Impuls)\\
     Photonen: $\epsilon_i = c p_i$ \ldots und der Faktor $\frac{1}{2}$ wird durch alle Mittelungen mitgeschleppt.
     \item Phononen (\textsc{Debye}-Modell) \\
-    \underline{Idee}: von Einstein (bereits besprochen): Das Gitter wird als eine Ansammlung von $3N$ nicht wechselwirkenden  %TODO Ref
+    \underline{Idee}: von Einstein (bereits besprochen): Das Gitter wird als eine Ansammlung von $3N$ nicht wechselwirkenden
     harmonischen Oszillatoren beschrieben \\
     \underline{Zusatz} von Debye: Satz von Eigenfrequenzen: $\nu_i$ \\
     Damit sind die Energien $\epsilon_i = h \nu_i \left( n_i + \frac{1}{2} \right) \quad n_i \in \mathbb{N}$
@@ -1661,11 +1660,23 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
     Sei $\hat{H}$ Hamilton Operator mit diskretem Spektrum $\epsilon_i, i=1, 2, \ldots$ und $\{\ket{i}\}$ ein entsprechender ON Basis-Satz,
     $\hat{H}\ket{i} = \epsilon_i \ket{i}$. In der Matrix-Darstellung dieses Satzes ist $\hat{H}$ diagonal. Damit aber auch
     \begin{equation}
-        \hat{H}^n = \text{TODO Matrix}
+        \hat{H}^n =
+        \begin{pmatrix}
+            \epsilon_1^n & &  & 0 \\
+             & \epsilon_2^n & & \\
+             & & \ddots & \\
+             0 & & & \epsilon_i^n
+        \end{pmatrix}
     \end{equation}
     und
     \begin{equation}
-        e^{- \beta ß \hat{H}} = \text{TODO Matrix}
+        e^{- \beta \hat{H}} = 
+        \begin{pmatrix}
+            e^{- \beta \epsilon_1} & &  & 0 \\
+             & e^{- \beta \epsilon_2} & & \\
+             & & \ddots & \\
+             0 & & & e^{- \beta \epsilon_i}
+        \end{pmatrix}
     \end{equation}
     mit $\beta = \frac{1}{k T}$\\
     Dann ist
