@@ -129,6 +129,7 @@ Die innere Energie ist eine Zustandsgröße.
     \end{enumerate}
     Gesamtheit der Magnetisierung $A = A_1 + A_2$
     \begin{equation}
+        \label{eq:work_mag}
         \begin{split}
             \delta A &= \delta A_1 + \delta A_2 = - M \difd H + \difd(M \cdot H) \\
             &= - M \difd H + H \difd M + M \difd H \\
@@ -256,7 +257,7 @@ Es gibt keine periodisch arbeitende Maschine, die \emph{ausschließlich}
 \begin{itemize}
     \item aus b): für ein abgeschlossenes System gilt
     \begin{equation}
-        \difd S = 0 \qquad
+        \difd S \geq 0 \qquad
         \begin{cases}
             \text{i) } & \difd S > 0 \Leftrightarrow \text{Prozess irreversibel} \\
             \text{ii)} & \difd S = 0 \Leftrightarrow \text{Prozess reversibel}
@@ -480,7 +481,7 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
             & \Rightarrow \frac{Q_2}{T_2} = \frac{Q_1}{T_1} = \gamma
         \end{split}
     \end{equation}
-    Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustan sein $\Rightarrow A = Q_2 - Q_1$) \\
+    Energieerhaltung (Maschine soll nach \emph{Zyklus} im Ausgangszustand sein $\Rightarrow A = Q_2 - Q_1$) \\
     Wirkungsgrad $\eta$:
     \begin{equation}
         \eta := \frac{A}{Q_2} \Rightarrow \eta_{\text{reversibel}} = \frac{Q_2 - Q_1}{Q_2} = \frac{T_2 - T_1}{T_2}
@@ -572,7 +573,7 @@ $E, F, H, G$ heißen \emph{Thermodynamische Potentiale}.
 \paragraph{Integrabilitätsbeziehungen} \mbox{}\\
 aus $E$:
 \begin{equation}
-    \left( \frac{\partial T}{\partial V} \right)_{S, N} = \left( \frac{\partial p}{\partial S} \right)_{V, N}, \quad
+    \left( \frac{\partial T}{\partial V} \right)_{S, N} = -\left( \frac{\partial p}{\partial S} \right)_{V, N}, \quad
     \left( \frac{\partial T}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial S} \right)_{V, N}, \quad
     - \left( \frac{\partial p}{\partial N} \right)_{S, V} = \left( \frac{\partial \mu}{\partial V} \right)_{S, N}
 \end{equation}
