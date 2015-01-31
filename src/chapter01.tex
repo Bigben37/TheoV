@@ -524,7 +524,7 @@ $E(S, V, N)$ ist eine Funktion von \emph{extensiven} Variablen.
     \item Kompressibilität
     \begin{equation}
         \begin{split}
-            \kappa_s &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_S \text{ (adiabatisch)} \\
+            \kappa_S &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_S \text{ (adiabatisch)} \\
             \kappa_T &= - \frac{1}{V} \left( \frac{\partial V}{\partial p} \right)_T \text{ (isotherm)}
         \end{split}
     \end{equation}
@@ -612,7 +612,7 @@ Rechenregeln
     \frac{\partial(f, g)}{\partial(x, y)} = -\frac{\partial(f, g)}{\partial(y, x)}; \qquad
     \frac{\partial(f, y)}{\partial(x, y)} = \frac{\partial f}{\partial x}
 \end{equation}
-und für $x=(u, v), y=(u, v)$
+und für $x=x(u, v), y=y(u, v)$
 \begin{equation}
     \Rightarrow \frac{\partial(f, g)}{\partial(u, v)} = \frac{\partial(f, g)}{\partial(x, y)} \cdot \frac{\partial(x, y)}{\partial(u, v)}
 \end{equation}
@@ -706,7 +706,7 @@ Damit, im Gleichgewicht
 \end{equation}
 Differentiation ergibt:
 \begin{equation}
-    \difd E = T \difd S + S \difd T - p \difd V - V \difd P + \mu \difd N + N \difd \mu
+    \difd E = T \difd S + S \difd T - p \difd V - V \difd p + \mu \difd N + N \difd \mu
 \end{equation}
 \begin{equation}
     \Rightarrow S \difd T - V \difd p + N \difd \mu = 0 \qquad \text{\textsc{Gibbs-Duhem} Beziehung}
@@ -866,12 +866,11 @@ G = E - TS + pV & \difd G = - S \difd T + V \difd p + \mu \difd N & G(T, p, N) \
 Es gibt noch weitere zwei thermodynamische Potentiale, welche allerdings ungebräuchlich sind.
 
 \subsection{3. Hauptsatz der Thermodynamik}
-Auch bekannt als \textsc{Nern
-st}'sches Theorem (1906) \\
+Auch bekannt als \textsc{Nernst}'sches Theorem (1906) \\
 Die Entropie eines homogenen, realen Stoffes ist bei $T=0$ Null. \\
 Mathematisch formuliert:
 \begin{equation}
-    \lim_{T \to 0} S(T, V) = 0, \qquad \lim_{T \to 0} S(T, P) = 0
+    \lim_{T \to 0} S(T, V) = 0, \qquad \lim_{T \to 0} S(T, p) = 0
 \end{equation}
 Erfahrungssatz der Thermodynamik. Beweis: Quantenstatistik. \\[\baselineskip]
 Bemerkung: Der 3. Hauptsatz gilt nicht für das ideale Gas.
@@ -881,7 +880,7 @@ Bemerkung: Der 3. Hauptsatz gilt nicht für das ideale Gas.
     \begin{equation}
         \lim_{T \to 0} \pdi{S}{V}{T} = 0, \qquad \lim_{T \to 0} \pdi{S}{p}{T} = 0
     \end{equation}
-    \item Sei $C_\xi$ die spezifische Wärme ($\xi = p$ oder $V$), $c_\xi = T \pdi{S}{T}{\xi}$. Entlang eines reversiblen Weges ist
+    \item Sei $c_\xi$ die spezifische Wärme ($\xi = p$ oder $V$), $c_\xi = T \pdi{S}{T}{\xi}$. Entlang eines reversiblen Weges ist
     \begin{equation}
         S(T, \xi) = \int_{0}^{T} c_\xi(T') \frac{\difd T'}{T'} + \underbrace{S(T=0, \xi)}_{=0, \text{ mit 3. HS}}
     \end{equation}
