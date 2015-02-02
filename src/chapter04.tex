@@ -394,7 +394,7 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
             E(N, T, h=0) &= - T^2 \left( \frac{\partial}{\partial T} \left( \frac{F}{T} \right)  \right)_{N, h} \\
             &= N k T^2 \left( - \frac{J}{k T^2} \right) \tanh \left( \frac{J}{k T} \right)  \\
             &= - N J \tanh \left( \frac{J}{k T} \right) \\
-            C_{h=0} &= \pdi{E}{T}{N, h=0} = \frac{N J^2}{k T^2} \sech^2 \left( \frac{J}{k T} \right)
+            c_{h=0} &= \pdi{E}{T}{N, h=0} = \frac{N J^2}{k T^2} \sech^2 \left( \frac{J}{k T} \right)
         \end{split}
     \end{equation}
     \begin{figure}[H]
@@ -517,4 +517,122 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
         \caption{Temperaturabhängige Korrelation von zwei Spins im Ising-Modell.}
         \label{img:IsingSigmaSigma}
     \end{figure}
+    \item Das zweidimensionale Ising-Modell (\textsc{Onsager} 1944) \\
+    Vereinfachung des Beweises: \textsc{Newell}-\textsc{Montroll} 1953; \textsc{Domb} 1960; K. \textsc{Huang} 1963; \textsc{Schultz-Mattis-Lieb} 1964 ("`subtil"') \\
+    Grundverfahren: Transformatrixmethode + Spindarstellung \\
+    \underline{Ergebnis} (siehe z.B. Kerson \textsc{Huang}):
+    \begin{equation}
+        \begin{split}
+            & \frac{1}{N} \ln Z(h=0, T, N) = \ln \left\{ 2 \cosh \left( \frac{2 J}{k T} \right) \right\} + \frac{1}{2 \pi} \int_{0}^{\pi} \difd \varphi \ln \left\{ \frac{1}{2} + \frac{1}{2} \sqrt{1 - \kappa^2 \sin^2 \varphi} \right\} \\
+            & \text{mit} \kappa = \frac{2 \sinh (2J / k T)}{\cosh^2 (2 J / k T)}
+        \end{split}
+    \end{equation}
+    \underline{Folgerungen}
+    \begin{itemize}
+        \item
+        \begin{equation}
+            \frac{J}{k T_c} = \frac{1}{2} \arcsinh(1) = \frac{1}{2} \ln \left( 1 + \sqrt{2} \right) = 0.4407\ldots \quad (T_c \neq 0 !!!)
+        \end{equation}
+        bereits von \textsc{Kramers} und \textsc{Wannier} 1941 entdeckt. \\
+        Zum Vergleich: MFA: $\frac{J}{k T_{c, \text{MFA}}} = \frac{1}{4} = 0.25$, Bethe: $\frac{J}{k T_{c, \text{B}}} = \frac{\ln(4/2)}{2} = \frac{\ln(2)}{2}=0.347\ldots$ \\
+        $\Rightarrow$ die exakte Übergangstemperatur ist \emph{kleiner} als die der Näherungen.
+        \item Die innere Energie und die spezifische Wärme lassen sich analytisch durch elliptische Integrale ausdrücken. In der Nähe von $T_c$ ist:
+        \begin{equation}
+            \begin{split}
+                c_{h=0}(T) &\simeq N k \frac{8}{\pi} \left( \frac{J}{k T_c} \right)^2 \left[ - \ln \abs{1 - \frac{T}{T_c}}+ \ln \left( \frac{k T_c}{2 J} \right) - \left( 1 - \frac{\pi}{4} \right)  \right] \\
+                \frac{c_{h=0}(T)}{N k} &\simeq -0.4945 \ln \abs{1 - \frac{T}{T_c}} + \const
+            \end{split}
+        \end{equation}
+        d.h. die spezifische Wärme divergiert logarithmisch bei $T_c$ \\
+        TODO: Bild $c_{h=0}/Nk$-$T/(k/J)$ (MFA, Bethe, Onsager) % TODO Bild
+        \item Spontane Magnetisierung: hier Lösung für $h \neq 0$ benötigt! \\
+        \textsc{Folklore Onsager} (1949): nie publiziert. Publiziert \textsc{Yang} (1952) \\
+        Im Grenzfall $h \to 0$ ist
+        \begin{equation}
+            m =
+            \begin{cases}
+                \frac{ \left( 1+z^2 \right)^{1/4} \left( 1 - 6z^2 + z^4 \right)^{1/8}}{\sqrt{1-z^2}} & T \leq T_c, \quad z = e^{-2J / k T} \\
+                0 & T \geq T_c
+            \end{cases}
+        \end{equation}
+        Spezialfälle\\
+        \begin{equation}
+            \begin{split}
+                T \to 0 \quad &m \simeq 1 - 2 e^{-8 J / k T} \\
+                T \to T_c \quad &m \simeq 1.2224 (1- \frac{T}{T_c})^{1/8} \quad \text{kritischer Exponent: } \frac{1}{8}
+            \end{split}
+        \end{equation}
+        TODO $m$-$T$-Diagramm (MFA, Bethe, Onsager) % TODO Bild
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Moderne Aspekte der Theorie der Phasenübergänge}
+\begin{enumerate}[A)]
+    \item \textsc{Landau}-Theorie (\textsc{Landau+Lifschitz} 1958) \\
+    \underline{Idee}: Ordnungsparameter als thermodynamische Variable (makroskopische Beschreibung). \\
+    Der Ordnungsparameter (z.B. Magnetisierung) sei $\mathcal{S}$. \\
+    \underline{Daher}: Entwicklung der freien Energie als eine Reihe in $\mathcal{S}$ \\
+    Ohne symmetriebrechende Felder ist der geordnete Zustand unabhängig vom \emph{Vorzeichen} von $\mathcal{S}$
+    \begin{equation}
+        F(\mathcal{S}, T) = F_0 (T) + B(T) \mathcal{S}^2 + D(T) \mathcal{S}^4 + \ldots
+    \end{equation}
+    Im thermodynamischen Gleichgewicht ist $F(\mathcal{S}, T)$ minimal als Funktion von $\mathcal{S}$. Daher (i. A.) ist $D(T)>0$.
+    Bei hohen $T$ ist auch $B(T)>0$, wogegen man bei tiefen Temperaturen einen Vorzeichenwechsel haben kann,
+    d.h. $B(T_c) = 0, B(T)<0$ für $T>T_c$. Bild qualitativ richtig!\\
+    TODO Bild $F$-$\mathcal{S}$-Diagramm \\ % TODO Bild
+    Bestimmung der Lage der Minima:
+    \begin{equation}
+        \pdi{F}{\mathcal{S}}{T} \overset{!}{=} 0
+    \end{equation}
+    Es folgt für $T < T_c$, dass
+    \begin{equation}
+        \mathcal{S}^2 = - \frac{1}{2} \frac{B(T)}{D(T)} \Rightarrow \mathcal{S} = \pm \sqrt{- \frac{1}{2} \frac{B(T)}{D(T)}}
+    \end{equation}
+    Zusatzannahme von \textsc{Landau}: $B(T)$ analytisch um $T_c$, mit
+    \begin{equation}
+        B(T) \simeq b_1 (T - T_c) + \ldots, \text{mit } b_1 > 0
+    \end{equation}
+    Daraus folgt
+    \begin{equation}
+        \mathcal{S} \approx
+        \begin{cases}
+            \left\{ \frac{b_1}{2 D(T_c)} \right\}^{1/2} (T_c - T)^{1/2} & T \leq T_c \\
+            0 & T \geq T_c
+        \end{cases}
+    \end{equation}
+    Dies beschreibt einen Phasenübergang 2. Ordnung (keine latente Wärme, aber die spezifische Wärme ändert sich unstetig).
+    Die \textsc{Landau}-Form stimmt mit der MFA  überein (kritischer Exponent ist $\frac{1}{2}$) und steht im Widerspruch zur \textsc{Onsager}-Lösung. \\
+    \underline{Quelle} der Diskrepanz: Physikalisch gibt es \emph{a-priori} keinen Grund, der die Analytizität von $B(T)$ um $T_c$ erzwingen würde (\textsc{Fisher} 1967),
+    z.B.: Die \textsc{Onsager} Lösung liefert für $T \to T_c: F \sim (T-T_c)^2 \ln (T-T_c)$. Hier zeigt die spezifische Wärme eine logarithmische
+    Singularität. \\[\baselineskip]
+    Erweiterung der \textsc{Landau}-Theorie (\textsc{Landau-Ginzburg}): Berücksichtigung von räumlichen Fluktuationen \\
+    \underline{Idee} Der Ordnungsparameter $\mathcal{S}$ ist nur $\vec{r}$-abhängig und kann fluktuieren. Daher ist die Dichte  der freien Energie ($f := \frac{F}{N}$)
+    \begin{equation}
+        \begin{split}
+            f(\vec{r}, T) =& F_0(T) + B(T) \left[ \mathcal{S}(\vec{r}) \right]^2 + D(T) \left[ \mathcal{S}(\vec{r}) \right]^4 \ldots \\
+            &- h(\vec{r}) \mathcal{S}(\vec{r}) + \underbrace{\delta(T) \left\{ \vec{\nabla} \mathcal{S}(\vec{r}) \cdot \vec{\nabla} \mathcal{S}(\vec{r}) \right\}}_{(*)}
+        \end{split}
+    \end{equation}
+    (*): Dämpfungsterm für allzu starke Fluktuationen (eigentlich Fluktuations-Dis\-si\-pa\-tions-Theorem) \\
+    \underline{Anwendung}: Supraleitung, Suprafluidität \\
+    Volumenintegration ud Minimumbestimmung liefern die partielle DGL:
+    \begin{equation}
+        \left\{ 2 B(T) + 4D(T) \mathcal{S}^2 (\vec{r}) - 2 \delta \vec{\nabla}^2 \right\} \mathcal{S}(\vec{r}) = h(\vec{r})
+    \end{equation}
+    Daraus folgt die Korrelationsfunktion (Fluktuations-Dissipations-Theorem) in 3 Dimensionen:
+    \begin{equation}
+        \begin{split}
+            \Gamma(\vec{r}) &= \avg{\mathcal{S}(\vec{r}') \mathcal{S} (\vec{r'}+\vec{r})} = \frac{k T}{8 \pi \delta (T)} \frac{1}{r} e^{-\frac{r}{\xi_1}} \quad \text{\textsc{Ornstein-Zernike} Form (*)} \\
+            \xi_1 &= 
+            \begin{cases}
+                \left\{ \frac{\delta(T)}{B(T)} \right\}^{1/2} & T > T_c \\
+                \left\{ - \frac{\delta(T)}{B(T)} \right\}^{1/2} & T < T_c
+            \end{cases}
+        \end{split}
+    \end{equation}
+    mit $\xi_i$: Korrelationslänge \\
+    (*): oder auch \textsc{Yukawa}-Abschirmung, \textsc{Hückel-Debye}-Form \\
+    d.h. eine divergierende Korrelationslänge für $T\to T_c^-$ und $T \to T_c^+$
+    \underline{Fazit}: Die \textsc{Landau}-Theorie gilt nur für Fluktuationen des Ordnungsparameters $\mathcal{S}(\vec{r})$, die räumlich begrenzt sind.
+    Dies ist i.A.in der Nähe von $T_c$ nicht mehr der Fall (divergierende Korrelationslänge).
 \end{enumerate}
