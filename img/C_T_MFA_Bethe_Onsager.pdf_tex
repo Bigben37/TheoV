@@ -1,0 +1,65 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'C_T_MFA_Bethe_Onsager.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{338.5061555bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.93141286)%
+    \put(0,0){\includegraphics[width=\unitlength]{C_T_MFA_Bethe_Onsager.pdf}}%
+    \put(-0.00394916,0.94260775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.64546485\unitlength}\raggedright $c_0(T)/Nk$\end{minipage}}}%
+    \put(0.41751368,0.11324676){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05038557\unitlength}\raggedright 2\end{minipage}}}%
+    \put(0.05202793,0.45321704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08542646\unitlength}\raggedleft 1\end{minipage}}}%
+    \put(0.74940189,0.08085312){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32779199\unitlength}\raggedright $T \ / \ k/J$\end{minipage}}}%
+    \put(0.05202793,0.73681602){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08542646\unitlength}\raggedleft 2\end{minipage}}}%
+    \put(0.69763935,0.11337783){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05038557\unitlength}\raggedright 4\end{minipage}}}%
+    \put(0.43498669,0.04710635){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11892199\unitlength}\raggedright 2.27\end{minipage}}}%
+    \put(0.5171992,0.1145001){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11892199\unitlength}\raggedright 2.88\end{minipage}}}%
+    \put(0.8045362,0.61364709){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32779199\unitlength}\raggedright MFA\end{minipage}}}%
+    \put(0.65839405,0.80897308){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32779199\unitlength}\raggedright Bethe\end{minipage}}}%
+    \put(0.56636354,0.92950265){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.32779199\unitlength}\raggedright Onsager\end{minipage}}}%
+  \end{picture}%
+\endgroup%
