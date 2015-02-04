@@ -623,8 +623,8 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
     \underline{Quelle} der Diskrepanz: Physikalisch gibt es \emph{a-priori} keinen Grund, der die Analytizität von $B(T)$ um $T_c$ erzwingen würde (\textsc{Fisher} 1967),
     z.B.: Die \textsc{Onsager} Lösung liefert für $T \to T_c: F \sim (T-T_c)^2 \ln (T-T_c)$. Hier zeigt die spezifische Wärme eine logarithmische
     Singularität. \\[\baselineskip]
-    Erweiterung der \textsc{Landau}-Theorie (\textsc{Landau-Ginzburg}): Berücksichtigung von räumlichen Fluktuationen \\
-    \underline{Idee} Der Ordnungsparameter $\mathcal{S}$ ist nur $\vec{r}$-abhängig und kann fluktuieren. Daher ist die Dichte  der freien Energie ($f := \frac{F}{N}$)
+    Erweiterung der \textsc{Landau}-Theorie (\textsc{Landau-Ginzburg}): Berücksichtigung von räumlichen Fluktuationen. \\
+    \underline{Idee} Der Ordnungsparameter $\mathcal{S}$ ist nur $\vec{r}$-abhängig und kann fluktuieren. Daher ist die Dichte der freien Energie ($f := \frac{F}{N}$)
     \begin{equation}
         \begin{split}
             f(\vec{r}, T) =& F_0(T) + B(T) \left[ \mathcal{S}(\vec{r}) \right]^2 + D(T) \left[ \mathcal{S}(\vec{r}) \right]^4 \ldots \\
@@ -653,4 +653,109 @@ Erwartung für ein Phasenübergang $m(h=0, T) \neq 0$ für kleine $T$. \\
     d.h. eine divergierende Korrelationslänge für $T\to T_c^-$ und $T \to T_c^+$
     \underline{Fazit}: Die \textsc{Landau}-Theorie gilt nur für Fluktuationen des Ordnungsparameters $\mathcal{S}(\vec{r})$, die räumlich begrenzt sind.
     Dies ist i.A.in der Nähe von $T_c$ nicht mehr der Fall (divergierende Korrelationslänge).
+    \item Kritischer Exponent \\
+    In der Nähe von $T_c$ hängen mehrere Messgrößen i.d.R. algebraisch von $T_c$ ab, d.h. man findet Abhängigkeit der Form $\abs{T-T_c}^\mu$,
+    $\mu$: kritische Exponenten.\\
+    \underline{Beispiele}
+    \begin{enumerate}[a)]
+        \item Ferromagnetismus \\
+        spezifische Wärme $c(T) \sim \abs{T-T_c}^\alpha$ \\
+        spontane Magnetisierung $m \sim (T_c-T)^\beta \quad (T<T_c)$ \\
+        Suszeptibilität $\chi = \frac{m}{h} \sim (T-T_c)^{-\gamma} \quad (T > T_c)$ \\
+        Magnetisierung bei $T_c$: $m \sim h^{1/\delta} \quad (T=T_c)$
+        \item Flüssig-Gas Übergang \\
+        Dichtedifferenz $\rho_\text{F}-\rho_\text{G} \sim (T-T_c)^\beta \quad (T < T_c)$ \\
+        Kompressibilität $\kappa_T = - \frac{1}{V} \pdi{V}{p}{T} \sim \abs{T-T_c}^{-\gamma}$ \\
+        Druckabhängigkeit der Dichte $\abs{\rho-\rho_c} \sim \abs{p-p_c}^{1/\delta} \quad (T=T_c)$ \\
+        Korrelationslänge $\xi \sim \abs{T-T_c}^{-\nu}$
+    \end{enumerate}
+    TODO Tabelle Werte der Exponenten \\ %TODO table
+    Zwischen den Exponenten bestehen Beziehungen (sogenannte Skalengesetze): \\
+    \underline{Beispiele}
+    \begin{itemize}
+        \item \textsc{Rushbrooke}: $\alpha + 2 \beta + \gamma \geq 2$ (*)
+        \item 1. Ungleichung von \textsc{Griffith}: $\alpha + \beta (\delta + 1) \geq 2$ (*)
+        \item 2. Ungleichung von \textsc{Griffith}: $\gamma (\delta + 1) \geq (2-\alpha)(\delta-1)$
+        \item \textsc{Josephson}: $d \nu \geq 2 - \alpha$ ($d$: Dimension des Raumes)
+    \end{itemize}
+    (*): Abgeleitet aus der Thermodynamik, sollten streng gelten \\
+    Die Ableitung dieser Beziehung beruht auf Skalenvorstellungen. \\  % vor / ver ?
+    \underline{Bemerkung}: Man erhält die \textsc{Landau}-Theorie für $d \geq 4$, $d=4$ ist die sogenannte Grenzdimension (marginal dimension)
+    \item Skizze zur Renormierung kritischer Phänomene \\
+    Folgerungen aus A) und B): Der Phasenübergang ist in der Nähe von $T_c$ durch langreichweitige Korrelationen des Ordnungsparameters charakterisiert.
+    $\Rightarrow$ benachbarte Spins sind stark korreliert. D.h.  in einem Block der Kantenlänge $L, L \ll \xi$, verhalten sich die Spins einheitlich. \\
+    $\Rightarrow$ \underline{Idee}: De Block ist die neue Einheit. \\
+    \underline{Mathematisierung}: Sei ein $d$-dim. Gitter mit Spins $\sigma_i$. Das Gitter wird in Blöcke der Länge $L$ zerlegt (mit jeweils $L^d$ Spins). \\
+    \underline{Definition}: $\tilde{\sigma}_\alpha$ Blockspinvariable des Blocks $\alpha$ (z.B. $\tilde{\sigma}_\alpha := \frac{\sum_i \sigma_i}{L^d}$) \\
+    \underline{Vorstellung}: $\sigma_i$ und $\tilde{\sigma}_i$ haben dieselbe physikalische Struktur (z.B. Anzahl der Komponenten, Kommutatorbeziehungen),
+    daher soll die mathematische Struktur des \emph{renormierten} Modells unverändert bleiben. D.h. aus
+    \begin{equation}
+        \mathscr{H}(\{\sigma\})/kT = - \sum_{ij} K_{ij} \sigma_i \sigma_j - h \sum_i \sigma_i
+    \end{equation}
+    soll folgen für die Block-Spin-Größen
+    \begin{equation}
+        \tilde{\mathscr{H}} \left( \{ \tilde{\sigma} \} \right)  /kT = - \sum_{\alpha \beta} \tilde{K}_{\alpha \beta} \tilde{\sigma}_\alpha \tilde{\sigma}_\beta - \tilde{h} \sum_\alpha \tilde{\sigma}_\alpha
+    \end{equation}
+    Eine direkte Auswertung von $\tilde{K}$ und $\tilde{h}$ ist umständlich und führt i.d.R. zu komplizierten Formen. \\
+    \underline{Vereinfachung} (\textsc{Kadanoff} 1966, \textsc{Stanley} 1971): NN-WW sollen nur NN-WW erzeugen (Annahme). \\
+    $\Rightarrow$ Die freie Energie pro Block $F(\tilde{K}, \tilde{h})$ zeigt dieselbe funktionale Abhängigkeit von $\tilde{K}, \tilde{h}$ wie die
+    freie Energie pro Spin $F(K, h)$. Nachdem es $L^d$ Spins pro Block gib, folgt
+    \begin{equation}
+        \label{eq:renomF}
+        F(K, h) = L^{-d}  F(\tilde{K}, \tilde{h}) \qquad \left( L \ll \xi, T \text{ nahe bei } T_c \right)
+    \end{equation}
+    Ebenso gilt für die Korrelationslänge
+    \begin{equation}
+        \label{eq:renomXi}
+        \xi(K, h) = L \xi(\tilde{K}, \tilde{h})\qquad \left( L \ll \xi, T \text{ nahe bei } T_c \right)
+    \end{equation}
+    \autoref{eq:renomF} und \autoref{eq:renomXi} sind zwei Homogenitätsbeziehungen, aus denen $L$ eliminiert werden kann. \\
+    \underline{Def.}: Reduzierte Temperatur $t$
+    \begin{equation}
+        t := \frac{T-T_c}{T_c} \simeq \frac{K_c - K}{K_c}
+    \end{equation}
+    Damit ist
+    \begin{equation}
+        \tilde{t} = \frac{K_c - \tilde{K}}{K_c} \quad \Rightarrow \quad
+        \begin{cases}
+            F(t, h) = L^{-d} F(\tilde{t}, \tilde{h}) \\
+            \xi(t, h) = L \xi (\tilde{t}, \tilde{h})3
+        \end{cases}
+        \qquad \left( \forall L \ll \xi \right)
+    \end{equation}
+    $\Rightarrow \tilde{t} = L^y t, \ \tilde{h} = L^x h$ (hier sind die Parameter $x, y$ noch unbestimmt.)
+    \begin{equation}
+        \begin{split}
+            \Rightarrow & F(t, h) = t^{d/y} f(t/h^{y/x}) \\
+            & \xi(t, h) = t^{-1/y} \varphi(t/h^{y/x})
+        \end{split}
+    \end{equation}
+    Das \textsc{Kadanoff}-Modell liefert somit die Grundlage der sogenannten \emph{Homogenitätsannahme} (\textsc{Widom} 1965):
+    In der Nähe von $T_c$ skalieren die makroskopischen Funktionen, die das System charakterisieren. \\
+    \underline{Mathematische Folgerung}: Die kritischen Exponenten sind durch mehrere Beziehungen miteinander verknüpft (Skalengesetze), da das
+    System z.B. durch $x$ und $y$ charakterisiert ist (\textsc{Kadanoff} 1967, \textsc{Fisher} 1967, \textsc{Stanley} 1971) \\
+    \underline{Folgerungen}:
+    \begin{enumerate}[a)]
+        \item Skalengesetze
+        \item viele kritische Exponenten sind oberhalb und unterhalb $T_c$ gleich (experimentell sehr gut bestätigt).
+    \end{enumerate}
+    \underline{Beispiele}
+    \begin{enumerate}[i)]
+        \item \textsc{Onsager}-Lösung skaliert mit $y=1$ und $x=\frac{15}{8}$
+        \item MFA skaliert i.A. \emph{nicht}.
+    \end{enumerate}
+    \underline{Universalitätshypothese} (\textsc{Kadanoff}): Die kritischen Exponenten eines gegebenen Modells hängen in der Regel nur von sehr 
+    wenigen Parametern ab, wie z.B. der Raumdimension $d$, von der Anzahl der $D$ der Komponenten der Spinvektoren. \\
+    $\Rightarrow$ z.B. sind die Exponenten unabhängig vom Gittertyp, von der (endlichen) Reichweite des Potentials, usw. \\
+    \underline{Beweisskizze} Gitterpunkte ($K$) $\rightarrow$ Block ($\tilde{K}$) $\rightarrow$ Block von Blocks ($\tilde{\tilde{K}}$) \\
+    Iterierte Abbildung $I(K) \rightarrow \tilde{K}$, $I(\tilde{K}) \rightarrow \tilde{\tilde{K}}$ usw. \\
+    Das Verfahren führt nach $n$ Schritten zu einem Superblock der Kantenlänge $L^n$. Wenn man nicht am kritischen Punkt ist, so wird $L^n > \xi$
+    für große $n$, und die Iteration hört auf physikalisch zu sein. Am kritischen Punkt dagegen kann man die Iteration beliebig fortsetzen,
+    daher ist $K_c$ ein \emph{Fixpunkt} der Operation $I$,
+    \begin{equation}
+        I(K_c) = K_c
+    \end{equation}
+    Bei $T_c$ ist somit die Struktur der Fluktuationen \emph{skalenunabhängig} (fraktal). Im \textsc{Ising}-Modell findet man Bereiche mit 
+    umgekehrter Magnetisierung ("`droplets"') und (\textsc{Kadanoff}) "`droplets inside droplets inside droplets"'. \\
+    \underline{Erweiterung}: Renormierung im Impulsraum ($\vec{p}$-Raum) \textsc{Wilson} 1975 (\textsc{Nobel}-Preis).
 \end{enumerate}
