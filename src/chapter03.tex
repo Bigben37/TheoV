@@ -169,7 +169,7 @@ Klarerweise wächst die Anzahl der Realisierungen sehr stark in der Reihenfolge 
         w_\nu = \frac{1}{\mathcal{Z}} e^{- \beta E_\nu- \gamma N_\nu} \quad \text{mit} \quad
         \mathcal{Z} := \sum_\nu e^{- \beta E_\nu - \gamma N_\nu} = \mathcal{Z}(\beta, V, \gamma)
     \end{equation}
-    $\mathcal{Z}(\beta, V, G\gamma)$ ist die großkanonische (große) Zustandssumme. \\
+    $\mathcal{Z}(\beta, V, \gamma)$ ist die großkanonische (große) Zustandssumme. \\
     Bestimmung von $\beta$ und $\gamma$:
     \begin{equation}
         \begin{split}
@@ -244,8 +244,8 @@ $6N$-dim. \emph{Phasenraum}.
         \item Quantisierung (quasiklassisch)
         \begin{equation}
             \begin{split}
-                & \oint p \difd q = n h, \quad N \in \mathbb{N} \Rightarrow 2 a \left| p_{x \nu}  \right| n h \\
-                & \Rightarrow \frac{p_{x \nu}^2}{2 m} = \frac{n^2 k^2}{8 m a^2} \qquad \alpha := \frac{h^2}{8 m a^2 k T}
+                & \oint p \difd q = n h, \quad N \in \mathbb{N} \Rightarrow 2 a \left| p_{x \nu}  \right| = n h \\
+                & \Rightarrow \frac{p_{x \nu}^2}{2 m} = \frac{n^2 h^2}{8 m a^2} \qquad \alpha := \frac{h^2}{8 m a^2 k T}
             \end{split}
         \end{equation}
         Weiterhin ist $Z = Z_x Z_y Z_z$ mit
@@ -576,7 +576,7 @@ Damit
 \end{equation}
 Mikrokanonische Zustandssumme:
 \begin{equation}
-    Z = W e^{-\frac{E}{k T}} \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N = \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N e^{-\frac{E}{k T}}
+    Z = W e^{-\frac{E}{k T}} = \left[ \frac{V}{N} \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} e^{5/2} \right]^N e^{-\frac{E}{k T}}
 \end{equation}
 Entropie:
 \begin{equation}
@@ -601,7 +601,7 @@ In der Regel ist \emph{kanonisch arbeiten} einfacher.
 \subsection{Der Gleichverteilungssatz der Energie}
 Wir berechnen kanonisch den Mittelwert der Energie. Wie bei \ref{sub:theo:statsums} ist
 \begin{equation}
-    E = \frac{\sum_\nu E_\nu e^{- E_\nu / kT}}{E_\nu e^{-E\nu / kT}}
+    E = \frac{\sum_\nu E_\nu e^{- E_\nu / kT}}{\sum_\nu e^{-E_\nu / kT}}
 \end{equation}
 was sich im Kontinuum schreibt
 \begin{equation}
@@ -670,7 +670,7 @@ Damit folgt
     \begin{equation}
         \begin{split}
             & c_v = \pdi{E}{T}{V} = \frac{3}{2} N k \\
-            & c_p = c_v + T \pdi{p}{t}{V} \pdi{V}{T}{p} = \frac{3}{2} N k + N k = \frac{5}{2} N k \\
+            & c_p = c_v + T \pdi{p}{T}{V} \pdi{V}{T}{p} = \frac{3}{2} N k + N k = \frac{5}{2} N k \\
             & \text{da (ideales Gas): } pV = N k T \Rightarrow \pdi{V}{T}{p} = \frac{N k }{p}; \pdi{p}{T}{V} = \frac{N k}{V}
         \end{split}
     \end{equation}
@@ -693,12 +693,12 @@ Damit folgt
     \end{equation}
     Vernachlässigt wurden:
     \begin{enumerate}[a)]
-        \item Rotation um die $\zeta$-Achse (Modell hier: Massenpunkte, $I_3 = 0$)
+        \item Rotation um die $\chi$-Achse (Modell hier: Massenpunkte, $I_3 = 0$)
         \item Schwingungen des Moleküls (Quanteneffekt, wird später diskutiert)
     \end{enumerate}
     \item Drei- und mehratomige Gase $f = 6$ (3 Rotationsfreiheitsgrade)
     \begin{equation}
-        \Rightarrow c_v = \frac{6}{2} N k = 3 N k \quad c_v = 4 N k
+        \Rightarrow c_v = \frac{6}{2} N k = 3 N k \qquad c_p = 4 N k
     \end{equation}
     \item Der Festkörper als System von $N$-dreidimensionalen Oszillatoren $\Rightarrow$ pro Oszillator (Atom) 6 thermodynamische Freiheitsgrade
     \begin{equation}
@@ -710,7 +710,7 @@ Damit folgt
 \underline{Hier}: semiklassische Behandlung (\textsc{Maxwell-Boltzmann} Statistik) \\
 $N$ untereinander nicht wechselwirkende Moleküle
 \begin{equation}
-    Z = \frac{1}{N!} \cdot z^N \quad \text{mit} \quad z = \sum_i e^{\frac{\epsilon_i}{k T}}
+    Z = \frac{1}{N!} \cdot z^N \quad \text{mit} \quad z = \sum_i e^{-\frac{\epsilon_i}{k T}}
 \end{equation}
 Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_j^\text{tr} + \epsilon_k^\text{rot} + \epsilon_l^\text{vib}$
 \begin{equation}
@@ -720,7 +720,7 @@ Falls Translation, Rotation und Vibration entkoppeln ist $\epsilon_i = \epsilon_
         \Rightarrow Z &= Z_\text{tr} Z_\text{rot} Z_\text{vib} \quad \text{mit} \quad Z_\text{tr} = \frac{1}{N!} \left( z_\text{tr} \right)^N; Z_\text{rot} = \left( z_\text{rot} \right)^N; Z_\text{vib} = \left( z_\text{vib} \right)^N \\
         F &= - k T \ln Z \Rightarrow F = F_\text{tr} + F_\text{rot} + F_\text{vib} \quad \text{mit} \quad F_\text{tr} = - k T \ln Z_\text{tr}, \text{ usw.} \\
         S &= - \pdi{F}{T}{V, N} \Rightarrow S = S_\text{tr} + S_\text{rot} + S_\text{vib} \quad \text{mit} \quad S_\text{tr} = - \pdi{F_\text{tr}}{T}{V, N}, \text{ usw.} \\
-        E &= F + T S \Rightarrow E = E_\text{tr} + E_\text{rot} + _\text{vib} \quad \text{mit} \quad E_\text{tr} = F_\text{tr} + T S_\text{tr}, \text{ usw.}
+        E &= F + T S \Rightarrow E = E_\text{tr} + E_\text{rot} + E_\text{vib} \quad \text{mit} \quad E_\text{tr} = F_\text{tr} + T S_\text{tr}, \text{ usw.}
     \end{split}
 \end{equation}
 \begin{enumerate}[A)]
@@ -942,7 +942,7 @@ allgemein
 \end{equation}
 \begin{equation}
     \begin{split}
-        \avg{(N_\nu - N)^2} &= \avg{N_\nu^2 - 2 N N\nu + N^2} \\
+        \avg{(N_\nu - N)^2} &= \avg{N_\nu^2 - 2 N N_\nu + N^2} \\
         &= \avg{N_\nu^2} - 2 N \underbrace{\avg{N_\nu}}_{N} + N^2 \\
         &= \avg{N_\nu^2} - N^2
     \end{split}
@@ -1049,7 +1049,7 @@ Die mittlere relative Schwankung ist
         \end{split}
     \end{equation}
     \underline{Kommentare}
-    $N_{i, \text{BD}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu + 1)}}$ sind die mittleren
+    $N_{i, \text{BE}} = \frac{1}{e^{(\epsilon_i - \mu) / k T}-1}$ bzw. $N_{i, \text{FD}} = \frac{1}{e^{(\epsilon_i - \mu)/kT}+1}$ sind die mittleren
     Besetzungszahlen der Niveaus $\epsilon_i$. Sei die Grundzustandsenergie auf Null normiert, $\epsilon_0 = 0$. Daraus folgt, da $N_{i, \text{BE}}$ nicht
     negativ sein darf, $e^{-\mu / k T} > 1$, d.h. $-\infty < \mu < 0$. Andererseits ist $0 < N_{i, \text{FD}} < 1$, d.h. $-\infty < \mu < \infty$.
     
@@ -1092,7 +1092,7 @@ $\Rightarrow \epsilon_i$ kinetische Energie, $\epsilon_i = \frac{p_i^2}{2 m}$, F
 \begin{equation}
     N = - \pdi{\Omega}{\mu}{T, V} =
     \begin{cases}
-\sum_i \left[ \sigma^{-1} e^{\epsilon_i / k T} \right]^{-1} & \begin{pmatrix} + \text{FD} \\ - \text{BE} \end{pmatrix} \\
+\sum_i \left[ \sigma^{-1} e^{\epsilon_i / k T} \pm 1 \right]^{-1} & \begin{pmatrix} + \text{FD} \\ - \text{BE} \end{pmatrix} \\
 \sum_i \sigma e^{-\epsilon_i / k T} & (\text{MB})
     \end{cases}
 \end{equation}
@@ -1206,7 +1206,7 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
             \end{split}
         \end{equation}
         Interpretation: Alle Zustände unterhalb $\mu (T=0, N/V)$ sind besetzt / sind leer. \\
-        Bestimmung von $\mu$ mit Hilfe von $\sum_i N_i = N$ und (2 wegen SPin $\frac{1}{2}$)
+        Bestimmung von $\mu$ mit Hilfe von $\sum_i N_i = N$ und (2 wegen Spin $\frac{1}{2}$)
         \begin{equation}
             \begin{split}
                 & N = \frac{2 V}{h^3} \int_{\epsilon \leq \mu} \difd^3 \vec{p} = \frac{2 V}{h^3} \frac{4 \pi}{3} p_\text{max}^3 \\
@@ -1310,7 +1310,7 @@ Somit ist zu zeigen ($\alpha := 1/(2 m k T)$)
     \begin{equation}
         \theta_F = \frac{\epsilon_F}{k} = \frac{\mu}{k} = \frac{h^2}{2 m k} \left( \frac{3 N}{8 \pi V} \right)^{2/3}
     \end{equation}
-    ist für Kupfer z.B. 50000$\,$K. Daher sind bereits bei Zimmertemperatur stark entartet.
+    ist für Kupfer z.B. 50000$\,$K. Daher sind bereits bei Zimmertemperatur die Leitungselektronen stark entartet.
     \begin{equation}
         c_V^\text{E} = \frac{N \pi^2 k^2}{2 \epsilon_F} T
     \end{equation}
